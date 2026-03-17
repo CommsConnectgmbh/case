@@ -24,8 +24,8 @@ export const PRODUCTS = {
     name: '5G Case Professional',
     subtitle: 'Mit Cradlepoint R980 (Ericsson)',
     badge: 'Enterprise',
-    priceBrutto: 2299.0,
-    priceNetto: 1931.93,
+    priceBrutto: 2699.99,
+    priceNetto: 2268.9,
     image: '/images/koffer-hero.png',
     description: 'Mobiles 5G-Koffersystem Enterprise-Klasse mit Cradlepoint R980 Router (embedded eSIM, 5-Jahres-Netcloud-Plan), Teltonika TAP200 WLAN Access Point, Teltonika PoE Injector, Poynting PANL431 5G/LTE-Außenantenne, 25 m Cat6-Netzwerkkabel, CE & IP67-zertifiziertes PARAT-Gehäuse. Akkubetrieb möglich – Akku und Markenadapter nicht im Lieferumfang enthalten.',
     features: [
