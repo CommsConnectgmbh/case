@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
 const brands = [
-  'Bosch Professional', 'Dewalt + Milwaukee', 'Festool', 'Makita',
-  'Metabo CAS', 'Einhell · Fein · Hikoki', 'Flex',
+  'Bosch Professional', 'Dewalt', 'Milwaukee', 'Makita',
+  'Festool', 'Metabo CAS', 'Einhell', 'Hikoki', 'Fein',
 ];
 
 export default function BatteryCompat() {
@@ -42,8 +42,8 @@ export default function BatteryCompat() {
           className="relative mx-auto mb-16 rounded-3xl overflow-hidden border border-white/[0.06]"
         >
           <Image
-            src="/images/brennstuhl.png"
-            alt="Brennenstuhl Multi Battery 18V System – Kompatibel mit Bosch, Dewalt, Milwaukee, Festool, Flex, Makita und Metabo CAS"
+            src="/images/adapters-overview.png"
+            alt="9 Brennenstuhl Markenadapter – Kompatibel mit Bosch, Dewalt, Milwaukee, Makita, Festool, Metabo CAS, Einhell, Hikoki und Fein"
             width={1200}
             height={600}
             className="w-full h-auto"

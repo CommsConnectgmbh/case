@@ -51,12 +51,14 @@ export const ADDONS = {
   },
   adapters: [
     { id: 'adapter-bosch', name: 'Brennenstuhl Adapter – Bosch Professional', priceNetto: 16.80, image: '/images/Bosch.jpg', description: 'Adapter für Bosch Professional 18V Akkus. Akku nicht enthalten.' },
-    { id: 'adapter-dewalt', name: 'Brennenstuhl Adapter – Dewalt / Milwaukee', priceNetto: 16.80, image: '/images/MILWAUKEE-und-Dewalt.jpg', description: 'Adapter für Dewalt oder Milwaukee 18V Akkus. Akku nicht enthalten.' },
-    { id: 'adapter-festool', name: 'Brennenstuhl Adapter – Festool', priceNetto: 16.80, image: '/images/Festool.jpg', description: 'Adapter für Festool 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-dewalt', name: 'Brennenstuhl Adapter – Dewalt', priceNetto: 16.80, image: '/images/MILWAUKEE-und-Dewalt.jpg', description: 'Adapter für Dewalt 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-milwaukee', name: 'Brennenstuhl Adapter – Milwaukee', priceNetto: 16.80, image: '/images/MILWAUKEE-und-Dewalt.jpg', description: 'Adapter für Milwaukee 18V Akkus. Akku nicht enthalten.' },
     { id: 'adapter-makita', name: 'Brennenstuhl Adapter – Makita', priceNetto: 16.80, image: '/images/MAKITA.jpg', description: 'Adapter für Makita 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-festool', name: 'Brennenstuhl Adapter – Festool', priceNetto: 16.80, image: '/images/Festool.jpg', description: 'Adapter für Festool 18V Akkus. Akku nicht enthalten.' },
     { id: 'adapter-metabo', name: 'Brennenstuhl Adapter – Metabo CAS', priceNetto: 16.80, image: '/images/Metabo.jpg', description: 'Adapter für Metabo CAS 18V Akkus. Akku nicht enthalten.' },
-    { id: 'adapter-einhell', name: 'Brennenstuhl Adapter – Einhell / Fein / Hikoki', priceNetto: 16.80, image: '/images/einhell.jpg', description: 'Adapter für Einhell, Fein oder Hikoki 18V Akkus. Akku nicht enthalten.' },
-    { id: 'adapter-flex', name: 'Brennenstuhl Adapter – Flex', priceNetto: 16.80, image: '/images/flex.jpg', description: 'Adapter für Flex 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-einhell', name: 'Brennenstuhl Adapter – Einhell', priceNetto: 16.80, image: '/images/einhell.jpg', description: 'Adapter für Einhell 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-hikoki', name: 'Brennenstuhl Adapter – Hikoki', priceNetto: 16.80, image: '/images/einhell.jpg', description: 'Adapter für Hikoki 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-fein', name: 'Brennenstuhl Adapter – Fein', priceNetto: 16.80, image: '/images/einhell.jpg', description: 'Adapter für Fein 18V Akkus. Akku nicht enthalten.' },
   ],
 } as const;
 

@@ -253,7 +253,7 @@ export const translations: Record<Language, Translations> = {
     batteryCompat: {
       headline: 'Ihre Werkzeuge. Ihre Akkus.',
       subline:
-        'Kein Vendor Lock-in. Kompatibel mit 18V Akkus von 7 Herstellern.',
+        'Kein Vendor Lock-in. Kompatibel mit 18V Akkus von 9 Herstellern.',
       note: 'Adapter separat erforderlich – Akku nicht im Lieferumfang',
       ctaButton: 'Adapter jetzt dazubuchen',
     },
@@ -473,7 +473,7 @@ export const translations: Record<Language, Translations> = {
     batteryCompat: {
       headline: 'Your tools. Your batteries.',
       subline:
-        'No vendor lock-in. Compatible with 18V batteries from 7 manufacturers.',
+        'No vendor lock-in. Compatible with 18V batteries from 9 manufacturers.',
       note: 'Adapter required separately – battery not included',
       ctaButton: 'Add adapter now',
     },
@@ -693,7 +693,7 @@ export const translations: Record<Language, Translations> = {
     batteryCompat: {
       headline: 'Vos outils. Vos batteries.',
       subline:
-        "Pas de verrouillage fabricant. Compatible avec les batteries 18V de 7 fabricants.",
+        "Pas de verrouillage fabricant. Compatible avec les batteries 18V de 9 fabricants.",
       note: 'Adaptateur vendu séparément – batterie non incluse',
       ctaButton: 'Ajouter un adaptateur',
     },
@@ -913,7 +913,7 @@ export const translations: Record<Language, Translations> = {
     batteryCompat: {
       headline: 'Sus herramientas. Sus baterías.',
       subline:
-        'Sin dependencia de fabricante. Compatible con baterías de 18V de 7 fabricantes.',
+        'Sin dependencia de fabricante. Compatible con baterías de 18V de 9 fabricantes.',
       note: 'Adaptador necesario por separado – batería no incluida',
       ctaButton: 'Añadir adaptador ahora',
     },
@@ -1133,7 +1133,7 @@ export const translations: Record<Language, Translations> = {
     batteryCompat: {
       headline: 'I vostri attrezzi. Le vostre batterie.',
       subline:
-        'Nessun vincolo al produttore. Compatibile con batterie 18V di 7 produttori.',
+        'Nessun vincolo al produttore. Compatibile con batterie 18V di 9 produttori.',
       note: 'Adattatore venduto separatamente – batteria non inclusa',
       ctaButton: 'Aggiungi adattatore ora',
     },
