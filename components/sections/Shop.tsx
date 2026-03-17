@@ -84,6 +84,15 @@ export default function Shop() {
         <p className="text-muted text-xs text-center mt-10">
           Akkubetrieb möglich – Akku und Markenadapter nicht im Lieferumfang enthalten.
         </p>
+
+        <div className="text-center mt-6">
+          <a
+            href="#technik"
+            className="inline-flex items-center gap-1.5 text-primary text-sm hover:text-primary/80 transition-colors"
+          >
+            Alle technischen Details vergleichen →
+          </a>
+        </div>
       </div>
     </section>
   );

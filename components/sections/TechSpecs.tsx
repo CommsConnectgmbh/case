@@ -12,10 +12,9 @@ const overviewRows = [
   { label: 'SIM', standard: '2× physisch + eSIM', professional: '1× physisch + eSIM embedded' },
   { label: 'WiFi', standard: 'WiFi 5 (802.11ac)', professional: 'WiFi 6 (802.11ax)' },
   { label: 'LAN', standard: '5× Gigabit Ethernet', professional: '2× Gigabit Ethernet' },
-  { label: 'Antenne', standard: 'Poynting PANL-431 (8-in-1)', professional: 'Poynting PANL-431 (8-in-1)' },
+  { label: 'Antenne (inkl.)', standard: 'Poynting PANL-431 (8-in-1)', professional: 'Poynting PANL-431 (8-in-1)' },
   { label: 'Schutzklasse', standard: 'CE & IP67 (Gehäuse)', professional: 'CE & IP67 (Gehäuse)' },
   { label: 'Remote Mgmt', standard: 'Teltonika RMS (10 Jahre)', professional: 'Netcloud (5 Jahre)' },
-  { label: 'Preis (netto)', standard: '1.999 €', professional: '2.499 €' },
 ];
 
 interface DetailCategory {
@@ -109,10 +108,10 @@ const antennaSpecs = [
 
 const productLinks = [
   { name: 'Teltonika RUTX50', url: 'https://teltonika-networks.com/products/routers/rutx50' },
-  { name: 'Teltonika RMS', url: 'https://teltonika-networks.com/products/remote-management/rms' },
+  { name: 'Teltonika RMS', url: 'https://www.teltonika-networks.com/de/newsroom/rms-connect-your-expert-remote-management-tool' },
   { name: 'Cradlepoint R980', url: 'https://cradlepoint.com/product/endpoints/r980/' },
-  { name: 'Ericsson NetCloud', url: 'https://cradlepoint.com/netcloud/' },
-  { name: 'Poynting PANL-431', url: 'https://poyntinggroup.com/antennas/panl-431/' },
+  { name: 'Ericsson NetCloud', url: 'https://cradlepoint.com/products/netcloud-service/' },
+  { name: 'Poynting PANL-431', url: 'https://poynting.tech/antennas/panl-431/' },
 ];
 
 export default function TechSpecs() {
@@ -120,7 +119,7 @@ export default function TechSpecs() {
   const t = useTranslation();
 
   return (
-    <section className="py-32 px-6">
+    <section id="technik" className="py-32 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Headline */}
         <motion.div
@@ -245,11 +244,11 @@ export default function TechSpecs() {
 
               {/* Antenna Section */}
               <div className="mt-12">
-                <p className="text-primary text-sm font-medium uppercase tracking-wider mb-3">Empfohlenes Zubehör</p>
+                <p className="text-primary text-sm font-medium uppercase tracking-wider mb-3">Inkludierte Antenne</p>
                 <h3 className="font-heading text-2xl md:text-3xl font-bold mb-2">Poynting PANL-431</h3>
                 <p className="text-muted text-[15px] mb-6 max-w-2xl">
                   8-in-1 Kombiantenne für 5G, WiFi 6E/7 und präzises GNSS –
-                  ideal für mobile Deployments und den 5G Case.
+                  in jedem 5G Case enthalten.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

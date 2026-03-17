@@ -22,10 +22,10 @@ export default function Home() {
         <Hero />
         <Problem />
         <ProductIntro />
-        <Shop />
         <HowItWorks />
         <UseCases />
         <BatteryCompat />
+        <Shop />
         <TechSpecs />
         <RemoteManagement />
         <Connectivity />
