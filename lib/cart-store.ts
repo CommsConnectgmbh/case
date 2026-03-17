@@ -25,7 +25,7 @@ function isExpired(lastActivity: number): boolean {
   return Date.now() - lastActivity > CART_TIMEOUT_MS;
 }
 
-export const useCartStore = create<CartStore>((set, get) => ({
+export const useCartStore = create<CartStore>((set) => ({
   items: [],
   isOpen: false,
   lastActivity: Date.now(),
