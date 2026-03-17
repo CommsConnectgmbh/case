@@ -28,49 +28,65 @@ export default function BatteryCompat() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-muted mb-12 max-w-xl mx-auto text-lg"
+          className="text-muted mb-16 max-w-xl mx-auto text-lg"
         >
           {t.batteryCompat.subline}
         </motion.p>
 
-        {/* Brennenstuhl Multi Battery System Image */}
+        {/* Circular brand arrangement around product image */}
         <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-          className="relative mx-auto mb-16 rounded-3xl overflow-hidden border border-white/[0.06]"
+          className="relative mx-auto mb-16 w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] md:w-[520px] md:h-[520px] lg:w-[600px] lg:h-[600px]"
         >
-          <Image
-            src="/images/adapters-overview.png"
-            alt="9 Brennenstuhl Markenadapter – Kompatibel mit Bosch, Dewalt, Milwaukee, Makita, Festool, Metabo CAS, Einhell, Hikoki und Fein"
-            width={1200}
-            height={600}
-            className="w-full h-auto"
-            quality={90}
-          />
-        </motion.div>
+          {/* Center image */}
+          <div className="absolute inset-[60px] sm:inset-[80px] md:inset-[100px] lg:inset-[115px] rounded-full overflow-hidden border-2 border-white/[0.08] bg-black/40 shadow-[0_0_80px_rgba(0,196,255,0.08)]">
+            <Image
+              src="/images/adapters-overview.png"
+              alt="9 Brennenstuhl Markenadapter – Kompatibel mit Bosch, Dewalt, Milwaukee, Makita, Festool, Metabo CAS, Einhell, Hikoki und Fein"
+              width={600}
+              height={600}
+              className="w-full h-full object-cover scale-125"
+              quality={90}
+            />
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          {brands.map((b, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 + i * 0.06, duration: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
-              whileHover={{ scale: 1.05, backgroundColor: 'rgba(0, 196, 255, 0.1)', borderColor: 'rgba(0, 196, 255, 0.3)' }}
-              className="px-6 py-3 rounded-full text-sm font-medium bg-white/[0.03] border border-white/[0.08] transition-colors duration-300 cursor-default"
-            >
-              {b}
-            </motion.span>
-          ))}
+          {/* Orbit ring */}
+          <div className="absolute inset-0 rounded-full border border-white/[0.06]" />
+
+          {/* Brand nodes arranged in a circle */}
+          {brands.map((b, i) => {
+            const angle = (i * 360) / brands.length - 90; // start from top
+            const rad = (angle * Math.PI) / 180;
+            // Position on the circle edge (50% radius)
+            const x = 50 + 46 * Math.cos(rad);
+            const y = 50 + 46 * Math.sin(rad);
+
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: 0.5 + i * 0.08,
+                  duration: 0.5,
+                  type: 'spring',
+                  stiffness: 200,
+                  damping: 15,
+                }}
+                whileHover={{ scale: 1.15, zIndex: 10 }}
+                className="absolute -translate-x-1/2 -translate-y-1/2"
+                style={{ left: `${x}%`, top: `${y}%` }}
+              >
+                <div className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-full text-[10px] sm:text-xs md:text-sm font-semibold bg-black/80 backdrop-blur-sm border border-white/[0.12] shadow-[0_0_20px_rgba(0,0,0,0.5)] whitespace-nowrap cursor-default hover:border-primary/40 hover:shadow-[0_0_20px_rgba(0,196,255,0.15)] transition-all duration-300">
+                  {b}
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         <motion.p
