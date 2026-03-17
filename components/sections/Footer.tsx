@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
+import { Linkedin, Star, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslation();
@@ -39,10 +40,29 @@ export default function Footer() {
             <ul className="space-y-2.5 text-[15px] text-muted/80">
               <li>Comms Connect GmbH</li>
               <li>Tal 30, 80331 München</li>
-              <li><a href="mailto:info@comms-connect.de" className="hover:text-primary transition-colors duration-300">info@comms-connect.de</a></li>
+              <li><a href="mailto:info@case-connect.de" className="hover:text-primary transition-colors duration-300">info@case-connect.de</a></li>
               <li><a href="tel:+498945221556" className="hover:text-primary transition-colors duration-300">+49 89 4522 1556</a></li>
-              <li><a href="https://www.linkedin.com/in/rainer-roloff/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300">LinkedIn</a></li>
             </ul>
+            <div className="flex items-center gap-3 mt-5">
+              {[
+                { href: 'https://www.linkedin.com/company/comms-connect-gmbh', icon: Linkedin, label: 'LinkedIn' },
+                { href: 'https://de.trustpilot.com/review/comms-connect.de', icon: Star, label: 'Trustpilot' },
+                { href: 'https://wa.me/4915254564856', icon: MessageCircle, label: 'WhatsApp' },
+                { href: 'https://www.instagram.com/comms_connect_gmbh/', icon: Instagram, label: 'Instagram' },
+                { href: 'https://www.facebook.com/profile.php?id=61579876531335', icon: Facebook, label: 'Facebook' },
+              ].map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-muted hover:text-primary hover:border-primary/30 transition-all duration-300"
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
