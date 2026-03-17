@@ -34,7 +34,7 @@ export default function ProductCard({
       )}
 
       <span className={`absolute top-6 right-6 px-3 py-1 text-[11px] font-medium rounded-full ${
-        highlighted ? 'bg-primary/20 text-primary' : 'bg-white/[0.08] text-muted'
+        highlighted ? 'bg-cta/20 text-cta' : 'bg-white/[0.08] text-muted'
       }`}>
         {badge}
       </span>
@@ -65,11 +65,7 @@ export default function ProductCard({
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.98 }}
         onClick={() => addItem({ productId: id, name, priceBrutto })}
-        className={`w-full py-3.5 font-medium rounded-full text-[15px] transition-all duration-300 ${
-          highlighted
-            ? 'bg-primary text-black hover:bg-primary/90'
-            : 'bg-white text-black hover:bg-white/90'
-        }`}
+        className="w-full py-3.5 font-medium rounded-full text-[15px] transition-all duration-300 bg-cta text-white hover:bg-cta/90"
       >
         {t.cart.addToCart}
       </motion.button>

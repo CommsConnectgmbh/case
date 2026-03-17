@@ -72,7 +72,7 @@ export default function NavBar() {
           </button>
           <a
             href="#shop"
-            className="hidden sm:inline-flex px-4 py-1.5 bg-white text-black text-[13px] font-medium rounded-full hover:bg-white/90 transition-colors duration-300"
+            className="hidden sm:inline-flex px-4 py-1.5 bg-cta text-white text-[13px] font-medium rounded-full hover:bg-cta/90 transition-colors duration-300"
           >
             {t.nav.buyButton}
           </a>
