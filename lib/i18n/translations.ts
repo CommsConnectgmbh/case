@@ -120,6 +120,17 @@ export interface Translations {
     headline: string;
     message: string;
   };
+  contact: {
+    headline: string;
+    subline: string;
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+    send: string;
+    success: string;
+    error: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -330,6 +341,17 @@ export const translations: Record<Language, Translations> = {
       message:
         'Ihre Bestellung wurde erfolgreich aufgegeben. Sie erhalten in Kürze eine Bestätigung per E-Mail.',
     },
+    contact: {
+      headline: 'Anfrage senden',
+      subline: 'Sie haben Fragen oder wünschen eine individuelle Beratung? Schreiben Sie uns.',
+      name: 'Name *',
+      email: 'E-Mail *',
+      phone: 'Telefon (optional)',
+      message: 'Ihre Nachricht *',
+      send: 'Nachricht senden',
+      success: 'Vielen Dank! Wir melden uns in Kürze bei Ihnen.',
+      error: 'Fehler beim Senden. Bitte versuchen Sie es erneut.',
+    },
   },
 
   // ─── ENGLISH ───────────────────────────────────────────────────────
@@ -538,6 +560,17 @@ export const translations: Record<Language, Translations> = {
       headline: 'Thank you for your order!',
       message:
         'Your order has been placed successfully. You will receive a confirmation email shortly.',
+    },
+    contact: {
+      headline: 'Send Inquiry',
+      subline: 'Have questions or need personalized advice? Get in touch with us.',
+      name: 'Name *',
+      email: 'Email *',
+      phone: 'Phone (optional)',
+      message: 'Your message *',
+      send: 'Send message',
+      success: 'Thank you! We will get back to you shortly.',
+      error: 'Error sending message. Please try again.',
     },
   },
 
@@ -748,6 +781,17 @@ export const translations: Record<Language, Translations> = {
       message:
         'Votre commande a été passée avec succès. Vous recevrez un e-mail de confirmation sous peu.',
     },
+    contact: {
+      headline: 'Envoyer une demande',
+      subline: 'Vous avez des questions ou souhaitez un conseil personnalisé ? Contactez-nous.',
+      name: 'Nom *',
+      email: 'E-mail *',
+      phone: 'Téléphone (facultatif)',
+      message: 'Votre message *',
+      send: 'Envoyer le message',
+      success: 'Merci ! Nous vous recontacterons sous peu.',
+      error: "Erreur lors de l'envoi. Veuillez réessayer.",
+    },
   },
 
   // ─── SPANISH ───────────────────────────────────────────────────────
@@ -957,6 +1001,17 @@ export const translations: Record<Language, Translations> = {
       message:
         'Su pedido se ha realizado correctamente. Recibirá un correo electrónico de confirmación en breve.',
     },
+    contact: {
+      headline: 'Enviar consulta',
+      subline: '¿Tiene preguntas o desea asesoramiento personalizado? Escríbanos.',
+      name: 'Nombre *',
+      email: 'Correo electrónico *',
+      phone: 'Teléfono (opcional)',
+      message: 'Su mensaje *',
+      send: 'Enviar mensaje',
+      success: '¡Gracias! Nos pondremos en contacto con usted en breve.',
+      error: 'Error al enviar. Por favor, inténtelo de nuevo.',
+    },
   },
 
   // ─── ITALIAN ───────────────────────────────────────────────────────
@@ -1165,6 +1220,17 @@ export const translations: Record<Language, Translations> = {
       headline: 'Grazie per il vostro ordine!',
       message:
         "Il vostro ordine è stato effettuato con successo. Riceverete a breve un'e-mail di conferma.",
+    },
+    contact: {
+      headline: 'Invia richiesta',
+      subline: 'Avete domande o desiderate una consulenza personalizzata? Scriveteci.',
+      name: 'Nome *',
+      email: 'E-mail *',
+      phone: 'Telefono (facoltativo)',
+      message: 'Il vostro messaggio *',
+      send: 'Invia messaggio',
+      success: 'Grazie! Vi ricontatteremo a breve.',
+      error: "Errore nell'invio. Si prega di riprovare.",
     },
   },
 };

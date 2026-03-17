@@ -20,8 +20,8 @@ export default function SuccessPage() {
           <h3 className="font-heading font-bold mb-3">Nächste Schritte</h3>
           <ul className="space-y-2 text-muted">
             <li>Ihre Rechnung wird automatisch per E-Mail zugestellt</li>
-            <li>Lieferzeit: 5–7 Werktage innerhalb DE/AT/CH</li>
-            <li>Bei Fragen: <a href="mailto:rainer.roloff@comms-connect.de" className="text-primary hover:underline">rainer.roloff@comms-connect.de</a></li>
+            <li>Lieferzeit: 5–7 Werktage innerhalb der EU</li>
+            <li>Bei Fragen: <a href="mailto:info@case-connect.de" className="text-primary hover:underline">info@case-connect.de</a></li>
           </ul>
         </div>
         <Link

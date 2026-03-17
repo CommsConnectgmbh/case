@@ -9,6 +9,7 @@ import BatteryCompat from '@/components/sections/BatteryCompat';
 import TechSpecs from '@/components/sections/TechSpecs';
 import RemoteManagement from '@/components/sections/RemoteManagement';
 import Connectivity from '@/components/sections/Connectivity';
+import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 import CartDrawer from '@/components/ui/CartDrawer';
 import FloatingCart from '@/components/ui/FloatingCart';
@@ -28,6 +29,7 @@ export default function Home() {
         <TechSpecs />
         <RemoteManagement />
         <Connectivity />
+        <Contact />
       </main>
       <Footer />
       <CartDrawer />

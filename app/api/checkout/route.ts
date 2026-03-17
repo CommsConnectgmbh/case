@@ -38,7 +38,11 @@ export async function POST(req: Request) {
       line_items,
       billing_address_collection: 'required',
       shipping_address_collection: {
-        allowed_countries: ['DE', 'AT', 'CH'],
+        allowed_countries: [
+          'DE', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI',
+          'FR', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL',
+          'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE',
+        ],
       },
       customer_creation: 'always',
       invoice_creation: {
