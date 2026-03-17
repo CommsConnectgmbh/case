@@ -12,7 +12,6 @@ interface ProductCardProps {
   name: string;
   subtitle: string;
   badge: string;
-  priceBrutto: number;
   priceNetto: number;
   image: string;
   features: readonly string[];
@@ -20,7 +19,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({
-  id, name, subtitle, badge, priceBrutto, priceNetto, image, features, highlighted,
+  id, name, subtitle, badge, priceNetto, image, features, highlighted,
 }: ProductCardProps) {
   const addItem = useCartStore((s) => s.addItem);
   const t = useTranslation();
@@ -47,9 +46,11 @@ export default function ProductCard({
       <p className="text-muted text-sm mb-6">{subtitle}</p>
 
       <div className="mb-8">
-        <span className="font-heading text-4xl font-bold tracking-tight">{formatPrice(priceBrutto)}</span>
-        <span className="text-muted text-sm ml-2">inkl. MwSt.</span>
-        <div className="text-muted text-xs mt-1">Netto: {formatPrice(priceNetto)}</div>
+        <span className="text-muted text-xs uppercase tracking-wider">UVP</span>
+        <div>
+          <span className="font-heading text-4xl font-bold tracking-tight">{formatPrice(priceNetto)}</span>
+          <span className="text-muted text-sm ml-2">zzgl. MwSt.</span>
+        </div>
       </div>
 
       <ul className="space-y-2.5 mb-8 flex-1">
@@ -64,7 +65,7 @@ export default function ProductCard({
       <motion.button
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.98 }}
-        onClick={() => addItem({ productId: id, name, priceBrutto })}
+        onClick={() => addItem({ productId: id, name, priceNetto })}
         className="w-full py-3.5 font-medium rounded-full text-[15px] transition-all duration-300 bg-cta text-white hover:bg-cta/90"
       >
         {t.cart.addToCart}

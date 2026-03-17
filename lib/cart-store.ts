@@ -3,7 +3,7 @@ import { create } from 'zustand';
 export interface CartItem {
   productId: string;
   name: string;
-  priceBrutto: number;
+  priceNetto: number;
   quantity: number;
 }
 
@@ -48,5 +48,5 @@ export const useCartStore = create<CartStore>((set) => ({
 }));
 
 export function getCartTotal(items: CartItem[]): number {
-  return items.reduce((sum, item) => sum + item.priceBrutto * item.quantity, 0);
+  return items.reduce((sum, item) => sum + item.priceNetto * item.quantity, 0);
 }

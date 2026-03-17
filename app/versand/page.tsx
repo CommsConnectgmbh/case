@@ -46,7 +46,7 @@ export default function VersandPage() {
         <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">Rechnungsstellung</h2>
         <p>
           Nach erfolgreicher Bestellung erhalten Sie automatisch eine Rechnung per E-Mail. Alle Preise
-          verstehen sich als Endpreise inklusive der gesetzlichen Mehrwertsteuer.
+          verstehen sich als Nettopreise zuzüglich der gesetzlichen Mehrwertsteuer.
         </p>
       </section>
 

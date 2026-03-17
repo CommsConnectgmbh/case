@@ -90,7 +90,7 @@ export default function CartDrawer() {
                           <Plus size={14} />
                         </button>
                       </div>
-                      <span className="font-bold text-sm">{formatPrice(item.priceBrutto * item.quantity)}</span>
+                      <span className="font-bold text-sm">{formatPrice(item.priceNetto * item.quantity)}</span>
                     </div>
                   </div>
                 ))
@@ -100,7 +100,7 @@ export default function CartDrawer() {
             {items.length > 0 && (
               <div className="p-6 border-t border-white/10">
                 <div className="flex justify-between mb-4">
-                  <span className="text-muted">Gesamt (inkl. MwSt.)</span>
+                  <span className="text-muted">Gesamt (zzgl. MwSt.)</span>
                   <span className="font-heading text-xl font-bold">{formatPrice(total)}</span>
                 </div>
                 <button

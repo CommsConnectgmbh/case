@@ -49,7 +49,7 @@ export default function AGBPage() {
       <section>
         <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">4. Preise und Zahlung</h2>
         <p>
-          Alle Preise sind Endpreise und enthalten die gesetzliche Mehrwertsteuer. Zuzüglich anfallender
+          Alle Preise sind Nettopreise zuzüglich der gesetzlichen Mehrwertsteuer. Zuzüglich anfallender
           Versandkosten, die im Bestellprozess ausgewiesen werden. Die Zahlung erfolgt über die im
           Online-Shop angebotenen Zahlungsmethoden (Kreditkarte, SEPA-Lastschrift).
         </p>
