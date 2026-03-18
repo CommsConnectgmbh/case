@@ -2,12 +2,11 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Play, Volume2, VolumeX } from 'lucide-react';
+import { Play, Volume2 } from 'lucide-react';
 
 export default function LaunchVideo() {
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -17,7 +16,6 @@ export default function LaunchVideo() {
       videoRef.current.muted = false;
       setIsMuted(false);
       videoRef.current.play();
-      setIsPlaying(true);
     }
   };
 
@@ -61,7 +59,6 @@ export default function LaunchVideo() {
             playsInline
             autoPlay
             loop
-            onPlay={() => setIsPlaying(true)}
             className="w-full aspect-video object-cover"
           />
 
