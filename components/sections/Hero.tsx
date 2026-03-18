@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
@@ -11,6 +11,14 @@ export default function Hero() {
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleSound = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -54,19 +62,21 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30" />
       </motion.div>
 
-      {/* Headline overlay */}
-      <div className="absolute inset-0 h-screen w-full sticky top-0 flex items-center justify-center z-[5] pointer-events-none">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
-          className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white text-center px-6 drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
-          style={{ textShadow: '0 2px 40px rgba(0,0,0,0.6)' }}
-        >
-          <span className="block">{t.hero.headlineLine1}</span>
-          <span className="block">{t.hero.headlineLine2}</span>
-        </motion.h1>
-      </div>
+      {/* Headline overlay — only visible before video loads */}
+      {!videoLoaded && (
+        <div className="absolute inset-0 h-screen w-full sticky top-0 flex items-center justify-center z-[5] pointer-events-none">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+            className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white text-center px-6 drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+            style={{ textShadow: '0 2px 40px rgba(0,0,0,0.6)' }}
+          >
+            <span className="block">{t.hero.headlineLine1}</span>
+            <span className="block">{t.hero.headlineLine2}</span>
+          </motion.h1>
+        </div>
+      )}
 
       {/* Bottom gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-[40vh] bg-gradient-to-t from-bg via-bg/60 to-transparent pointer-events-none" />
@@ -101,6 +111,20 @@ export default function Hero() {
           </div>
         </motion.div>
       </motion.div>
+
+      {/* Sound toggle button */}
+      {videoLoaded && (
+        <motion.button
+          onClick={toggleSound}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2 }}
+          className="absolute top-6 right-6 z-20 p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all duration-300"
+          aria-label={isMuted ? 'Ton einschalten' : 'Ton ausschalten'}
+        >
+          {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+        </motion.button>
+      )}
 
       {/* Scroll indicator */}
       <motion.div
