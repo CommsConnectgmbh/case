@@ -1,40 +1,57 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Play } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
 export default function Hero() {
   const t = useTranslation();
   const ref = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
   const imageOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
   return (
     <section ref={ref} className="relative h-[120vh] w-full overflow-hidden">
-      {/* Parallax + Scale image */}
+      {/* Video background */}
       <motion.div
         style={{ scale: imageScale, opacity: imageOpacity }}
         className="absolute inset-0 h-screen w-full sticky top-0"
       >
+        {/* Fallback image while video loads */}
         <Image
           src="/images/hero-bg.png"
           alt="5G Case by Comms Connect – Kein Netz? Unser Problem."
           fill
-          className="object-cover object-center"
+          className={`object-cover object-center transition-opacity duration-1000 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
           priority
           quality={90}
         />
+
+        {/* Launch video */}
+        <video
+          ref={videoRef}
+          src="/videos/launch-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          onCanPlay={() => setVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+        />
+
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
       </motion.div>
 
       {/* Headline overlay */}
