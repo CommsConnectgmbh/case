@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
 
 export default function LaunchVideo() {
   const ref = useRef(null);
@@ -17,8 +17,25 @@ export default function LaunchVideo() {
       videoRef.current.pause();
       setIsPlaying(false);
     } else {
+      // On mobile, go fullscreen automatically
+      const isMobile = window.innerWidth < 768;
+      if (isMobile && videoRef.current.requestFullscreen) {
+        videoRef.current.requestFullscreen().catch(() => {});
+      } else if (isMobile && (videoRef.current as HTMLVideoElement & { webkitEnterFullscreen?: () => void }).webkitEnterFullscreen) {
+        (videoRef.current as HTMLVideoElement & { webkitEnterFullscreen: () => void }).webkitEnterFullscreen();
+      }
       videoRef.current.play();
       setIsPlaying(true);
+    }
+  };
+
+  const goFullscreen = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    if (videoRef.current.requestFullscreen) {
+      videoRef.current.requestFullscreen().catch(() => {});
+    } else if ((videoRef.current as HTMLVideoElement & { webkitEnterFullscreen?: () => void }).webkitEnterFullscreen) {
+      (videoRef.current as HTMLVideoElement & { webkitEnterFullscreen: () => void }).webkitEnterFullscreen();
     }
   };
 
@@ -83,15 +100,24 @@ export default function LaunchVideo() {
             </div>
           )}
 
-          {/* Sound toggle — visible when playing */}
+          {/* Controls — visible when playing */}
           {isPlaying && (
-            <button
-              onClick={toggleMute}
-              className="absolute top-4 right-4 p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all duration-300 z-10"
-              aria-label={isMuted ? 'Ton einschalten' : 'Ton ausschalten'}
-            >
-              {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-            </button>
+            <div className="absolute top-4 right-4 flex gap-2 z-10">
+              <button
+                onClick={toggleMute}
+                className="p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all duration-300"
+                aria-label={isMuted ? 'Ton einschalten' : 'Ton ausschalten'}
+              >
+                {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              </button>
+              <button
+                onClick={goFullscreen}
+                className="p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all duration-300 hidden md:flex items-center justify-center"
+                aria-label="Vollbild"
+              >
+                <Maximize size={18} />
+              </button>
+            </div>
           )}
         </motion.div>
       </div>
