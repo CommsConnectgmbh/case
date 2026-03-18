@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown, Play } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
