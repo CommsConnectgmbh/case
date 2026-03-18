@@ -2,28 +2,31 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Play, Volume2 } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 
 export default function LaunchVideo() {
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.muted = false;
-      setIsMuted(false);
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
       videoRef.current.play();
+      setIsPlaying(true);
     }
   };
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    videoRef.current.muted = !videoRef.current.muted;
+    setIsMuted(videoRef.current.muted);
   };
 
   return (
@@ -49,44 +52,45 @@ export default function LaunchVideo() {
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
-          className="relative rounded-2xl overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] border border-white/5"
+          className="relative rounded-2xl overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] border border-white/5 cursor-pointer group"
+          onClick={togglePlay}
         >
-          {/* Video element */}
+          {/* Video element — paused by default, shows first frame as poster */}
           <video
             ref={videoRef}
             src="/videos/launch-video.mp4"
-            muted
             playsInline
-            autoPlay
-            loop
+            preload="metadata"
+            onEnded={() => setIsPlaying(false)}
             className="w-full aspect-video object-cover"
           />
 
-          {/* Play button overlay — shows when muted/autoplay */}
-          {isMuted && (
-            <motion.button
-              onClick={handlePlay}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors duration-300 cursor-pointer group"
-            >
+          {/* Play overlay — visible when paused */}
+          {!isPlaying && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
                 <Play size={32} className="text-white ml-1" fill="white" />
               </div>
-              <span className="absolute bottom-8 text-white/60 text-sm tracking-wider">
-                MIT TON ABSPIELEN
-              </span>
-            </motion.button>
+            </div>
           )}
 
-          {/* Mute toggle — visible when unmuted */}
-          {!isMuted && (
+          {/* Pause hint — subtle, shows on hover when playing */}
+          {isPlaying && (
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-16 h-16 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center">
+                <Pause size={28} className="text-white" />
+              </div>
+            </div>
+          )}
+
+          {/* Sound toggle — visible when playing */}
+          {isPlaying && (
             <button
               onClick={toggleMute}
               className="absolute top-4 right-4 p-3 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all duration-300 z-10"
-              aria-label="Ton ausschalten"
+              aria-label={isMuted ? 'Ton einschalten' : 'Ton ausschalten'}
             >
-              <Volume2 size={18} />
+              {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
             </button>
           )}
         </motion.div>
