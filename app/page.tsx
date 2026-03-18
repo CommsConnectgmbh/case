@@ -1,6 +1,7 @@
 import NavBar from '@/components/sections/NavBar';
 import Hero from '@/components/sections/Hero';
 import TrustBar from '@/components/sections/TrustBar';
+import LaunchVideo from '@/components/sections/LaunchVideo';
 import Problem from '@/components/sections/Problem';
 import ProductIntro from '@/components/sections/ProductIntro';
 import HowItWorks from '@/components/sections/HowItWorks';
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <LaunchVideo />
         <Problem />
         <ProductIntro />
         <HowItWorks />
