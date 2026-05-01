@@ -41,6 +41,7 @@ export default function Footer() {
               <li>Comms Connect GmbH</li>
               <li>Tal 30, 80331 München</li>
               <li><a href="mailto:info@case-connect.de" className="hover:text-primary transition-colors duration-300">info@case-connect.de</a></li>
+              <li><a href="mailto:info@case-connect.de" className="hover:text-primary transition-colors duration-300">info@case-connect.de</a></li>
               <li><a href="tel:+498945221556" className="hover:text-primary transition-colors duration-300">+49 89 4522 1556</a></li>
             </ul>
             <div className="flex items-center gap-3 mt-5">
