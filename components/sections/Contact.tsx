@@ -61,38 +61,87 @@ export default function Contact() {
           className="space-y-5"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="flex flex-col gap-1.5">
+              <label
+                htmlFor="contact-name"
+                className="text-xs font-medium text-muted uppercase tracking-wider px-1"
+              >
+                {t.contact.name}
+                <span aria-hidden="true" className="text-primary ml-1">*</span>
+              </label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                required
+                autoComplete="name"
+                aria-required="true"
+                placeholder={t.contact.name}
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors"
+              />
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <label
+                htmlFor="contact-email"
+                className="text-xs font-medium text-muted uppercase tracking-wider px-1"
+              >
+                {t.contact.email}
+                <span aria-hidden="true" className="text-primary ml-1">*</span>
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                aria-required="true"
+                placeholder={t.contact.email}
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="contact-phone"
+              className="text-xs font-medium text-muted uppercase tracking-wider px-1"
+            >
+              {t.contact.phone}
+            </label>
             <input
-              type="text"
-              required
-              placeholder={t.contact.name}
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors"
-            />
-            <input
-              type="email"
-              required
-              placeholder={t.contact.email}
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              placeholder={t.contact.phone}
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
               className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors"
             />
           </div>
-          <input
-            type="tel"
-            placeholder={t.contact.phone}
-            value={form.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors"
-          />
-          <textarea
-            required
-            rows={5}
-            placeholder={t.contact.message}
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors resize-none"
-          />
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="contact-message"
+              className="text-xs font-medium text-muted uppercase tracking-wider px-1"
+            >
+              {t.contact.message}
+              <span aria-hidden="true" className="text-primary ml-1">*</span>
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              required
+              rows={5}
+              aria-required="true"
+              placeholder={t.contact.message}
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-muted/50 focus:border-primary/50 focus:outline-none transition-colors resize-none"
+            />
+          </div>
 
           <button
             type="submit"
