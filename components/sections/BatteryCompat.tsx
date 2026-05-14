@@ -27,20 +27,20 @@ export default function BatteryCompat() {
       <div className="max-w-6xl mx-auto relative">
         {/* Headline section — Apple-style centered typography */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.45 }}
           className="text-primary text-xs font-medium tracking-[0.25em] uppercase text-center mb-5"
         >
           Universelle Kompatibilität
         </motion.p>
 
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-5 leading-[1.05] tracking-tight"
         >
           {t.batteryCompat.headline}
@@ -88,12 +88,12 @@ export default function BatteryCompat() {
           {brands.map((brand, i) => (
             <motion.div
               key={brand.name}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                delay: 0.1 + i * 0.05,
-                duration: 0.5,
+                delay: 0.06 + i * 0.035,
+                duration: 0.4,
                 ease: [0.25, 0.4, 0.25, 1],
               }}
               className="group"
