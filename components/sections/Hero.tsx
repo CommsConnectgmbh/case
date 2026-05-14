@@ -43,9 +43,9 @@ export default function Hero() {
       {/* Headline overlay */}
       <div className="absolute inset-0 h-screen w-full sticky top-0 flex items-center justify-center z-[5] pointer-events-none">
         <motion.h1
-          initial={{ opacity: 0, y: 12, filter: 'blur(4px)' }}
-          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
           className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white text-center px-6 drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
           style={{ textShadow: '0 2px 40px rgba(0,0,0,0.6)' }}
         >
