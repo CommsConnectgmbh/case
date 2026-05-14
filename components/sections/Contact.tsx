@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
@@ -34,10 +34,10 @@ export default function Contact() {
     <section id="kontakt" className="py-32 px-6">
       <div className="max-w-2xl mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           className="font-heading text-4xl md:text-5xl font-bold text-center mb-4"
         >
           {t.contact.headline}
@@ -156,12 +156,36 @@ export default function Contact() {
             )}
           </button>
 
-          {status === 'sent' && (
-            <p className="text-primary text-center text-sm">{t.contact.success}</p>
-          )}
-          {status === 'error' && (
-            <p className="text-red-400 text-center text-sm">{t.contact.error}</p>
-          )}
+          <AnimatePresence mode="wait">
+            {status === 'sent' && (
+              <motion.p
+                key="sent"
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -2 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+                role="status"
+                aria-live="polite"
+                className="text-primary text-center text-sm"
+              >
+                {t.contact.success}
+              </motion.p>
+            )}
+            {status === 'error' && (
+              <motion.p
+                key="error"
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -2 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+                role="alert"
+                aria-live="assertive"
+                className="text-red-400 text-center text-sm"
+              >
+                {t.contact.error}
+              </motion.p>
+            )}
+          </AnimatePresence>
         </motion.form>
       </div>
     </section>

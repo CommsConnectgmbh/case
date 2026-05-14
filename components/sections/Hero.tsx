@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
 export default function Hero() {
@@ -26,14 +25,17 @@ export default function Hero() {
         style={{ scale: imageScale, opacity: imageOpacity }}
         className="absolute inset-0 h-screen w-full sticky top-0"
       >
-        <Image
-          src="/images/hero-bg.png"
-          alt="5G Case by Comms Connect – Kein Netz? Unser Problem."
-          fill
-          className="object-cover object-center"
-          priority
-          quality={90}
-        />
+        <picture>
+          <source srcSet="/images/hero-bg.avif" type="image/avif" />
+          <source srcSet="/images/hero-bg.webp" type="image/webp" />
+          <img
+            src="/images/hero-bg.png"
+            alt="5G Case by Comms Connect – Kein Netz? Unser Problem."
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />
       </motion.div>
@@ -41,9 +43,9 @@ export default function Hero() {
       {/* Headline overlay */}
       <div className="absolute inset-0 h-screen w-full sticky top-0 flex items-center justify-center z-[5] pointer-events-none">
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+          initial={{ opacity: 0, y: 12, filter: 'blur(4px)' }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
           className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white text-center px-6 drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
           style={{ textShadow: '0 2px 40px rgba(0,0,0,0.6)' }}
         >
@@ -61,9 +63,9 @@ export default function Hero() {
         className="absolute bottom-[15vh] left-0 right-0 z-10"
       >
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+          transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
           className="text-center px-6"
         >
           <p className="text-[15px] md:text-lg text-white/70 mb-8 max-w-xl mx-auto tracking-wide">

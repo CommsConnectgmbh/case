@@ -12,10 +12,10 @@ export default function UseCases() {
     <section id="usecases" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           className="font-heading text-4xl md:text-6xl font-bold text-center mb-6"
         >
           {t.useCases.headline}
@@ -36,10 +36,10 @@ export default function UseCases() {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-30px' }}
-                transition={{ duration: 0.7, delay: i * 0.08, ease: [0.25, 0.4, 0.25, 1] }}
+                transition={{ duration: 0.45, delay: i * 0.06, ease: [0.25, 0.4, 0.25, 1] }}
                 whileHover={{ y: -4, transition: { duration: 0.3 } }}
                 className="group relative rounded-3xl p-8 bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-primary/20 transition-all duration-500 cursor-default"
               >
