@@ -16,6 +16,16 @@ export interface Translations {
     subline: string;
     ctaBuy: string;
     ctaMore: string;
+    eyebrow?: string;
+    subhead?: string;
+    ctaDemo?: string;
+    ctaDatasheet?: string;
+    statSetup?: string;
+    statSetupLabel?: string;
+    statUptime?: string;
+    statUptimeLabel?: string;
+    statRange?: string;
+    statRangeLabel?: string;
   };
   problem: {
     headline: string;
@@ -152,6 +162,17 @@ export const translations: Record<Language, Translations> = {
         'Das portable Enterprise-5G-Netzwerk. Einstecken. Einschalten. Online.',
       ctaBuy: 'Jetzt kaufen',
       ctaMore: 'Mehr erfahren',
+      eyebrow: '5G Industrie-Konnektivität · Plug & Play',
+      subhead:
+        'Industrial-Internet in einem Trolley. Multi-Carrier-5G, IP67-Gehäuse, Reichweite bis 500 m. Aufgebaut, bevor die Diskussion über Netzabdeckung anfängt.',
+      ctaDemo: 'Live-Demo anfragen',
+      ctaDatasheet: 'Datenblatt',
+      statSetup: '< 60 s',
+      statSetupLabel: 'Setup',
+      statUptime: '99,9 %',
+      statUptimeLabel: 'Uptime',
+      statRange: '500 m',
+      statRangeLabel: 'Reichweite',
     },
     problem: {
       headline:
@@ -372,6 +393,17 @@ export const translations: Record<Language, Translations> = {
         'The portable enterprise 5G network. Plug in. Power on. Online.',
       ctaBuy: 'Buy now',
       ctaMore: 'Learn more',
+      eyebrow: '5G Industrial Connectivity · Plug & Play',
+      subhead:
+        'Industrial internet in a trolley. Multi-carrier 5G, IP67 enclosure, up to 500 m range. Online before the meeting about network coverage even starts.',
+      ctaDemo: 'Request live demo',
+      ctaDatasheet: 'Datasheet',
+      statSetup: '< 60 s',
+      statSetupLabel: 'Setup',
+      statUptime: '99.9%',
+      statUptimeLabel: 'Uptime',
+      statRange: '500 m',
+      statRangeLabel: 'Range',
     },
     problem: {
       headline:
@@ -592,6 +624,17 @@ export const translations: Record<Language, Translations> = {
         'Le réseau 5G portable professionnel. Brancher. Allumer. En ligne.',
       ctaBuy: 'Acheter maintenant',
       ctaMore: 'En savoir plus',
+      eyebrow: 'Connectivité 5G industrielle · Plug & Play',
+      subhead:
+        "Internet industriel dans un trolley. 5G multi-opérateur, boîtier IP67, portée jusqu'à 500 m. En ligne avant même la réunion sur la couverture réseau.",
+      ctaDemo: 'Demander une démo',
+      ctaDatasheet: 'Fiche technique',
+      statSetup: '< 60 s',
+      statSetupLabel: 'Installation',
+      statUptime: '99,9 %',
+      statUptimeLabel: 'Disponibilité',
+      statRange: '500 m',
+      statRangeLabel: 'Portée',
     },
     problem: {
       headline:
@@ -812,6 +855,17 @@ export const translations: Record<Language, Translations> = {
         'La red 5G portátil empresarial. Enchufar. Encender. En línea.',
       ctaBuy: 'Comprar ahora',
       ctaMore: 'Más información',
+      eyebrow: 'Conectividad 5G industrial · Plug & Play',
+      subhead:
+        'Internet industrial en un trolley. 5G multi-operador, carcasa IP67, alcance de hasta 500 m. En línea antes de que comience la reunión sobre cobertura.',
+      ctaDemo: 'Solicitar demo',
+      ctaDatasheet: 'Ficha técnica',
+      statSetup: '< 60 s',
+      statSetupLabel: 'Instalación',
+      statUptime: '99,9 %',
+      statUptimeLabel: 'Disponibilidad',
+      statRange: '500 m',
+      statRangeLabel: 'Alcance',
     },
     problem: {
       headline:
@@ -1032,6 +1086,17 @@ export const translations: Record<Language, Translations> = {
         'La rete 5G portatile aziendale. Collegare. Accendere. Online.',
       ctaBuy: 'Acquista ora',
       ctaMore: 'Scopri di più',
+      eyebrow: 'Connettività 5G industriale · Plug & Play',
+      subhead:
+        'Internet industriale in un trolley. 5G multi-operatore, custodia IP67, portata fino a 500 m. Online prima ancora che inizi la riunione sulla copertura.',
+      ctaDemo: 'Richiedi demo',
+      ctaDatasheet: 'Scheda tecnica',
+      statSetup: '< 60 s',
+      statSetupLabel: 'Installazione',
+      statUptime: '99,9 %',
+      statUptimeLabel: 'Uptime',
+      statRange: '500 m',
+      statRangeLabel: 'Portata',
     },
     problem: {
       headline:
