@@ -7,11 +7,13 @@ const PRICE_MAP: Record<string, string | undefined> = {
   'addon-einhell-kit': process.env.STRIPE_PRICE_EINHELL_KIT,
   'adapter-bosch': process.env.STRIPE_PRICE_ADAPTER_BOSCH,
   'adapter-dewalt': process.env.STRIPE_PRICE_ADAPTER_DEWALT,
-  'adapter-festool': process.env.STRIPE_PRICE_ADAPTER_FESTOOL,
+  'adapter-milwaukee': process.env.STRIPE_PRICE_ADAPTER_MILWAUKEE,
   'adapter-makita': process.env.STRIPE_PRICE_ADAPTER_MAKITA,
+  'adapter-festool': process.env.STRIPE_PRICE_ADAPTER_FESTOOL,
   'adapter-metabo': process.env.STRIPE_PRICE_ADAPTER_METABO,
   'adapter-einhell': process.env.STRIPE_PRICE_ADAPTER_EINHELL,
-  'adapter-flex': process.env.STRIPE_PRICE_ADAPTER_FLEX,
+  'adapter-hikoki': process.env.STRIPE_PRICE_ADAPTER_HIKOKI,
+  'adapter-fein': process.env.STRIPE_PRICE_ADAPTER_FEIN,
 };
 
 export async function POST(req: Request) {
@@ -25,13 +27,29 @@ export async function POST(req: Request) {
       );
     }
 
-    const line_items = items.map((item: { productId: string; quantity: number }) => {
-      const priceId = PRICE_MAP[item.productId];
-      if (!priceId) {
-        throw new Error(`Unbekanntes Produkt: ${item.productId}`);
-      }
-      return { price: priceId, quantity: item.quantity };
-    });
+    // Map cart items to Stripe line items. A single unknown or unconfigured
+    // product (e.g. missing price ID) must never kill the whole checkout —
+    // skip the offending position and let the rest of the cart through.
+    const skipped: string[] = [];
+    const line_items = (items as { productId: string; quantity: number }[])
+      .map((item) => {
+        const priceId = PRICE_MAP[item.productId];
+        if (!priceId) {
+          skipped.push(item.productId);
+          console.error(`Checkout: skipping unknown/unconfigured product: ${item.productId}`);
+          return null;
+        }
+        const quantity = Math.max(1, Math.floor(Number(item.quantity) || 1));
+        return { price: priceId, quantity };
+      })
+      .filter((li): li is { price: string; quantity: number } => li !== null);
+
+    if (line_items.length === 0) {
+      return NextResponse.json(
+        { error: 'Keine gültigen Artikel im Warenkorb.' },
+        { status: 400 }
+      );
+    }
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',

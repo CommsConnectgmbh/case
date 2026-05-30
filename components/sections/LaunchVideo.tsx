@@ -72,15 +72,18 @@ export default function LaunchVideo() {
           className="relative rounded-2xl overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] border border-white/5 cursor-pointer group"
           onClick={togglePlay}
         >
-          {/* Video element — paused by default, shows first frame as poster */}
+          {/* Video element — paused by default, shows poster until played */}
           <video
             ref={videoRef}
-            src="/videos/launch-video.mp4"
+            poster="/images/launch-poster.webp"
             playsInline
             preload="metadata"
             onEnded={() => setIsPlaying(false)}
             className="w-full aspect-video object-cover"
-          />
+          >
+            <source src="/videos/launch-video.webm" type="video/webm" />
+            <source src="/videos/launch-video.mp4" type="video/mp4" />
+          </video>
 
           {/* Play overlay — visible when paused */}
           <AnimatePresence>

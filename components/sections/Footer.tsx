@@ -7,7 +7,7 @@ import { Linkedin, Star, MessageCircle, Instagram, Facebook } from 'lucide-react
 export default function Footer() {
   const t = useTranslation();
   return (
-    <footer id="contact" className="py-20 px-6 border-t border-white/[0.06]">
+    <footer id="footer" className="py-20 px-6 border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
@@ -40,7 +40,6 @@ export default function Footer() {
             <ul className="space-y-2.5 text-[15px] text-muted/80">
               <li>Comms Connect GmbH</li>
               <li>Tal 30, 80331 München</li>
-              <li><a href="mailto:info@case-connect.de" className="hover:text-primary transition-colors duration-300">info@case-connect.de</a></li>
               <li><a href="mailto:info@case-connect.de" className="hover:text-primary transition-colors duration-300">info@case-connect.de</a></li>
               <li><a href="tel:+498945221556" className="hover:text-primary transition-colors duration-300">+49 89 4522 1556</a></li>
             </ul>

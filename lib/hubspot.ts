@@ -22,6 +22,27 @@ export async function createHubSpotContactAndDeal(session: {
   const phone = session.customer_details?.phone || '';
   const amount = (session.amount_total || 0) / 100;
 
+  // Idempotency: Stripe may redeliver checkout.session.completed. The deal
+  // stores the session id in `description` — if a deal already exists for this
+  // session, skip to avoid duplicate deals in HubSpot.
+  try {
+    const dealSearch = await hubspotFetch('/crm/v3/objects/deals/search', {
+      filterGroups: [
+        {
+          filters: [
+            { propertyName: 'description', operator: 'EQ', value: `Stripe Session: ${session.id}` },
+          ],
+        },
+      ],
+      properties: ['dealname'],
+      limit: 1,
+    });
+    const existing = await dealSearch.json();
+    if (existing?.results?.length > 0) return;
+  } catch (err) {
+    console.error('HubSpot deal dedup check failed (continuing):', err);
+  }
+
   const contactRes = await hubspotFetch('/crm/v3/objects/contacts', {
     properties: {
       firstname: name.split(' ')[0] || name,
@@ -31,8 +52,25 @@ export async function createHubSpotContactAndDeal(session: {
       hs_lead_status: 'NEW',
     },
   });
-  const contact = await contactRes.json();
-  const contactId = contact.id;
+  let contactId: string | undefined;
+  if (contactRes.ok) {
+    const contact = await contactRes.json();
+    contactId = contact?.id;
+  } else {
+    // Contact likely already exists (duplicate email) — look it up so the
+    // deal can still be associated instead of created orphaned.
+    console.error('HubSpot contact create failed:', contactRes.status, await contactRes.text());
+    if (email) {
+      const lookup = await hubspotFetch('/crm/v3/objects/contacts/search', {
+        filterGroups: [
+          { filters: [{ propertyName: 'email', operator: 'EQ', value: email }] },
+        ],
+        limit: 1,
+      });
+      const found = await lookup.json().catch(() => null);
+      contactId = found?.results?.[0]?.id;
+    }
+  }
 
   await hubspotFetch('/crm/v3/objects/deals', {
     properties: {
