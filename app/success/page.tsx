@@ -1,13 +1,18 @@
+import type { Metadata } from 'next';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import ClearCartOnMount from './ClearCartOnMount';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Bestellung bestätigt | 5G Case – Comms Connect',
+  robots: { index: false, follow: false },
 };
 
 export default function SuccessPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-6">
+      {/* Clears the cart once after a successful checkout to prevent re-orders */}
+      <ClearCartOnMount />
       <div className="max-w-lg text-center">
         <CheckCircle size={64} className="text-primary mx-auto mb-6" />
         <h1 className="font-heading text-4xl font-bold mb-4">

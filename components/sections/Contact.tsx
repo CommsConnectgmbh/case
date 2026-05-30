@@ -6,7 +6,7 @@ import { Send } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', company: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const t = useTranslation();
 
@@ -21,7 +21,7 @@ export default function Contact() {
       });
       if (res.ok) {
         setStatus('sent');
-        setForm({ name: '', email: '', phone: '', message: '' });
+        setForm({ name: '', email: '', phone: '', message: '', company: '' });
       } else {
         setStatus('error');
       }
@@ -60,6 +60,20 @@ export default function Contact() {
           transition={{ delay: 0.3, duration: 0.7 }}
           className="space-y-5"
         >
+          {/* Honeypot — hidden from humans, catches bots. Must stay empty. */}
+          <div className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+            <label htmlFor="contact-company">Firma (bitte leer lassen)</label>
+            <input
+              id="contact-company"
+              name="company"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={form.company}
+              onChange={(e) => setForm({ ...form, company: e.target.value })}
+            />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-1.5">
               <label

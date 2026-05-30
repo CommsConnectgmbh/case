@@ -25,7 +25,7 @@ export default function NavBar() {
     { href: '#shop', label: t.nav.links.produkte },
     { href: '#features', label: t.nav.links.features },
     { href: '#usecases', label: t.nav.links.anwendungen },
-    { href: '#contact', label: t.nav.links.kontakt },
+    { href: '#kontakt', label: t.nav.links.kontakt },
   ];
 
   return (

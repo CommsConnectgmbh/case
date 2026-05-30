@@ -90,14 +90,14 @@ export default function Hero() {
               className="mt-9 flex flex-col sm:flex-row gap-3"
             >
               <a
-                href="#contact"
+                href="#kontakt"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-cta text-white font-medium rounded-full text-[14.5px] hover:bg-cta/90 transition-all duration-300 shadow-[0_8px_30px_-8px_rgba(255,107,53,0.55)] hover:shadow-[0_10px_40px_-6px_rgba(255,107,53,0.75)]"
               >
                 {ctaPrimary}
                 <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
               </a>
               <a
-                href="#techspecs"
+                href="#technik"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/15 bg-white/[0.03] text-white font-medium rounded-full text-[14.5px] hover:bg-white/[0.08] hover:border-white/25 transition-all duration-300 backdrop-blur-sm"
               >
                 <FileText size={15} className="opacity-80" />
