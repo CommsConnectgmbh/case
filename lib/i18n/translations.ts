@@ -114,7 +114,9 @@ export interface Translations {
       datenschutz: string;
       agb: string;
       widerruf: string;
+      widerrufFunktion: string;
       versand: string;
+      cookieEinstellungen: string;
     };
     copyright: string;
     trademark: string;
@@ -345,7 +347,9 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Datenschutz',
         agb: 'AGB',
         widerruf: 'Widerrufsbelehrung',
+        widerrufFunktion: 'Widerruf',
         versand: 'Versand & Zahlung',
+        cookieEinstellungen: 'Cookie-Einstellungen',
       },
       copyright: '© 2026 Comms Connect GmbH. Alle Rechte vorbehalten.',
       trademark: 'Case Connect ist eine Marke der Comms Connect GmbH.',
@@ -576,7 +580,9 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Privacy Policy',
         agb: 'Terms & Conditions',
         widerruf: 'Cancellation Policy',
+        widerrufFunktion: 'Cancel Contract',
         versand: 'Shipping & Payment',
+        cookieEinstellungen: 'Cookie Settings',
       },
       copyright: '© 2026 Comms Connect GmbH. All rights reserved.',
       trademark: 'Case Connect is a brand of Comms Connect GmbH.',
@@ -807,7 +813,9 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Politique de confidentialité',
         agb: 'Conditions générales',
         widerruf: 'Droit de rétractation',
+        widerrufFunktion: 'Rétractation',
         versand: 'Livraison & Paiement',
+        cookieEinstellungen: 'Paramètres des cookies',
       },
       copyright: '© 2026 Comms Connect GmbH. Tous droits réservés.',
       trademark: 'Case Connect est une marque de Comms Connect GmbH.',
@@ -1038,7 +1046,9 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Política de privacidad',
         agb: 'Condiciones generales',
         widerruf: 'Derecho de desistimiento',
+        widerrufFunktion: 'Desistimiento',
         versand: 'Envío y pago',
+        cookieEinstellungen: 'Configuración de cookies',
       },
       copyright: '© 2026 Comms Connect GmbH. Todos los derechos reservados.',
       trademark: 'Case Connect es una marca de Comms Connect GmbH.',
@@ -1269,7 +1279,9 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Informativa sulla privacy',
         agb: 'Condizioni generali',
         widerruf: 'Diritto di recesso',
+        widerrufFunktion: 'Recesso',
         versand: 'Spedizione e pagamento',
+        cookieEinstellungen: 'Impostazioni cookie',
       },
       copyright: '© 2026 Comms Connect GmbH. Tutti i diritti riservati.',
       trademark: 'Case Connect è un marchio di Comms Connect GmbH.',
