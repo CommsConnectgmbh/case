@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import CookieSettingsLink from '@/components/ui/CookieSettingsLink';
 
 export default function LegalLayout({
   title,
@@ -40,8 +41,10 @@ export default function LegalLayout({
             <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
             <Link href="/agb" className="hover:text-white transition-colors">AGB</Link>
+            <Link href="/widerruf" className="hover:text-white transition-colors">Widerruf</Link>
             <Link href="/widerrufsbelehrung" className="hover:text-white transition-colors">Widerrufsbelehrung</Link>
             <Link href="/versand" className="hover:text-white transition-colors">Versand & Zahlung</Link>
+            <CookieSettingsLink className="hover:text-white transition-colors" />
           </div>
         </div>
       </footer>

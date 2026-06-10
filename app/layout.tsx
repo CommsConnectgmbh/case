@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import CookieConsent from "@/components/ui/CookieConsent";
 
 const SITE_URL = "https://case-connect.de";
 
@@ -138,7 +139,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </head>
-      <body className="bg-bg text-white font-body antialiased">{children}</body>
+      <body className="bg-bg text-white font-body antialiased">
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }
