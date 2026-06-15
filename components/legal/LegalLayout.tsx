@@ -44,6 +44,7 @@ export default function LegalLayout({
             <Link href="/widerruf" className="hover:text-white transition-colors">Widerruf</Link>
             <Link href="/widerrufsbelehrung" className="hover:text-white transition-colors">Widerrufsbelehrung</Link>
             <Link href="/versand" className="hover:text-white transition-colors">Versand & Zahlung</Link>
+            <Link href="/barrierefreiheit" className="hover:text-white transition-colors">Barrierefreiheit</Link>
             <CookieSettingsLink className="hover:text-white transition-colors" />
           </div>
         </div>

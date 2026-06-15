@@ -34,6 +34,7 @@ export default function Footer() {
               <li><a href="/widerruf" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.widerrufFunktion}</a></li>
               <li><a href="/widerrufsbelehrung" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.widerruf}</a></li>
               <li><a href="/versand" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.versand}</a></li>
+              <li><a href="/barrierefreiheit" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.barrierefreiheit}</a></li>
               <li>
                 <button
                   type="button"
