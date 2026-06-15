@@ -116,6 +116,7 @@ export interface Translations {
       widerruf: string;
       widerrufFunktion: string;
       versand: string;
+      barrierefreiheit: string;
       cookieEinstellungen: string;
     };
     copyright: string;
@@ -349,6 +350,7 @@ export const translations: Record<Language, Translations> = {
         widerruf: 'Widerrufsbelehrung',
         widerrufFunktion: 'Widerruf',
         versand: 'Versand & Zahlung',
+        barrierefreiheit: 'Barrierefreiheit',
         cookieEinstellungen: 'Cookie-Einstellungen',
       },
       copyright: '© 2026 Comms Connect GmbH. Alle Rechte vorbehalten.',
@@ -582,6 +584,7 @@ export const translations: Record<Language, Translations> = {
         widerruf: 'Cancellation Policy',
         widerrufFunktion: 'Cancel Contract',
         versand: 'Shipping & Payment',
+        barrierefreiheit: 'Accessibility',
         cookieEinstellungen: 'Cookie Settings',
       },
       copyright: '© 2026 Comms Connect GmbH. All rights reserved.',
@@ -815,6 +818,7 @@ export const translations: Record<Language, Translations> = {
         widerruf: 'Droit de rétractation',
         widerrufFunktion: 'Rétractation',
         versand: 'Livraison & Paiement',
+        barrierefreiheit: 'Accessibilité',
         cookieEinstellungen: 'Paramètres des cookies',
       },
       copyright: '© 2026 Comms Connect GmbH. Tous droits réservés.',
@@ -1048,6 +1052,7 @@ export const translations: Record<Language, Translations> = {
         widerruf: 'Derecho de desistimiento',
         widerrufFunktion: 'Desistimiento',
         versand: 'Envío y pago',
+        barrierefreiheit: 'Accesibilidad',
         cookieEinstellungen: 'Configuración de cookies',
       },
       copyright: '© 2026 Comms Connect GmbH. Todos los derechos reservados.',
@@ -1281,6 +1286,7 @@ export const translations: Record<Language, Translations> = {
         widerruf: 'Diritto di recesso',
         widerrufFunktion: 'Recesso',
         versand: 'Spedizione e pagamento',
+        barrierefreiheit: 'Accessibilità',
         cookieEinstellungen: 'Impostazioni cookie',
       },
       copyright: '© 2026 Comms Connect GmbH. Tutti i diritti riservati.',
