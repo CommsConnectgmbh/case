@@ -170,7 +170,7 @@ export const translations: Record<Language, Translations> = {
       statSetup: '< 60 s',
       statSetupLabel: 'Setup',
       statUptime: '99,9 %',
-      statUptimeLabel: 'Uptime',
+      statUptimeLabel: 'Geräte-Verfügbarkeit',
       statRange: '500 m',
       statRangeLabel: 'Reichweite',
     },
@@ -180,7 +180,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 60, suffix: 's', label: 'Setup-Zeit' },
         { value: 500, suffix: 'm', label: 'Reichweite' },
-        { value: 99.9, suffix: '%', label: 'Uptime' },
+        { value: 99.9, suffix: '%', label: 'Geräte-Verfügbarkeit' },
       ],
       cards: [
         {
@@ -202,7 +202,7 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Enterprise-Konnektivität. Überall.',
+      headline: 'Enterprise-Konnektivität. Nahezu überall.',
       features: [
         'Plug & Play in <60s',
         'IP67 Schutzklasse',
@@ -212,7 +212,7 @@ export const translations: Record<Language, Translations> = {
     },
     shop: {
       headline: 'Das richtige Setup für Ihren Einsatz.',
-      subline: 'Zwei Varianten. Ein Versprechen: Konnektivität überall.',
+      subline: 'Zwei Varianten. Konnektivität nahezu überall, wo ein Netz erreichbar ist.',
       addonsTitle: 'Zubehör & Adapter',
     },
     howItWorks: {
@@ -401,7 +401,7 @@ export const translations: Record<Language, Translations> = {
       statSetup: '< 60 s',
       statSetupLabel: 'Setup',
       statUptime: '99.9%',
-      statUptimeLabel: 'Uptime',
+      statUptimeLabel: 'Device availability',
       statRange: '500 m',
       statRangeLabel: 'Range',
     },
@@ -411,7 +411,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 60, suffix: 's', label: 'Setup time' },
         { value: 500, suffix: 'm', label: 'Range' },
-        { value: 99.9, suffix: '%', label: 'Uptime' },
+        { value: 99.9, suffix: '%', label: 'Device availability' },
       ],
       cards: [
         {
@@ -433,7 +433,7 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Enterprise connectivity. Everywhere.',
+      headline: 'Enterprise connectivity. Nearly everywhere.',
       features: [
         'Plug & Play in <60s',
         'IP67 protection rating',
@@ -443,7 +443,7 @@ export const translations: Record<Language, Translations> = {
     },
     shop: {
       headline: 'The right setup for your operation.',
-      subline: 'Two variants. One promise: connectivity everywhere.',
+      subline: 'Two variants. Connectivity nearly everywhere a network is reachable.',
       addonsTitle: 'Accessories & Adapters',
     },
     howItWorks: {
@@ -632,7 +632,7 @@ export const translations: Record<Language, Translations> = {
       statSetup: '< 60 s',
       statSetupLabel: 'Installation',
       statUptime: '99,9 %',
-      statUptimeLabel: 'Disponibilité',
+      statUptimeLabel: "Disponibilité de l'appareil",
       statRange: '500 m',
       statRangeLabel: 'Portée',
     },
@@ -642,7 +642,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 60, suffix: 's', label: 'Installation' },
         { value: 500, suffix: 'm', label: 'Portée' },
-        { value: 99.9, suffix: '%', label: 'Disponibilité' },
+        { value: 99.9, suffix: '%', label: "Disponibilité de l'appareil" },
       ],
       cards: [
         {
@@ -664,7 +664,7 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Connectivité professionnelle. Partout.',
+      headline: 'Connectivité professionnelle. Presque partout.',
       features: [
         'Plug & Play en <60s',
         'Indice de protection IP67',
@@ -674,7 +674,7 @@ export const translations: Record<Language, Translations> = {
     },
     shop: {
       headline: 'La bonne configuration pour votre mission.',
-      subline: 'Deux variantes. Une promesse : connectivité partout.',
+      subline: 'Deux variantes. Connectivité presque partout où un réseau est disponible.',
       addonsTitle: 'Accessoires & Adaptateurs',
     },
     howItWorks: {
@@ -863,7 +863,7 @@ export const translations: Record<Language, Translations> = {
       statSetup: '< 60 s',
       statSetupLabel: 'Instalación',
       statUptime: '99,9 %',
-      statUptimeLabel: 'Disponibilidad',
+      statUptimeLabel: 'Disponibilidad del equipo',
       statRange: '500 m',
       statRangeLabel: 'Alcance',
     },
@@ -873,7 +873,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 60, suffix: 's', label: 'Instalación' },
         { value: 500, suffix: 'm', label: 'Alcance' },
-        { value: 99.9, suffix: '%', label: 'Disponibilidad' },
+        { value: 99.9, suffix: '%', label: 'Disponibilidad del equipo' },
       ],
       cards: [
         {
@@ -895,7 +895,7 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Conectividad empresarial. En todas partes.',
+      headline: 'Conectividad empresarial. Casi en todas partes.',
       features: [
         'Plug & Play en <60s',
         'Protección IP67',
@@ -905,7 +905,7 @@ export const translations: Record<Language, Translations> = {
     },
     shop: {
       headline: 'La configuración adecuada para su operación.',
-      subline: 'Dos variantes. Una promesa: conectividad en todas partes.',
+      subline: 'Dos variantes. Conectividad casi en todas partes donde hay red.',
       addonsTitle: 'Accesorios y adaptadores',
     },
     howItWorks: {
@@ -1094,7 +1094,7 @@ export const translations: Record<Language, Translations> = {
       statSetup: '< 60 s',
       statSetupLabel: 'Installazione',
       statUptime: '99,9 %',
-      statUptimeLabel: 'Uptime',
+      statUptimeLabel: 'Disponibilità del dispositivo',
       statRange: '500 m',
       statRangeLabel: 'Portata',
     },
@@ -1104,7 +1104,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 60, suffix: 's', label: 'Installazione' },
         { value: 500, suffix: 'm', label: 'Portata' },
-        { value: 99.9, suffix: '%', label: 'Disponibilità' },
+        { value: 99.9, suffix: '%', label: 'Disponibilità del dispositivo' },
       ],
       cards: [
         {
@@ -1126,7 +1126,7 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Connettività aziendale. Ovunque.',
+      headline: 'Connettività aziendale. Quasi ovunque.',
       features: [
         'Plug & Play in <60s',
         'Grado di protezione IP67',
@@ -1136,7 +1136,7 @@ export const translations: Record<Language, Translations> = {
     },
     shop: {
       headline: 'La configurazione giusta per la vostra operazione.',
-      subline: 'Due varianti. Una promessa: connettività ovunque.',
+      subline: 'Due varianti. Connettività quasi ovunque dove è disponibile una rete.',
       addonsTitle: 'Accessori e adattatori',
     },
     howItWorks: {
