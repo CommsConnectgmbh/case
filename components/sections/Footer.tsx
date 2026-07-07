@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
 import { Linkedin, Star, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
@@ -21,6 +22,8 @@ export default function Footer() {
               <li><a href="#shop" className="hover:text-white transition-colors duration-300">5G Case Standard</a></li>
               <li><a href="#shop" className="hover:text-white transition-colors duration-300">5G Case Professional</a></li>
               <li><a href="#shop" className="hover:text-white transition-colors duration-300">Zubehör</a></li>
+              <li><Link href="/ratgeber" className="hover:text-white transition-colors duration-300">Ratgeber</Link></li>
+              <li><Link href="/partner" className="text-primary/90 hover:text-primary transition-colors duration-300">Partner werden</Link></li>
             </ul>
           </div>
 

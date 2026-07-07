@@ -6,37 +6,37 @@ const SITE_URL = "https://case-connect.de";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "5G Case — Mobiles Enterprise-Netzwerk kaufen | Comms Connect",
-    template: "%s · 5G Case",
+    default: "5G Koffer kaufen — Mobiles Internet für Baustelle, Event & BOS | Case Connect",
+    template: "%s · Case Connect 5G Koffer",
   },
   description:
-    "Das portable 5G-Koffersystem für Baustellen, Events, Wartung und Notfälle. Plug & Play in unter 60 Sekunden. CE & IP67 zertifiziert, Multi-Carrier 5G/LTE, bis zu 500m Reichweite. Ab 1.999 €.",
+    "Mobiler 5G Internetkoffer — plug & play in unter 60 Sekunden online. IP67, akkubetrieben, Multi-Carrier 5G/LTE, bis zu 500 m WLAN-Reichweite. Für Baustelle, Event, BOS, Service & Film. Ab 1.999 €.",
   keywords: [
     "5G Koffer kaufen",
-    "mobiles 5G Internet",
-    "Baustelle WLAN",
-    "portable 5G Router",
-    "Enterprise Konnektivität",
-    "5G Case",
+    "5G Koffer mieten",
+    "mobiler Internetkoffer",
+    "mobiles Internet Baustelle",
+    "WLAN für Events",
+    "5G Koffer BOS",
+    "portabler 5G Router",
+    "Internet ohne Festanschluss",
     "Teltonika 5G Koffer",
-    "Cradlepoint Mobil",
-    "Eventnetzwerk 5G",
-    "Notfall Internet 5G",
+    "IP67 5G Router",
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: SITE_URL,
-    siteName: "5G Case by Comms Connect",
-    title: "Kein Netz? Unser Problem. | 5G Case by Comms Connect",
+    siteName: "Case Connect — 5G Koffer",
+    title: "5G Koffer kaufen — Mobiles Internet in 60 Sekunden | Case Connect",
     description:
-      "Portable 5G-Konnektivität für Baustellen, Events und Notfälle. In unter 60 Sekunden online. Ab 1.999 €.",
+      "Mobiler 5G Internetkoffer für Baustelle, Event, BOS & Film. IP67, akkubetrieben, bis 500 m Reichweite. Ab 1.999 €.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kein Netz? Unser Problem. | 5G Case",
-    description: "Portable 5G-Konnektivität in unter 60 Sekunden. Ab 1.999 €.",
+    title: "5G Koffer kaufen — Mobiles Internet in 60 Sekunden | Case Connect",
+    description: "Mobiler 5G Internetkoffer, plug & play. IP67, bis 500 m Reichweite. Ab 1.999 €.",
   },
   robots: {
     index: true,
@@ -87,9 +87,9 @@ const schema = {
     {
       "@type": "Product",
       "@id": `${SITE_URL}/#product-standard`,
-      name: "5G Case Standard",
+      name: "5G Koffer Standard — Case Connect",
       description:
-        "Portables Enterprise-5G-Netzwerk mit Teltonika RUTX50. Plug & Play in unter 60 Sekunden, IP67, bis zu 500 m Reichweite.",
+        "Mobiler 5G Internetkoffer mit Teltonika RUTX50. Plug & Play in unter 60 Sekunden online, IP67, akkubetrieben, bis zu 500 m WLAN-Reichweite. Für Baustelle, Event, BOS und Film.",
       brand: { "@type": "Brand", name: "5G Case" },
       manufacturer: { "@id": `${SITE_URL}/#organization` },
       category: "Industrial Networking Hardware",
@@ -106,9 +106,9 @@ const schema = {
     {
       "@type": "Product",
       "@id": `${SITE_URL}/#product-pro`,
-      name: "5G Case Professional",
+      name: "5G Koffer Professional — Case Connect",
       description:
-        "Professionelle Variante mit Cradlepoint R980. Multi-Carrier 5G, robustes IP67-Gehäuse, weltweite Konnektivität.",
+        "Mobiler 5G Internetkoffer mit Cradlepoint R980. Multi-Carrier 5G, robustes IP67-Gehäuse, akkubetrieben, weltweite Konnektivität. Für anspruchsvolle Einsätze auf Baustelle, Event und BOS.",
       brand: { "@type": "Brand", name: "5G Case" },
       manufacturer: { "@id": `${SITE_URL}/#organization` },
       category: "Industrial Networking Hardware",

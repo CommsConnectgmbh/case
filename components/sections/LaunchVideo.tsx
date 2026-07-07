@@ -47,7 +47,7 @@ export default function LaunchVideo() {
   };
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32 bg-bg">
+    <section id="launch" ref={ref} className="relative py-20 md:py-32 bg-bg">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section heading */}
         <motion.div

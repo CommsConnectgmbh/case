@@ -3,10 +3,19 @@
 import { useState, useEffect } from 'react';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useCartStore } from '@/lib/cart-store';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from '@/lib/i18n';
+import { useTranslation, useLanguageStore } from '@/lib/i18n';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+
+const PARTNER_LABEL: Record<string, string> = {
+  de: 'Partner werden',
+  en: 'Become a Partner',
+  fr: 'Devenir partenaire',
+  es: 'Hazte socio',
+  it: 'Diventa partner',
+};
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,6 +23,8 @@ export default function NavBar() {
   const { items, openCart } = useCartStore();
   const itemCount = items.reduce((sum, i) => sum + i.quantity, 0);
   const t = useTranslation();
+  const language = useLanguageStore((s) => s.language);
+  const partnerLabel = PARTNER_LABEL[language] ?? PARTNER_LABEL.de;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -22,10 +33,11 @@ export default function NavBar() {
   }, []);
 
   const links = [
-    { href: '#shop', label: t.nav.links.produkte },
-    { href: '#features', label: t.nav.links.features },
-    { href: '#usecases', label: t.nav.links.anwendungen },
-    { href: '#kontakt', label: t.nav.links.kontakt },
+    { href: '/#shop', label: t.nav.links.produkte },
+    { href: '/#features', label: t.nav.links.features },
+    { href: '/#usecases', label: t.nav.links.anwendungen },
+    { href: '/ratgeber', label: 'Ratgeber' },
+    { href: '/#kontakt', label: t.nav.links.kontakt },
   ];
 
   return (
@@ -38,16 +50,22 @@ export default function NavBar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image src="/images/logo.png" alt="Comms Connect" width={120} height={30} className="h-6 w-auto" />
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8 text-[13px] text-muted/80">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-white transition-colors duration-300">
+            <Link key={l.href} href={l.href} className="hover:text-white transition-colors duration-300">
               {l.label}
-            </a>
+            </Link>
           ))}
+          <Link
+            href="/partner"
+            className="text-primary font-medium hover:text-primary/80 transition-colors duration-300"
+          >
+            {partnerLabel}
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
@@ -70,12 +88,12 @@ export default function NavBar() {
               )}
             </AnimatePresence>
           </button>
-          <a
-            href="#shop"
+          <Link
+            href="/#shop"
             className="hidden sm:inline-flex px-4 py-1.5 bg-cta text-white text-[13px] font-medium rounded-full hover:bg-cta/90 transition-colors duration-300"
           >
             {t.nav.buyButton}
-          </a>
+          </Link>
           <LanguageSwitcher />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -97,15 +115,22 @@ export default function NavBar() {
           >
             <div className="px-6 py-4 space-y-3">
               {links.map((l) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
                   className="block text-sm text-muted hover:text-white transition-colors"
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
+              <Link
+                href="/partner"
+                onClick={() => setMobileOpen(false)}
+                className="block text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                {partnerLabel}
+              </Link>
             </div>
           </motion.div>
         )}
