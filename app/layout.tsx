@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import CookieConsent from "@/components/ui/CookieConsent";
-import { FAQS as CASE_FAQS } from "@/components/sections/FAQ";
+import { FAQS as CASE_FAQS } from "@/components/sections/faq-data";
 
 const SITE_URL = "https://case-connect.de";
 
