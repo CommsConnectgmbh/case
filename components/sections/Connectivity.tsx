@@ -20,8 +20,8 @@ const features: Feature[] = [
   },
   {
     icon: Radio,
-    title: 'Multi-Carrier Failover',
-    text: 'Automatischer Wechsel zwischen Mobilfunknetzen für maximale Verfügbarkeit. Kein manuelles Umschalten.',
+    title: 'Dual-SIM-Failover',
+    text: 'Fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM. Kein manuelles Umschalten.',
   },
   {
     icon: Satellite,

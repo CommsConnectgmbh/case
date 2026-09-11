@@ -188,7 +188,7 @@ export default function SignalDiagram() {
           5G Case
         </text>
         <text x="110" y="284" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="8" fill="#A0A0A0">
-          Multi-Carrier · IP67
+          5G · Dual-SIM
         </text>
       </svg>
     </div>

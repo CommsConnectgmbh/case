@@ -18,8 +18,8 @@ export default function FAQ() {
           Was Kunden vor dem Kauf wissen wollen.
         </h2>
         <p className="text-muted/80 leading-relaxed mb-12">
-          Acht typische Fragen zum 5G-Koffer von Case-Connect — Multi-Carrier, IP67, Plug &
-          Play in unter 60 Sekunden. Mehr Details auf Anfrage über{' '}
+          Acht typische Fragen zum 5G-Koffer von Case-Connect: Technik, Stromversorgung, Betrieb
+          und Preis. Mehr Details auf Anfrage über{' '}
           <a href="mailto:info@case-connect.de" className="text-primary underline">
             info@case-connect.de
           </a>

@@ -4,6 +4,14 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
   },
+  async redirects() {
+    return [
+      { source: '/partner-werden', destination: '/partner', permanent: true },
+      { source: '/reseller', destination: '/partner', permanent: true },
+      { source: '/vertriebspartner', destination: '/partner', permanent: true },
+      { source: '/ratgeber/5g-einsatzkoffer-bos', destination: '/ratgeber', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
