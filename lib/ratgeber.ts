@@ -61,8 +61,8 @@ export const articles: Article[] = [
       {
         h2: '5. Mobiler 5G-Koffer',
         p: [
-          'Der Mittelweg, der für die meisten Baustellen am besten passt: ein robuster Koffer mit Industrie-5G-Router, Hochleistungsantenne und Akku. In unter 60 Sekunden hochgefahren, spannt er per WLAN ein Netz über bis zu 500 Meter auf — für viele Geräte gleichzeitig. Multi-SIM heißt: fällt ein Mobilfunknetz aus, wird automatisch umgeschaltet.',
-          'Kein Tiefbau, kein Techniker, keine Wartezeit. Genau dafür ist Case Connect gebaut — IP67-geschützt gegen Staub und Regen, akkubetrieben für Standorte ohne Strom.',
+          'Der Mittelweg, der für die meisten Baustellen am besten passt: ein robuster Koffer mit Industrie-5G-Router, Panelantenne und Stromversorgung aus Netz, Werkzeugakku oder Kfz. Er kommt vorkonfiguriert und verteilt das Netz per WLAN und über fünf Gigabit-Ports samt 25-m-Netzwerkkabel an viele Geräte gleichzeitig. Dual-SIM heißt: fällt ein Mobilfunknetz aus, wird automatisch umgeschaltet.',
+          'Kein Tiefbau, kein Techniker, keine Wartezeit. Genau dafür ist Case Connect gebaut: ein robuster PARAT-Systemkoffer, akkubetrieben für Standorte ohne Strom. Betrieben wird er in trockener Umgebung, etwa im Baucontainer oder im Rohbau unter Dach, nicht im Regen.',
         ],
         bullets: ['Gut für: nahezu jede Baustelle, sofort und mobil', 'Schwäche: braucht Mobilfunkempfang (sonst Satellit ergänzen)'],
       },
@@ -74,8 +74,8 @@ export const articles: Article[] = [
       },
     ],
     faq: [
-      { q: 'Wie schnell ist mobiles Internet auf der Baustelle einsatzbereit?', a: 'Mit einem 5G-Koffer in unter 60 Sekunden — aufstellen, einschalten, verbinden. Ein Festnetzanschluss braucht dagegen Wochen Vorlauf.' },
-      { q: 'Wie viele Geräte kann ein 5G-Koffer versorgen?', a: 'Je nach Variante mehrere Dutzend gleichzeitig — genug für Bauleitung, Tablets zur Dokumentation, Kameras und Maschinensteuerung.' },
+      { q: 'Wie schnell ist mobiles Internet auf der Baustelle einsatzbereit?', a: 'Mit einem 5G-Koffer ohne Vorlauf: aufstellen, Strom anschließen, einschalten, verbinden. Der Router kommt vorkonfiguriert. Ein Festnetzanschluss braucht dagegen Wochen Vorlauf.' },
+      { q: 'Wie viele Geräte kann ein 5G-Koffer versorgen?', a: 'Viele gleichzeitig, per WLAN und über 5 × Gigabit-Ethernet: genug für Bauleitung, Tablets zur Dokumentation, Kameras und Maschinensteuerung.' },
       { q: 'Funktioniert das auch ohne Stromanschluss?', a: 'Ja. Case Connect lässt sich akkubetrieben einsetzen, auch dort, wo noch kein Baustrom liegt.' },
     ],
   },
@@ -114,7 +114,7 @@ export const articles: Article[] = [
       {
         h2: 'Case Connect: kaufen ab Lager',
         p: [
-          'Case Connect ist als Kaufgerät ausgelegt — in zwei Varianten, sofort lieferbar, ohne Mindestlaufzeit. Wer wiederverkaufen oder selbst vermieten möchte, findet im Partnerprogramm passende Konditionen.',
+          'Case Connect ist als Kaufgerät ausgelegt: der 5G Case Standard, sofort lieferbar, ohne Mindestlaufzeit. Wer wiederverkaufen oder selbst vermieten möchte, findet im Partnerprogramm passende Konditionen.',
         ],
       },
     ],
@@ -152,7 +152,7 @@ export const articles: Article[] = [
       {
         h2: 'Reichweite & Aufbau',
         p: [
-          'Ein 5G-Koffer spannt per WLAN ein Netz über bis zu 500 Meter auf — für viele Setups reicht ein einziger Koffer als zentrale Quelle, von der aus per LAN weiterverteilt wird. Aufbau in Minuten, kein Techniker, kein Kabelgraben.',
+          'Ein 5G-Koffer liefert Dual-Band-WLAN direkt am Standort. Wie weit das WLAN reicht, hängt von Halle, Bebauung und Publikum ab. Für viele Setups reicht ein einziger Koffer als zentrale Quelle, von der aus per LAN weiterverteilt wird: Der 5G Case hat 5 × Gigabit-Ethernet und ein 25 m langes Netzwerkkabel im Lieferumfang. Kein Techniker, kein Kabelgraben.',
         ],
       },
       {
@@ -166,51 +166,6 @@ export const articles: Article[] = [
       { q: 'Reicht ein Koffer für ein ganzes Event?', a: 'Für viele kleine bis mittlere Events ja — ein Koffer als zentrale Quelle, von dort per LAN/WLAN verteilt. Bei großen Flächen verteilt man mehrere Koffer als Zellen.' },
       { q: 'Wie schütze ich Kasse und Ticketing vor Ausfall?', a: 'Über Multi-SIM: Der Koffer nutzt mehrere Netze gleichzeitig und schaltet bei Ausfall automatisch um. Kernsysteme sollten in einem eigenen Netz vom Gäste-WLAN getrennt laufen.' },
       { q: 'Brauche ich für das Event-WLAN einen Festanschluss?', a: 'Nein. Der 5G-Koffer ist die Internetquelle selbst — er braucht nur Mobilfunkempfang und Strom oder Akku.' },
-    ],
-  },
-  {
-    slug: '5g-einsatzkoffer-bos',
-    keyword: '5G Koffer BOS',
-    title: '5G-Einsatzkoffer für BOS: Konnektivität für Feuerwehr, THW & Rettungsdienst',
-    metaTitle: '5G-Einsatzkoffer für BOS — Konnektivität an der Einsatzstelle',
-    metaDescription:
-      'Mobile Datenverbindung für Feuerwehr, THW, Rettungsdienst und Katastrophenschutz: Worauf es beim 5G-Einsatzkoffer ankommt — Multi-SIM, IP67, Akku.',
-    datePublished: '2026-06-04',
-    readingMinutes: 5,
-    teaser: 'Lagekarten, Drohnenbilder, Dokumentation — wie BOS-Kräfte an der Einsatzstelle ohne Infrastruktur online bleiben.',
-    lead: 'Bei BOS-Einsätzen zählt jede Sekunde, und genau dort fehlt oft die Infrastruktur: kein WLAN, überlastete Netze, abgelegene Lagen. Ein 5G-Einsatzkoffer bringt eine eigene Datenverbindung an die Einsatzstelle — diese Anforderungen sollte er erfüllen.',
-    sections: [
-      {
-        h2: 'Ausfallsicherheit zuerst',
-        p: [
-          'Im Einsatz darf die Verbindung nicht von einem einzigen Netz abhängen. Multi-SIM mit automatischem Umschalten zwischen den Mobilfunkbetreibern ist Pflicht — fällt ein Netz aus oder ist es überlastet, läuft die Lagekommunikation über das nächste weiter.',
-        ],
-      },
-      {
-        h2: 'Robust & autark',
-        p: [
-          'Einsatzstellen sind kein Büro: Regen, Staub, Hitze, Kälte. Ein IP67-geschütztes Gehäuse und Akkubetrieb sind entscheidend, damit der Koffer auch im Feld, bei Unwetterlagen oder im Stromausfall arbeitet.',
-        ],
-        bullets: ['IP67 gegen Staub und Wasser', 'Akkubetrieb für Lagen ohne Strom', 'In unter 60 Sekunden einsatzbereit'],
-      },
-      {
-        h2: 'Typische Anwendungen',
-        p: [
-          'Ein eigenes Netz an der Einsatzstelle trägt Lagekarten, Drohnen-Livebilder, digitale Einsatzdokumentation, Nachforderungen und die Anbindung des Führungsfahrzeugs oder Lagezentrums — alles, was sonst am fehlenden Netz scheitert.',
-        ],
-        bullets: ['Mobiles Lagezentrum / Einsatzleitung', 'Drohnen- und Kamerabilder in Echtzeit', 'Digitale Dokumentation und Nachforderung'],
-      },
-      {
-        h2: 'Beschaffung über Fachhandel',
-        p: [
-          'BOS-Beschaffung läuft meist über spezialisierte Ausstatter. Case Connect ist mit Multi-SIM, IP67 und Akku auf genau diese Anforderungen ausgelegt und über Vertriebspartner im BOS-Bereich erhältlich.',
-        ],
-      },
-    ],
-    faq: [
-      { q: 'Warum ist Multi-SIM für BOS wichtig?', a: 'Weil im Einsatz kein einzelnes Netz ausfallen darf. Multi-SIM nutzt mehrere Mobilfunknetze gleichzeitig und schaltet bei Ausfall oder Überlast automatisch um.' },
-      { q: 'Funktioniert der Koffer ohne Stromanschluss?', a: 'Ja, akkubetrieben — wichtig für Einsatzstellen ohne Infrastruktur oder bei Stromausfall.' },
-      { q: 'Ist der Koffer wetterfest?', a: 'Das IP67-Gehäuse schützt zuverlässig gegen Staub und Wasser, auch im Außeneinsatz bei Unwetter.' },
     ],
   },
   {
@@ -228,7 +183,7 @@ export const articles: Article[] = [
       {
         h2: 'Das Kundennetz ist kein verlässlicher Partner',
         p: [
-          'Auf den Gastzugang des Kunden zu hoffen, kostet Zeit und scheitert oft an Sicherheitsrichtlinien. Mit einem eigenen Netz bist du in Sekunden online — unabhängig davon, ob die Kunden-IT mitspielt.',
+          'Auf den Gastzugang des Kunden zu hoffen, kostet Zeit und scheitert oft an Sicherheitsrichtlinien. Mit einem eigenen Netz bist du schnell online, unabhängig davon, ob die Kunden-IT mitspielt.',
         ],
       },
       {
@@ -241,7 +196,7 @@ export const articles: Article[] = [
       {
         h2: 'Klein, schnell, akkubetrieben',
         p: [
-          'Für den Außendienst zählt: aufstellen, einschalten, arbeiten. Ein 5G-Koffer ist in unter 60 Sekunden online, läuft akkubetrieben und versorgt Laptop, Diagnosegerät und Tablet gleichzeitig — auch in Maschinenhalle, Keller oder auf dem Feld.',
+          'Für den Außendienst zählt: aufstellen, einschalten, arbeiten. Ein 5G-Koffer kommt vorkonfiguriert, läuft an Netz, Werkzeugakku oder Kfz-Buchse und versorgt Laptop, Diagnosegerät und Tablet gleichzeitig, auch in Maschinenhalle oder Keller.',
         ],
       },
     ],
@@ -269,16 +224,16 @@ export const articles: Article[] = [
         ],
       },
       {
-        h2: 'Reichweite über das ganze Set',
+        h2: 'Ein Netz für das ganze Team',
         p: [
-          'Video-Village, DIT-Station, Regie und Aufnahmeleitung sind über das Set verteilt. Statt jedem einen eigenen Hotspot zu geben, spannt ein Koffer ein gemeinsames Netz über bis zu 500 Meter — alle ziehen aus derselben stabilen Quelle.',
+          'Video-Village, DIT-Station, Regie und Aufnahmeleitung sind über das Set verteilt. Statt jedem einen eigenen Hotspot zu geben, spannt ein Koffer ein gemeinsames Netz auf, per Dual-Band-WLAN und bei Bedarf per LAN-Kabel (25 m im Lieferumfang). Alle ziehen aus derselben stabilen Quelle.',
         ],
         bullets: ['DIT-Daten-Offload in die Cloud', 'Remote-Review mit Kunden/Producer', 'Streaming und Live-Monitoring'],
       },
       {
-        h2: 'Robust für Outdoor-Drehs',
+        h2: 'Strom und Aufstellung bei Außendrehs',
         p: [
-          'Drehs finden bei Wind und Wetter statt. IP67-Schutz und Akkubetrieb sorgen dafür, dass der Koffer auch am Strand, im Wald oder auf dem Berg arbeitet — ohne Generator und Kabelsalat.',
+          'Drehs finden oft fernab jeder Steckdose statt. Der 5G Case läuft an Werkzeugakku oder an der 12-V-Kfz-Buchse des Produktionsfahrzeugs, ganz ohne Generator. Aufgestellt wird er trocken und geschützt, etwa im Fahrzeug oder an der DIT-Station: Betrieb mit geöffnetem Deckel bei 0 bis 35 °C, nicht bei Regen. Für den Transport den Akku entnehmen.',
         ],
       },
     ],
@@ -302,13 +257,13 @@ export const articles: Article[] = [
       {
         h2: 'Der Router im Inneren',
         p: [
-          'Herzstück ist ein Industrie-Mobilfunkrouter (z. B. Teltonika RUTX50 oder Cradlepoint R980). Er nimmt das 5G-/LTE-Signal auf und stellt daraus ein WLAN- und LAN-Netz bereit, mit dem sich Laptops, Tablets, Kameras und Maschinen verbinden — genau wie zu Hause am Router.',
+          'Herzstück ist ein Industrie-Mobilfunkrouter (im 5G Case ein Teltonika RUTX50). Er nimmt das 5G-/LTE-Signal auf und stellt daraus ein WLAN- und LAN-Netz bereit, mit dem sich Laptops, Tablets, Kameras und Maschinen verbinden, genau wie zu Hause am Router.',
         ],
       },
       {
         h2: 'Antenne & Reichweite',
         p: [
-          'Hochleistungsantennen holen auch dort noch Signal, wo ein Handy aufgibt. Verteilt wird das Netz per WLAN über bis zu 500 Meter; für feste Punkte gibt es zusätzlich LAN-Anschlüsse und ein langes Netzwerkkabel, um z. B. aus dem Keller nach oben zu kommen.',
+          'Hochleistungsantennen holen auch dort noch Signal, wo ein Handy aufgibt. Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Verteilt wird das Netz per Dual-Band-WLAN, dessen Reichweite von Umgebung und Bebauung abhängt. Für feste Punkte gibt es zusätzlich 5 × Gigabit-Ethernet und ein 25 m langes Netzwerkkabel, um z. B. aus dem Keller nach oben zu kommen.',
         ],
       },
       {
@@ -321,63 +276,79 @@ export const articles: Article[] = [
       {
         h2: 'Strom & Akku',
         p: [
-          'Betrieben wird der Koffer per Netzteil oder integriertem/aufsteckbarem Akku. Akkubetrieb ist der Grund, warum er auch dort läuft, wo es keine Steckdose gibt — auf der Baustelle, im Feld, an der Einsatzstelle.',
+          'Betrieben wird der Koffer per Netz, Akku oder Fahrzeug. Der 5G Case nimmt Netzstrom (100 bis 240 V), Werkzeugakkus von 18 bis 36 V über einen Akku-Adapter oder die 12-V-Kfz-Steckdose. Akkubetrieb ist der Grund, warum er auch dort läuft, wo es keine Steckdose gibt, etwa auf der Baustelle.',
         ],
       },
       {
-        h2: 'In drei Schritten online',
+        h2: 'So läuft die Inbetriebnahme',
         p: [
-          'In der Praxis heißt das: Koffer hinstellen, einschalten, mit dem WLAN verbinden. In unter 60 Sekunden steht das Netz — ohne Techniker, ohne Konfiguration für den Nutzer.',
+          'In der Praxis heißt das: Koffer öffnen, Strom anschließen, Drehwahlschalter auf die Stromquelle stellen und mit dem WLAN oder per LAN-Kabel verbinden. Der Router kommt vorkonfiguriert, ein Techniker ist nicht nötig.',
         ],
       },
     ],
     faq: [
-      { q: 'Brauche ich technisches Wissen, um den Koffer zu nutzen?', a: 'Nein. Einschalten und mit dem WLAN verbinden — fertig. Die Konfiguration ist vorbereitet.' },
+      { q: 'Brauche ich technisches Wissen, um den Koffer zu nutzen?', a: 'Grundkenntnisse genügen: Strom anschließen, Stromquelle wählen, mit dem WLAN verbinden. Der Router wird vorkonfiguriert geliefert.' },
       { q: 'Welche SIM-Karte brauche ich?', a: 'Eine Daten-SIM eines Mobilfunkanbieters. Mit Multi-SIM lassen sich mehrere Anbieter parallel für Ausfallschutz nutzen.' },
-      { q: 'Wie groß ist die Reichweite?', a: 'Per WLAN bis zu 500 Meter, je nach Umgebung; für feste Punkte zusätzlich über LAN-Kabel.' },
+      { q: 'Wie groß ist die Reichweite?', a: 'Die WLAN-Reichweite hängt von Umgebung, Bebauung und Endgeräten ab, eine pauschale Meterzahl nennen wir deshalb nicht. Für feste Punkte gibt es zusätzlich LAN, mit 25 m Netzwerkkabel im Lieferumfang.' },
     ],
   },
   {
     slug: 'ip67-5g-koffer-outdoor',
-    keyword: 'IP67 5G Router outdoor',
-    title: 'IP67 & akkubetrieben: Worauf du beim Outdoor-5G-Koffer achten musst',
-    metaTitle: 'Outdoor-5G-Koffer: Worauf bei IP67, Akku & Antenne achten',
+    keyword: 'Outdoor 5G Koffer',
+    title: 'Outdoor-5G-Koffer: Kaufkriterien für mobiles Baustellen-Internet',
+    metaTitle: 'Outdoor-5G-Koffer: Kaufkriterien für Baustelle und Außeneinsatz',
     metaDescription:
-      'Outdoor-tauglicher 5G-Koffer gesucht? Die Kaufkriterien: IP67-Schutz, Akkulaufzeit, Temperaturbereich, Antenne und Multi-SIM — verständlich erklärt.',
+      'Mobiles Internet für Baustelle und Außeneinsatz: Schutzarten verständlich erklärt, dazu Stromversorgung, Temperaturbereich, Antenne und Dual-SIM als Kaufkriterien.',
     datePublished: '2026-06-04',
-    readingMinutes: 4,
-    teaser: 'Die Kaufkriterien für den Außeneinsatz: Schutzklasse, Akku, Temperatur, Antenne.',
-    lead: 'Soll der 5G-Koffer draußen arbeiten — auf Baustelle, Event oder im Einsatz — entscheiden ein paar Kennwerte über Erfolg oder Frust. Diese Kriterien solltest du vor dem Kauf prüfen.',
+    readingMinutes: 5,
+    teaser: 'Die Kaufkriterien für mobiles Internet auf Baustelle und Außenstelle: Schutzart, Strom, Temperatur, Antenne.',
+    lead: 'Soll der 5G-Koffer auf der Baustelle, auf dem Event-Gelände oder an einer Außenstelle Netz liefern, entscheiden ein paar Kennwerte über Erfolg oder Frust. Diese Kriterien solltest du vor dem Kauf prüfen, und so ordnet sich der 5G Case von Case Connect ein.',
     sections: [
       {
-        h2: 'Schutzklasse: was IP67 bedeutet',
+        h2: 'Schutzarten: was die IP-Kennziffern bedeuten',
         p: [
-          'Die erste Ziffer (6) steht für vollständigen Schutz gegen Staub, die zweite (7) für Schutz beim zeitweisen Untertauchen. IP67 ist für den Außeneinsatz der sinnvolle Standard — Regen, Staub und Spritzwasser machen dem Gehäuse dann nichts aus.',
+          'Die IP-Schutzart nach DIN EN 60529 besteht aus zwei Ziffern. Die erste beschreibt den Schutz gegen Fremdkörper und Staub, die zweite den Schutz gegen Wasser. IP54 steht etwa für Staubschutz und Schutz gegen Spritzwasser, IP65 für Staubdichtheit und Schutz gegen Strahlwasser, IP67 für Staubdichtheit und Schutz beim zeitweiligen Untertauchen.',
+          'Wichtig: Eine Schutzart gilt nur für den Zustand, in dem sie geprüft wurde, meist mit geschlossenem Gehäuse. Ein Koffer, der im Betrieb geöffnet sein muss, damit Wärme abziehen kann, ist im Betrieb nicht gegen Regen geschützt. Frag deshalb immer nach den Betriebsbedingungen des Herstellers, nicht nur nach der Kennziffer.',
+        ],
+      },
+      {
+        h2: 'Betriebsbedingungen beim 5G Case',
+        p: [
+          'Der 5G Case steckt in einem robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Ausgelegt ist er für den Betrieb mit geöffnetem Deckel und geöffnetem Staufach in trockener Umgebung bei 0 bis 35 °C. Bei Regen oder in feuchter Umgebung darf er nicht betrieben werden. Auf der Baustelle heißt das: aufstellen im Baucontainer, im Rohbau unter Dach oder im Fahrzeug und von dort per WLAN oder LAN-Kabel verteilen.',
+        ],
+        bullets: [
+          'Betrieb mit geöffnetem Deckel und Staufach (Wärmeabfuhr)',
+          'Umgebungstemperatur 0 bis 35 °C',
+          'Nicht bei Regen oder in feuchter Umgebung betreiben',
+          'Akku bei Transport entnehmen',
         ],
       },
       {
         h2: 'Akku & Stromversorgung',
         p: [
-          'Ohne Steckdose zählt die Laufzeit. Achte darauf, ob der Koffer per Netzteil und Akku läuft und wie lange — und ob sich der Akku im Betrieb tauschen oder extern nachspeisen lässt.',
+          'Ohne Steckdose zählt die Stromversorgung. Achte darauf, welche Quellen der Koffer akzeptiert und ob er mit Akkus läuft, die im Betrieb ohnehin vorhanden sind. Wie lange ein Akku reicht, hängt von Akkugröße und Last ab; eine pauschale Laufzeit ist deshalb wenig aussagekräftig.',
+          'Der 5G Case läuft an drei Quellen: Netz (100 bis 240 V), Werkzeugakkus von 18 bis 36 V über den Brennenstuhl MULTI Battery Adapter (Adapter für neun Akkusysteme, z. B. Makita, Milwaukee oder DeWalt) und die 12-V-Kfz-Steckdose. Der Akku wird nicht im Koffer geladen, sondern mit dem Originalladegerät.',
         ],
-        bullets: ['Netz- und Akkubetrieb', 'Ausreichende Laufzeit für den Einsatztag', 'Nachspeisung im Betrieb möglich'],
+        bullets: ['Mehrere Stromquellen: Netz, Akku, Fahrzeug', 'Akkusystem, das im Betrieb schon vorhanden ist', 'Ersatzakkus für lange Tage einplanen'],
       },
       {
-        h2: 'Antenne & Reichweite',
+        h2: 'Antenne & Verteilung vor Ort',
         p: [
-          'Eine Hochleistungsantenne entscheidet, ob im Funkloch noch Signal ankommt. Genauso wichtig: die WLAN-Reichweite, mit der das Netz vor Ort verteilt wird — bei Case Connect bis zu 500 Meter.',
+          'Eine gute Antenne entscheidet, ob am Rand der Abdeckung noch nutzbares Signal ankommt. Im 5G Case sitzt eine Poynting 5G-Panelantenne (A-PANL-0431) im Kofferdeckel. Vor Ort verteilt der Teltonika RUTX50 das Netz per Dual-Band-WLAN; wie weit das reicht, hängt von Umgebung und Bebauung ab. Für Maschinen, Kameras oder andere Etagen gibt es 5 × Gigabit-Ethernet und ein 25 m langes Cat6-Kabel im Lieferumfang.',
         ],
       },
       {
-        h2: 'Multi-SIM & Verwaltung',
+        h2: 'Dual-SIM & Verwaltung',
         p: [
-          'Für verlässlichen Betrieb sollte der Koffer mehrere Mobilfunknetze parallel nutzen können (Multi-SIM) und sich aus der Ferne verwalten lassen — so lässt sich der Status prüfen, ohne vor Ort zu sein.',
+          'Für verlässlichen Betrieb sollte der Koffer zwei SIM-Karten aufnehmen, bei Ausfall automatisch umschalten (Dual-SIM mit Failover) und sich aus der Ferne verwalten lassen. Beim 5G Case übernimmt das Teltonika RMS, die 10-Jahres-Lizenz ist inklusive. So lässt sich der Status prüfen, ohne vor Ort zu sein.',
         ],
       },
     ],
     faq: [
-      { q: 'Reicht IP54 oder braucht es IP67?', a: 'Für echten Außeneinsatz mit Regen und Staub ist IP67 die sichere Wahl. Niedrigere Klassen schützen nur eingeschränkt gegen Wasser.' },
-      { q: 'Wie wichtig ist die Antenne?', a: 'Sehr — sie entscheidet, ob im Randbereich der Abdeckung überhaupt noch nutzbares Signal ankommt. Eine gute Antenne schlägt oft mehr Sendeleistung.' },
+      { q: 'Was bedeutet IP67?', a: 'IP67 steht für staubdicht (6) und Schutz beim zeitweiligen Untertauchen (7). Die Angabe gilt für das geprüfte, in der Regel geschlossene Gehäuse. Für den Betrieb zählen die Betriebsbedingungen des Herstellers.' },
+      { q: 'Kann der 5G Case im Regen betrieben werden?', a: 'Nein. Der 5G Case ist für den Betrieb mit geöffnetem Deckel in trockener Umgebung bei 0 bis 35 °C ausgelegt. Bei Regen oder in feuchter Umgebung darf er nicht betrieben werden. Stell ihn geschützt auf, etwa im Baucontainer oder im Fahrzeug, und verteile das Netz per WLAN oder LAN-Kabel.' },
+      { q: 'Wie lange läuft der Koffer mit Akku?', a: 'Das hängt von Akkugröße und Last ab, deshalb nennen wir keine pauschale Laufzeit. Für lange Einsätze empfiehlt sich Netz- oder Kfz-Betrieb oder ein Ersatzakku.' },
+      { q: 'Wie wichtig ist die Antenne?', a: 'Sehr, denn sie entscheidet, ob im Randbereich der Abdeckung überhaupt noch nutzbares Signal ankommt. Eine gute Antenne schlägt oft mehr Sendeleistung.' },
     ],
   },
   {
@@ -404,7 +375,7 @@ export const articles: Article[] = [
         p: [
           'Ein 5G-Koffer bringt eine eigene, private Verbindung mit: aufstellen, einschalten, alle Standgeräte verbinden sich per WLAN oder LAN. Das Netz gehört nur deinem Stand — keine Konkurrenz um Bandbreite, keine Tageslimits, keine Gerätezahl-Grenze vom Veranstalter.',
         ],
-        bullets: ['In unter 60 Sekunden aufgebaut', 'Dutzende Geräte gleichzeitig: Kasse, Tablets, Displays', 'Über mehrere Mobilfunknetze abgesichert'],
+        bullets: ['Vorkonfiguriert geliefert, schnell aufgebaut', 'Dutzende Geräte gleichzeitig: Kasse, Tablets, Displays', 'Über mehrere Mobilfunknetze abgesichert'],
       },
       {
         h2: 'Was am Stand damit zuverlässig läuft',
@@ -431,10 +402,10 @@ export const articles: Article[] = [
     title: 'Internet-Ausfall überbrücken: so bleibt der Betrieb online',
     metaTitle: 'Internet-Ausfall überbrücken — Backup-Leitung per 5G-Koffer',
     metaDescription:
-      'Fällt die Firmenleitung aus, steht der Betrieb: keine Kasse, kein ERP, keine Telefonie. So überbrückst du einen Internet-Ausfall in Sekunden mit einem 5G-Koffer als Backup.',
+      'Fällt die Firmenleitung aus, steht der Betrieb: keine Kasse, kein ERP, keine Telefonie. So überbrückst du einen Internet-Ausfall schnell mit einem 5G-Koffer als Backup.',
     datePublished: '2026-07-02',
     readingMinutes: 5,
-    teaser: 'Ein Bagger kappt das Glasfaserkabel, der Provider hat eine Störung — und die ganze Firma steht. Ein 5G-Koffer als Backup hält den Betrieb in Sekunden am Laufen.',
+    teaser: 'Ein Bagger kappt das Glasfaserkabel, der Provider hat eine Störung, und die ganze Firma steht. Ein 5G-Koffer als Backup bringt den Betrieb schnell wieder online.',
     lead: 'Moderne Betriebe hängen komplett am Netz: Warenwirtschaft, Kasse, Cloud-Software, VoIP-Telefonie und Kartenzahlung. Fällt die Hauptleitung aus — Bauarbeiten, Provider-Störung, defekter Router — kostet jede Stunde bares Geld. Ein 5G-Koffer als vorbereitetes Backup überbrückt den Ausfall sofort, ohne Technikertermin.',
     sections: [
       {
@@ -447,9 +418,9 @@ export const articles: Article[] = [
       {
         h2: 'Der 5G-Koffer als sofortiges Backup',
         p: [
-          'Ein 5G-Koffer steht griffbereit im Schrank und ist in unter einer Minute aktiv: einschalten, per LAN an den Firmenrouter oder Switch hängen — und der Betrieb ist über Mobilfunk wieder online. Weil der Koffer mehrere Netze nutzen kann, ist er auch dann verfügbar, wenn ein einzelnes Netz gestört ist.',
+          'Ein 5G-Koffer steht griffbereit im Schrank und ist schnell aktiv: Strom anschließen, einschalten, per LAN an den Firmenrouter oder Switch hängen, und der Betrieb ist über Mobilfunk wieder online. Weil der Koffer mehrere Netze nutzen kann, ist er auch dann verfügbar, wenn ein einzelnes Netz gestört ist.',
         ],
-        bullets: ['In unter 60 Sekunden online', 'An Router/Switch angeschlossen — die ganze Firma nutzt es', 'Mehrere Mobilfunknetze als Absicherung'],
+        bullets: ['Vorkonfiguriert geliefert', 'An Router/Switch angeschlossen: die ganze Firma nutzt es', 'Mehrere Mobilfunknetze als Absicherung'],
       },
       {
         h2: 'Automatisches Failover vs. Koffer im Schrank',
@@ -465,7 +436,7 @@ export const articles: Article[] = [
       },
     ],
     faq: [
-      { q: 'Wie schnell ist der Koffer im Ausfall einsatzbereit?', a: 'In unter 60 Sekunden: einschalten und per LAN an den Router hängen. Die Firmengeräte sind dann sofort wieder über Mobilfunk online — kein Technikertermin nötig.' },
+      { q: 'Wie schnell ist der Koffer im Ausfall einsatzbereit?', a: 'Schnell und ohne Technikertermin: Strom anschließen, einschalten und per LAN an den Router hängen. Der Router im Koffer kommt vorkonfiguriert, die Firmengeräte sind dann wieder über Mobilfunk online.' },
       { q: 'Nutzt bei einem Ausfall die ganze Firma den Koffer oder nur ein Gerät?', a: 'Die ganze Firma. Am Router oder Switch angeschlossen versorgt der Koffer das komplette Netzwerk — Kassen, Rechner, Telefone und WLAN wie gewohnt.' },
       { q: 'Lohnt sich ein Koffer, wenn selten etwas ausfällt?', a: 'Gerade dann: Ein einziger vermiedener Ausfalltag kostet meist mehr als der Koffer. Wer nur die Störung überbrücken will, mietet ihn für die Ausfalldauer.' },
     ],

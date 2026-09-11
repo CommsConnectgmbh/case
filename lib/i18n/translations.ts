@@ -20,12 +20,12 @@ export interface Translations {
     subhead?: string;
     ctaDemo?: string;
     ctaDatasheet?: string;
-    statSetup?: string;
-    statSetupLabel?: string;
+    statPower?: string;
+    statPowerLabel?: string;
     statUptime?: string;
     statUptimeLabel?: string;
-    statRange?: string;
-    statRangeLabel?: string;
+    statCable?: string;
+    statCableLabel?: string;
   };
   problem: {
     headline: string;
@@ -114,7 +114,10 @@ export interface Translations {
       datenschutz: string;
       agb: string;
       widerruf: string;
+      widerrufFunktion: string;
       versand: string;
+      barrierefreiheit: string;
+      cookieEinstellungen: string;
     };
     copyright: string;
     trademark: string;
@@ -164,22 +167,22 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Mehr erfahren',
       eyebrow: '5G Industrie-Konnektivität · Plug & Play',
       subhead:
-        'Industrial-Internet in einem Trolley. Multi-Carrier-5G, IP67-Gehäuse, Reichweite bis 500 m. Aufgebaut, bevor die Diskussion über Netzabdeckung anfängt.',
+        'Industrial-Internet im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM und drei Stromquellen. Vorkonfiguriert geliefert und aufgebaut, bevor die Diskussion über Netzabdeckung anfängt.',
       ctaDemo: 'Live-Demo anfragen',
       ctaDatasheet: 'Datenblatt',
-      statSetup: '< 60 s',
-      statSetupLabel: 'Setup',
+      statPower: '3',
+      statPowerLabel: 'Stromquellen',
       statUptime: '99,9 %',
       statUptimeLabel: 'Geräte-Verfügbarkeit',
-      statRange: '500 m',
-      statRangeLabel: 'Reichweite',
+      statCable: '25 m',
+      statCableLabel: 'LAN-Kabel',
     },
     problem: {
       headline:
         'Kein Netz ist keine Option. Nicht auf der Baustelle. Nicht beim Event. Nicht im Einsatz.',
       stats: [
-        { value: 60, suffix: 's', label: 'Setup-Zeit' },
-        { value: 500, suffix: 'm', label: 'Reichweite' },
+        { value: 3, suffix: '', label: 'Stromquellen' },
+        { value: 25, suffix: ' m', label: 'LAN-Kabel inklusive' },
         { value: 99.9, suffix: '%', label: 'Geräte-Verfügbarkeit' },
       ],
       cards: [
@@ -194,9 +197,9 @@ export const translations: Record<Language, Translations> = {
             'Kassensysteme, Ticketing und Live-Streaming brauchen stabile Konnektivität – das öffentliche Netz reicht nicht.',
         },
         {
-          title: 'Einsatz ohne Infrastruktur',
+          title: 'Standorte ohne Infrastruktur',
           description:
-            'Katastrophengebiete, temporäre Standorte und Fernwartung erfordern sofort verfügbares Netz ohne Installationsaufwand.',
+            'Temporäre Standorte, Außenstellen und Fernwartung erfordern sofort verfügbares Netz ohne Installationsaufwand.',
         },
       ],
     },
@@ -204,15 +207,15 @@ export const translations: Record<Language, Translations> = {
       overline: '5G CASE',
       headline: 'Enterprise-Konnektivität. Nahezu überall.',
       features: [
-        'Plug & Play in <60s',
-        'IP67 Schutzklasse',
-        'Bis zu 500m Reichweite',
+        'Vorkonfiguriert geliefert',
+        '3 Stromquellen: Netz, Akku, Kfz',
+        'Dual-Band-WLAN, 5 × Gigabit-Ethernet',
         'Multi-Carrier 5G/LTE',
       ],
     },
     shop: {
       headline: 'Das richtige Setup für Ihren Einsatz.',
-      subline: 'Zwei Varianten. Konnektivität nahezu überall, wo ein Netz erreichbar ist.',
+      subline: 'Der 5G Case Standard. Konnektivität nahezu überall, wo ein Netz erreichbar ist.',
       addonsTitle: 'Zubehör & Adapter',
     },
     howItWorks: {
@@ -231,13 +234,13 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Verbinden',
           description:
-            'WLAN auswählen und sofort mit bis zu 500 m Reichweite online gehen.',
+            'WLAN auswählen oder Geräte per LAN-Kabel anschließen und online gehen.',
         },
       ],
     },
     useCases: {
       headline: 'Jedes Szenario. Eine Lösung.',
-      subline: 'Von der Baustelle bis zum Katastrophengebiet.',
+      subline: 'Von der Baustelle bis zum Messestand.',
       cases: [
         {
           title: 'Baustellen',
@@ -255,9 +258,9 @@ export const translations: Record<Language, Translations> = {
             'Fernwartung und Datenübertragung bei Außeneinsätzen – ohne Abhängigkeit vom lokalen Mobilfunknetz.',
         },
         {
-          title: 'Notfälle & Krisen',
+          title: 'Backup bei Leitungsausfall',
           description:
-            'Schnelle Lagekommunikation für Feuerwehr, THW und Rettungsdienste in Gebieten mit zerstörter Infrastruktur.',
+            'Fällt der Festnetzanschluss am Standort aus, überbrückt der Koffer per 5G oder LTE, bis die Leitung wieder steht.',
         },
         {
           title: 'Temporäre Standorte',
@@ -345,7 +348,10 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Datenschutz',
         agb: 'AGB',
         widerruf: 'Widerrufsbelehrung',
+        widerrufFunktion: 'Widerruf',
         versand: 'Versand & Zahlung',
+        barrierefreiheit: 'Barrierefreiheit',
+        cookieEinstellungen: 'Cookie-Einstellungen',
       },
       copyright: '© 2026 Comms Connect GmbH. Alle Rechte vorbehalten.',
       trademark: 'Case Connect ist eine Marke der Comms Connect GmbH.',
@@ -395,22 +401,22 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Learn more',
       eyebrow: '5G Industrial Connectivity · Plug & Play',
       subhead:
-        'Industrial internet in a trolley. Multi-carrier 5G, IP67 enclosure, up to 500 m range. Online before the meeting about network coverage even starts.',
+        'Industrial internet in a rugged PARAT system case. 5G with LTE fallback, dual SIM and three power sources. Delivered pre-configured and online before the meeting about network coverage even starts.',
       ctaDemo: 'Request live demo',
       ctaDatasheet: 'Datasheet',
-      statSetup: '< 60 s',
-      statSetupLabel: 'Setup',
+      statPower: '3',
+      statPowerLabel: 'Power sources',
       statUptime: '99.9%',
       statUptimeLabel: 'Device availability',
-      statRange: '500 m',
-      statRangeLabel: 'Range',
+      statCable: '25 m',
+      statCableLabel: 'LAN cable',
     },
     problem: {
       headline:
         'No signal is not an option. Not on the construction site. Not at the event. Not in the field.',
       stats: [
-        { value: 60, suffix: 's', label: 'Setup time' },
-        { value: 500, suffix: 'm', label: 'Range' },
+        { value: 3, suffix: '', label: 'Power sources' },
+        { value: 25, suffix: ' m', label: 'LAN cable included' },
         { value: 99.9, suffix: '%', label: 'Device availability' },
       ],
       cards: [
@@ -425,9 +431,9 @@ export const translations: Record<Language, Translations> = {
             'POS systems, ticketing and live streaming need stable connectivity – public networks are not enough.',
         },
         {
-          title: 'Operations without infrastructure',
+          title: 'Sites without infrastructure',
           description:
-            'Disaster zones, temporary sites and remote maintenance require instant connectivity without complex installation.',
+            'Temporary sites, branch locations and remote maintenance require instant connectivity without complex installation.',
         },
       ],
     },
@@ -435,15 +441,15 @@ export const translations: Record<Language, Translations> = {
       overline: '5G CASE',
       headline: 'Enterprise connectivity. Nearly everywhere.',
       features: [
-        'Plug & Play in <60s',
-        'IP67 protection rating',
-        'Up to 500m range',
+        'Delivered pre-configured',
+        '3 power sources: mains, battery, vehicle',
+        'Dual-band Wi-Fi, 5 × Gigabit Ethernet',
         'Multi-carrier 5G/LTE',
       ],
     },
     shop: {
       headline: 'The right setup for your operation.',
-      subline: 'Two variants. Connectivity nearly everywhere a network is reachable.',
+      subline: 'The 5G Case Standard. Connectivity nearly everywhere a network is reachable.',
       addonsTitle: 'Accessories & Adapters',
     },
     howItWorks: {
@@ -462,13 +468,13 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Connect',
           description:
-            'Select the Wi-Fi network and go online instantly with up to 500 m range.',
+            'Select the Wi-Fi network or connect devices via LAN cable and go online.',
         },
       ],
     },
     useCases: {
       headline: 'Every scenario. One solution.',
-      subline: 'From construction sites to disaster zones.',
+      subline: 'From construction sites to trade show booths.',
       cases: [
         {
           title: 'Construction',
@@ -486,9 +492,9 @@ export const translations: Record<Language, Translations> = {
             'Remote maintenance and data transfer in the field – without relying on local mobile networks.',
         },
         {
-          title: 'Emergencies & Crises',
+          title: 'Backup during line outages',
           description:
-            'Rapid communication for first responders and rescue services in areas with destroyed infrastructure.',
+            'If the fixed-line connection on site fails, the case bridges the gap via 5G or LTE until the line is restored.',
         },
         {
           title: 'Temporary Sites',
@@ -576,7 +582,10 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Privacy Policy',
         agb: 'Terms & Conditions',
         widerruf: 'Cancellation Policy',
+        widerrufFunktion: 'Cancel Contract',
         versand: 'Shipping & Payment',
+        barrierefreiheit: 'Accessibility',
+        cookieEinstellungen: 'Cookie Settings',
       },
       copyright: '© 2026 Comms Connect GmbH. All rights reserved.',
       trademark: 'Case Connect is a brand of Comms Connect GmbH.',
@@ -626,22 +635,22 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'En savoir plus',
       eyebrow: 'Connectivité 5G industrielle · Plug & Play',
       subhead:
-        "Internet industriel dans un trolley. 5G multi-opérateur, boîtier IP67, portée jusqu'à 500 m. En ligne avant même la réunion sur la couverture réseau.",
+        "Internet industriel dans une valise système PARAT robuste. 5G avec repli LTE, double SIM et trois sources d'alimentation. Livré préconfiguré et en ligne avant même la réunion sur la couverture réseau.",
       ctaDemo: 'Demander une démo',
       ctaDatasheet: 'Fiche technique',
-      statSetup: '< 60 s',
-      statSetupLabel: 'Installation',
+      statPower: '3',
+      statPowerLabel: "Sources d'alimentation",
       statUptime: '99,9 %',
       statUptimeLabel: "Disponibilité de l'appareil",
-      statRange: '500 m',
-      statRangeLabel: 'Portée',
+      statCable: '25 m',
+      statCableLabel: 'Câble LAN',
     },
     problem: {
       headline:
         "Pas de réseau n'est pas une option. Pas sur le chantier. Pas lors d'un événement. Pas en mission.",
       stats: [
-        { value: 60, suffix: 's', label: 'Installation' },
-        { value: 500, suffix: 'm', label: 'Portée' },
+        { value: 3, suffix: '', label: "Sources d'alimentation" },
+        { value: 25, suffix: ' m', label: 'Câble LAN inclus' },
         { value: 99.9, suffix: '%', label: "Disponibilité de l'appareil" },
       ],
       cards: [
@@ -656,9 +665,9 @@ export const translations: Record<Language, Translations> = {
             'Les caisses, la billetterie et le streaming en direct nécessitent une connectivité stable – le réseau public ne suffit pas.',
         },
         {
-          title: 'Opérations sans infrastructure',
+          title: 'Sites sans infrastructure',
           description:
-            'Zones sinistrées, sites temporaires et maintenance à distance nécessitent un réseau immédiat sans installation complexe.',
+            'Sites temporaires, sites distants et maintenance à distance nécessitent un réseau immédiat sans installation complexe.',
         },
       ],
     },
@@ -666,15 +675,15 @@ export const translations: Record<Language, Translations> = {
       overline: '5G CASE',
       headline: 'Connectivité professionnelle. Presque partout.',
       features: [
-        'Plug & Play en <60s',
-        'Indice de protection IP67',
-        "Jusqu'à 500m de portée",
+        'Livré préconfiguré',
+        "3 sources d'alimentation : secteur, batterie, véhicule",
+        'Wi-Fi double bande, 5 × Gigabit Ethernet',
         'Multi-opérateur 5G/LTE',
       ],
     },
     shop: {
       headline: 'La bonne configuration pour votre mission.',
-      subline: 'Deux variantes. Connectivité presque partout où un réseau est disponible.',
+      subline: 'Le 5G Case Standard. Connectivité presque partout où un réseau est disponible.',
       addonsTitle: 'Accessoires & Adaptateurs',
     },
     howItWorks: {
@@ -693,13 +702,13 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Connecter',
           description:
-            "Sélectionnez le réseau Wi-Fi et connectez-vous instantanément avec jusqu'à 500 m de portée.",
+            'Sélectionnez le réseau Wi-Fi ou branchez vos appareils par câble LAN et connectez-vous.',
         },
       ],
     },
     useCases: {
       headline: 'Chaque scénario. Une solution.',
-      subline: 'Du chantier à la zone sinistrée.',
+      subline: 'Du chantier au stand de salon.',
       cases: [
         {
           title: 'Chantiers',
@@ -717,9 +726,9 @@ export const translations: Record<Language, Translations> = {
             'Télémaintenance et transfert de données en extérieur – sans dépendre du réseau mobile local.',
         },
         {
-          title: 'Urgences & Crises',
+          title: 'Secours en cas de panne de ligne',
           description:
-            "Communication rapide pour les pompiers et secouristes dans les zones où l'infrastructure est détruite.",
+            "Si la connexion fixe du site tombe en panne, la valise prend le relais en 5G ou LTE jusqu'au rétablissement de la ligne.",
         },
         {
           title: 'Sites temporaires',
@@ -807,7 +816,10 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Politique de confidentialité',
         agb: 'Conditions générales',
         widerruf: 'Droit de rétractation',
+        widerrufFunktion: 'Rétractation',
         versand: 'Livraison & Paiement',
+        barrierefreiheit: 'Accessibilité',
+        cookieEinstellungen: 'Paramètres des cookies',
       },
       copyright: '© 2026 Comms Connect GmbH. Tous droits réservés.',
       trademark: 'Case Connect est une marque de Comms Connect GmbH.',
@@ -857,22 +869,22 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Más información',
       eyebrow: 'Conectividad 5G industrial · Plug & Play',
       subhead:
-        'Internet industrial en un trolley. 5G multi-operador, carcasa IP67, alcance de hasta 500 m. En línea antes de que comience la reunión sobre cobertura.',
+        'Internet industrial en un robusto maletín de sistema PARAT. 5G con respaldo LTE, doble SIM y tres fuentes de alimentación. Se entrega preconfigurado y está en línea antes de que comience la reunión sobre cobertura.',
       ctaDemo: 'Solicitar demo',
       ctaDatasheet: 'Ficha técnica',
-      statSetup: '< 60 s',
-      statSetupLabel: 'Instalación',
+      statPower: '3',
+      statPowerLabel: 'Fuentes de alimentación',
       statUptime: '99,9 %',
       statUptimeLabel: 'Disponibilidad del equipo',
-      statRange: '500 m',
-      statRangeLabel: 'Alcance',
+      statCable: '25 m',
+      statCableLabel: 'Cable LAN',
     },
     problem: {
       headline:
         'Sin cobertura no es una opción. Ni en la obra. Ni en el evento. Ni en la operación.',
       stats: [
-        { value: 60, suffix: 's', label: 'Instalación' },
-        { value: 500, suffix: 'm', label: 'Alcance' },
+        { value: 3, suffix: '', label: 'Fuentes de alimentación' },
+        { value: 25, suffix: ' m', label: 'Cable LAN incluido' },
         { value: 99.9, suffix: '%', label: 'Disponibilidad del equipo' },
       ],
       cards: [
@@ -887,9 +899,9 @@ export const translations: Record<Language, Translations> = {
             'Sistemas de cobro, ticketing y streaming en vivo necesitan conectividad estable – la red pública no es suficiente.',
         },
         {
-          title: 'Operaciones sin infraestructura',
+          title: 'Ubicaciones sin infraestructura',
           description:
-            'Zonas de desastre, ubicaciones temporales y mantenimiento remoto requieren red inmediata sin instalación compleja.',
+            'Ubicaciones temporales, sedes externas y mantenimiento remoto requieren red inmediata sin instalación compleja.',
         },
       ],
     },
@@ -897,15 +909,15 @@ export const translations: Record<Language, Translations> = {
       overline: '5G CASE',
       headline: 'Conectividad empresarial. Casi en todas partes.',
       features: [
-        'Plug & Play en <60s',
-        'Protección IP67',
-        'Hasta 500m de alcance',
+        'Entregado preconfigurado',
+        '3 fuentes de alimentación: red, batería, vehículo',
+        'Wi-Fi de doble banda, 5 × Gigabit Ethernet',
         'Multi-operador 5G/LTE',
       ],
     },
     shop: {
       headline: 'La configuración adecuada para su operación.',
-      subline: 'Dos variantes. Conectividad casi en todas partes donde hay red.',
+      subline: 'El 5G Case Standard. Conectividad casi en todas partes donde hay red.',
       addonsTitle: 'Accesorios y adaptadores',
     },
     howItWorks: {
@@ -924,13 +936,13 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Conectar',
           description:
-            'Seleccione la red Wi-Fi y conéctese al instante con hasta 500 m de alcance.',
+            'Seleccione la red Wi-Fi o conecte los equipos por cable LAN y conéctese.',
         },
       ],
     },
     useCases: {
       headline: 'Cada escenario. Una solución.',
-      subline: 'Desde la obra hasta la zona de desastre.',
+      subline: 'Desde la obra hasta el stand de feria.',
       cases: [
         {
           title: 'Obras',
@@ -948,9 +960,9 @@ export const translations: Record<Language, Translations> = {
             'Mantenimiento remoto y transferencia de datos en exteriores – sin depender de la red móvil local.',
         },
         {
-          title: 'Emergencias y crisis',
+          title: 'Respaldo ante caídas de línea',
           description:
-            'Comunicación rápida para bomberos y servicios de rescate en zonas con infraestructura destruida.',
+            'Si falla la conexión fija del lugar, el maletín cubre el hueco vía 5G o LTE hasta que se restablezca la línea.',
         },
         {
           title: 'Ubicaciones temporales',
@@ -1038,7 +1050,10 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Política de privacidad',
         agb: 'Condiciones generales',
         widerruf: 'Derecho de desistimiento',
+        widerrufFunktion: 'Desistimiento',
         versand: 'Envío y pago',
+        barrierefreiheit: 'Accesibilidad',
+        cookieEinstellungen: 'Configuración de cookies',
       },
       copyright: '© 2026 Comms Connect GmbH. Todos los derechos reservados.',
       trademark: 'Case Connect es una marca de Comms Connect GmbH.',
@@ -1088,22 +1103,22 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Scopri di più',
       eyebrow: 'Connettività 5G industriale · Plug & Play',
       subhead:
-        'Internet industriale in un trolley. 5G multi-operatore, custodia IP67, portata fino a 500 m. Online prima ancora che inizi la riunione sulla copertura.',
+        'Internet industriale in una robusta valigia di sistema PARAT. 5G con fallback LTE, doppia SIM e tre fonti di alimentazione. Consegnato preconfigurato e online prima ancora che inizi la riunione sulla copertura.',
       ctaDemo: 'Richiedi demo',
       ctaDatasheet: 'Scheda tecnica',
-      statSetup: '< 60 s',
-      statSetupLabel: 'Installazione',
+      statPower: '3',
+      statPowerLabel: 'Fonti di alimentazione',
       statUptime: '99,9 %',
       statUptimeLabel: 'Disponibilità del dispositivo',
-      statRange: '500 m',
-      statRangeLabel: 'Portata',
+      statCable: '25 m',
+      statCableLabel: 'Cavo LAN',
     },
     problem: {
       headline:
         "Nessun segnale non è un'opzione. Non in cantiere. Non all'evento. Non in missione.",
       stats: [
-        { value: 60, suffix: 's', label: 'Installazione' },
-        { value: 500, suffix: 'm', label: 'Portata' },
+        { value: 3, suffix: '', label: 'Fonti di alimentazione' },
+        { value: 25, suffix: ' m', label: 'Cavo LAN incluso' },
         { value: 99.9, suffix: '%', label: 'Disponibilità del dispositivo' },
       ],
       cards: [
@@ -1118,9 +1133,9 @@ export const translations: Record<Language, Translations> = {
             'Sistemi POS, biglietteria e streaming live richiedono connettività stabile – la rete pubblica non basta.',
         },
         {
-          title: 'Operazioni senza infrastruttura',
+          title: 'Siti senza infrastruttura',
           description:
-            'Zone disastrate, siti temporanei e manutenzione remota richiedono rete immediata senza installazioni complesse.',
+            'Siti temporanei, sedi distaccate e manutenzione remota richiedono rete immediata senza installazioni complesse.',
         },
       ],
     },
@@ -1128,15 +1143,15 @@ export const translations: Record<Language, Translations> = {
       overline: '5G CASE',
       headline: 'Connettività aziendale. Quasi ovunque.',
       features: [
-        'Plug & Play in <60s',
-        'Grado di protezione IP67',
-        'Fino a 500m di portata',
+        'Consegnato preconfigurato',
+        '3 fonti di alimentazione: rete, batteria, veicolo',
+        'Wi-Fi dual band, 5 × Gigabit Ethernet',
         'Multi-operatore 5G/LTE',
       ],
     },
     shop: {
       headline: 'La configurazione giusta per la vostra operazione.',
-      subline: 'Due varianti. Connettività quasi ovunque dove è disponibile una rete.',
+      subline: 'Il 5G Case Standard. Connettività quasi ovunque dove è disponibile una rete.',
       addonsTitle: 'Accessori e adattatori',
     },
     howItWorks: {
@@ -1155,13 +1170,13 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Connettere',
           description:
-            'Selezionate la rete Wi-Fi e connettetevi istantaneamente con una portata fino a 500 m.',
+            'Selezionate la rete Wi-Fi o collegate i dispositivi via cavo LAN e andate online.',
         },
       ],
     },
     useCases: {
       headline: 'Ogni scenario. Una soluzione.',
-      subline: 'Dal cantiere alla zona disastrata.',
+      subline: 'Dal cantiere allo stand fieristico.',
       cases: [
         {
           title: 'Cantieri',
@@ -1179,9 +1194,9 @@ export const translations: Record<Language, Translations> = {
             'Manutenzione remota e trasferimento dati in esterno – senza dipendere dalla rete mobile locale.',
         },
         {
-          title: 'Emergenze e crisi',
+          title: 'Backup in caso di guasto della linea',
           description:
-            'Comunicazione rapida per vigili del fuoco e servizi di soccorso in zone con infrastruttura distrutta.',
+            'Se la connessione fissa del sito si interrompe, la valigia colma il vuoto via 5G o LTE fino al ripristino della linea.',
         },
         {
           title: 'Siti temporanei',
@@ -1269,7 +1284,10 @@ export const translations: Record<Language, Translations> = {
         datenschutz: 'Informativa sulla privacy',
         agb: 'Condizioni generali',
         widerruf: 'Diritto di recesso',
+        widerrufFunktion: 'Recesso',
         versand: 'Spedizione e pagamento',
+        barrierefreiheit: 'Accessibilità',
+        cookieEinstellungen: 'Impostazioni cookie',
       },
       copyright: '© 2026 Comms Connect GmbH. Tutti i diritti riservati.',
       trademark: 'Case Connect è un marchio di Comms Connect GmbH.',

@@ -1,0 +1,46 @@
+// FAQ-Inhalte, bewusst ohne 'use client'.
+//
+// Die Daten werden an zwei Stellen gebraucht: in der Client-Komponente FAQ.tsx
+// (Accordion) und im FAQPage-JSON-LD in app/layout.tsx, das serverseitig
+// gerendert wird. Importiert eine Server Component aus einem 'use client'-Modul,
+// ersetzt Next den Import durch eine Client-Referenz — Komponenten passieren die
+// Grenze, ein Array nicht. Aus `FAQS` wurde dabei ein Proxy-Objekt, und der
+// Prerender brach mit `FAQS.map is not a function` ab. Deshalb liegen die Daten
+// hier in einem eigenen, server-seitig lesbaren Modul.
+
+export type FaqEntry = { q: string; a: string };
+
+export const FAQS: FaqEntry[] = [
+  {
+    q: 'Was ist ein 5G-Koffer?',
+    a: 'Ein 5G-Koffer ist ein mobiles Netzwerk-System in einem Koffer. Im 5G Case von Case-Connect steckt ein Teltonika RUTX50 (5G mit Rückfall auf 4G LTE, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) mit einer Poynting 5G-Panelantenne im Kofferdeckel, eingebaut in einen robusten PARAT-Systemkoffer. Er wird vorkonfiguriert geliefert, läuft an Netz, Werkzeugakku oder 12-V-Kfz-Buchse und schafft bis 3,3 Gbit/s Download (Herstellerangabe, real abhängig von Netz und Standort).',
+  },
+  {
+    q: 'Wofür wird ein 5G-Koffer eingesetzt?',
+    a: 'Standorte ohne Festnetz oder mit zu langsamem DSL: Baustellen, Außendienst-Stützpunkte, Events, Container-Büros, mobile Werkstätten, Notfall-Internet bei Carrier-Ausfall. Ebenso für Industrie-IoT, Maschinen-Monitoring, Pop-up-Stores oder Filmcrew-Logistik vor Ort.',
+  },
+  {
+    q: 'Welche Reichweite hat der 5G-Koffer?',
+    a: 'Die WLAN-Reichweite hängt stark von Umgebung, Bebauung und Endgeräten ab, deshalb nennen wir keine pauschale Meterzahl. Für weiter entfernte Geräte, Maschinen, Kameras oder andere Etagen liegt ein 25 m langes Cat6-Netzwerkkabel bei, der Router hat 5 × Gigabit-Ethernet.',
+  },
+  {
+    q: 'Wie schnell ist das Internet aus dem 5G-Koffer?',
+    a: 'Bis zu 3,3 Gbit/s Download und 900 Mbit/s Upload im 5G-Standalone-Modus (4×4 MIMO). In der Praxis hängt das Tempo von der Carrier-Abdeckung am Standort ab. Bei schwachem 5G-Netz wechselt der Koffer automatisch auf LTE-Cat-20 (bis 2 Gbit/s).',
+  },
+  {
+    q: 'Welche Mobilfunkanbieter werden unterstützt?',
+    a: 'Multi-Carrier: Deutsche Telekom, Vodafone, O2 (Telefónica), 1&1 — und alle EU-Roaming-Partner via eSIM. Der Koffer prüft alle vier Netze parallel und wählt automatisch das stärkste. Bei Bedarf kommt jedes Gerät auch mit Business-SIM-Karte aus unserem Bestand.',
+  },
+  {
+    q: 'Was kostet ein 5G-Koffer und gibt es Miete?',
+    a: 'Kauf: 1.999 € netto (5G Case Standard mit Teltonika RUTX50). Miete startet bei 49 € pro Tag bzw. 690 € pro Monat, inkl. Multi-Carrier-SIMs und Versand. Mietpreise sinken ab 4 Wochen Mietdauer deutlich; Kauf nach Miete ist anrechenbar.',
+  },
+  {
+    q: 'Kann der Koffer draußen oder bei Regen betrieben werden?',
+    a: 'Der 5G Case ist ein robuster PARAT-Systemkoffer, ausgelegt für den Betrieb in trockener Umgebung bei 0 bis 35 °C. Bei Regen oder in feuchter Umgebung darf er nicht betrieben werden. Im Betrieb bleiben Deckel und Staufach geöffnet (Wärmeabfuhr). Bei Transport den Akku entnehmen.',
+  },
+  {
+    q: 'Brauche ich technisches Wissen zum Aufbau?',
+    a: 'Grundkenntnisse genügen. Der Router kommt von Comms Connect vorkonfiguriert. Strom anschließen (Netz, Akku oder Kfz), Drehwahlschalter auf die Quelle stellen, die Status-LED zeigt die Versorgung an, dann per WLAN oder LAN-Kabel verbinden. Auf Wunsch managen wir den Koffer remote über Teltonika RMS (Firmware-Updates, Monitoring, Geräte-Sperre bei Diebstahl).',
+  },
+];

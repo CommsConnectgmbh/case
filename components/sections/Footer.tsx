@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
 import { Linkedin, Star, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { openCookieSettings } from '@/components/ui/CookieConsent';
 
 export default function Footer() {
   const t = useTranslation();
@@ -20,7 +21,6 @@ export default function Footer() {
             <h4 className="text-xs font-medium tracking-[0.15em] uppercase text-muted mb-4">{t.footer.sections.produkte}</h4>
             <ul className="space-y-2.5 text-[15px] text-muted/80">
               <li><a href="#shop" className="hover:text-white transition-colors duration-300">5G Case Standard</a></li>
-              <li><a href="#shop" className="hover:text-white transition-colors duration-300">5G Case Professional</a></li>
               <li><a href="#shop" className="hover:text-white transition-colors duration-300">Zubehör</a></li>
               <li><Link href="/ratgeber" className="hover:text-white transition-colors duration-300">Ratgeber</Link></li>
               <li><Link href="/partner" className="text-primary/90 hover:text-primary transition-colors duration-300">Partner werden</Link></li>
@@ -33,8 +33,19 @@ export default function Footer() {
               <li><a href="/impressum" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.impressum}</a></li>
               <li><a href="/datenschutz" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.datenschutz}</a></li>
               <li><a href="/agb" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.agb}</a></li>
+              <li><a href="/widerruf" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.widerrufFunktion}</a></li>
               <li><a href="/widerrufsbelehrung" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.widerruf}</a></li>
               <li><a href="/versand" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.versand}</a></li>
+              <li><a href="/barrierefreiheit" className="hover:text-white transition-colors duration-300">{t.footer.legalLinks.barrierefreiheit}</a></li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openCookieSettings}
+                  className="hover:text-white transition-colors duration-300 text-left"
+                >
+                  {t.footer.legalLinks.cookieEinstellungen}
+                </button>
+              </li>
             </ul>
           </div>
 

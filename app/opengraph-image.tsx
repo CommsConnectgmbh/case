@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = '5G Case – Mobiles Enterprise-Netzwerk in unter 60 Sekunden';
+export const alt = '5G Case: mobiles 5G-Internet im robusten PARAT-Systemkoffer';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -75,8 +75,8 @@ export default function OpengraphImage() {
               maxWidth: 900,
             }}
           >
-            Portables 5G-Koffersystem. Plug &amp; Play in unter 60 Sekunden.
-            CE &amp; IP67 zertifiziert. Ab 1.999 €.
+            Portables 5G-Koffersystem. Vorkonfiguriert geliefert.
+            Robuster PARAT-Systemkoffer. 1.999 € netto.
           </div>
         </div>
 
@@ -93,7 +93,7 @@ export default function OpengraphImage() {
           <div>·</div>
           <div>Multi-Carrier 5G/LTE</div>
           <div>·</div>
-          <div>500 m Reichweite</div>
+          <div>Netz · Akku · Kfz</div>
         </div>
       </div>
     ),

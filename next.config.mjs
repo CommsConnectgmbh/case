@@ -9,6 +9,7 @@ const nextConfig = {
       { source: '/partner-werden', destination: '/partner', permanent: true },
       { source: '/reseller', destination: '/partner', permanent: true },
       { source: '/vertriebspartner', destination: '/partner', permanent: true },
+      { source: '/ratgeber/5g-einsatzkoffer-bos', destination: '/ratgeber', permanent: true },
     ];
   },
 };

@@ -1,42 +1,49 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import CookieConsent from "@/components/ui/CookieConsent";
+import { FAQS as CASE_FAQS } from "@/components/sections/faq-data";
 
 const SITE_URL = "https://case-connect.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "5G Koffer kaufen — Mobiles Internet für Baustelle, Event & BOS | Case Connect",
-    template: "%s · Case Connect 5G Koffer",
+    default: "Case-Connect 5G-Koffer — Mobiles Internet für Baustelle, Service & Event | Comms Connect",
+    template: "%s · Case-Connect 5G-Koffer",
   },
   description:
-    "Mobiler 5G Internetkoffer — plug & play in unter 60 Sekunden online. IP67, akkubetrieben, Multi-Carrier 5G/LTE, bis zu 500 m WLAN-Reichweite. Für Baustelle, Event, BOS, Service & Film. Ab 1.999 €.",
+    "Case-Connect 5G-Koffer: mobiles Internet ohne DSL im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, drei Stromquellen (Netz, Akku, Kfz), vorkonfiguriert geliefert. 1.999 € netto. Aus München, von Comms Connect.",
   keywords: [
-    "5G Koffer kaufen",
     "5G Koffer mieten",
+    "5G Koffer kaufen",
     "mobiler Internetkoffer",
     "mobiles Internet Baustelle",
     "WLAN für Events",
-    "5G Koffer BOS",
-    "portabler 5G Router",
+    "Internet ohne DSL",
     "Internet ohne Festanschluss",
+    "portabler 5G Router",
+    "WLAN Koffer 5G",
+    "5G Case Bauleitung",
+    "5G Hotspot Industrie",
+    "Case-Connect",
+    "Case Connect 5G",
     "Teltonika 5G Koffer",
-    "IP67 5G Router",
+    "Teltonika RUTX50 Koffer",
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: SITE_URL,
-    siteName: "Case Connect — 5G Koffer",
-    title: "5G Koffer kaufen — Mobiles Internet in 60 Sekunden | Case Connect",
+    siteName: "Case-Connect — 5G-Koffer by Comms Connect",
+    title: "Case-Connect 5G-Koffer — Mobiles Internet für Baustelle & Service",
     description:
-      "Mobiler 5G Internetkoffer für Baustelle, Event, BOS & Film. IP67, akkubetrieben, bis 500 m Reichweite. Ab 1.999 €.",
+      "Mobiles Internet ohne DSL im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM, drei Stromquellen, vorkonfiguriert geliefert. 1.999 € netto.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "5G Koffer kaufen — Mobiles Internet in 60 Sekunden | Case Connect",
-    description: "Mobiler 5G Internetkoffer, plug & play. IP67, bis 500 m Reichweite. Ab 1.999 €.",
+    title: "Case-Connect 5G-Koffer — Mobiles Internet für Baustelle",
+    description: "Mobiles 5G-Internet ohne DSL im PARAT-Systemkoffer. Dual-SIM, drei Stromquellen, vorkonfiguriert. 1.999 € netto.",
   },
   robots: {
     index: true,
@@ -80,17 +87,27 @@ const schema = {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: "5G Case by Comms Connect",
+      name: "Case-Connect — 5G-Koffer by Comms Connect",
+      alternateName: ["Case-Connect", "Case Connect", "5G Case Connect"],
       inLanguage: "de-DE",
       publisher: { "@id": `${SITE_URL}/#organization` },
     },
     {
+      "@type": "Brand",
+      "@id": `${SITE_URL}/#brand`,
+      name: "Case-Connect",
+      alternateName: ["Case Connect", "5G Case"],
+      logo: `${SITE_URL}/images/logo.png`,
+      slogan: "Kein Netz? Unser Problem.",
+      parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    },
+    {
       "@type": "Product",
       "@id": `${SITE_URL}/#product-standard`,
-      name: "5G Koffer Standard — Case Connect",
+      name: "Case-Connect 5G-Koffer Standard",
       description:
-        "Mobiler 5G Internetkoffer mit Teltonika RUTX50. Plug & Play in unter 60 Sekunden online, IP67, akkubetrieben, bis zu 500 m WLAN-Reichweite. Für Baustelle, Event, BOS und Film.",
-      brand: { "@type": "Brand", name: "5G Case" },
+        "Mobiles 5G-Koffersystem mit Teltonika RUTX50 (5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) im robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Drei Stromquellen: Netz, Werkzeugakku, 12 V Kfz. Vorkonfiguriert geliefert, inklusive 25 m Cat6-Kabel und Teltonika RMS mit 10-Jahres-Lizenz.",
+      brand: { "@id": `${SITE_URL}/#brand` },
       manufacturer: { "@id": `${SITE_URL}/#organization` },
       category: "Industrial Networking Hardware",
       offers: {
@@ -104,23 +121,13 @@ const schema = {
       },
     },
     {
-      "@type": "Product",
-      "@id": `${SITE_URL}/#product-pro`,
-      name: "5G Koffer Professional — Case Connect",
-      description:
-        "Mobiler 5G Internetkoffer mit Cradlepoint R980. Multi-Carrier 5G, robustes IP67-Gehäuse, akkubetrieben, weltweite Konnektivität. Für anspruchsvolle Einsätze auf Baustelle, Event und BOS.",
-      brand: { "@type": "Brand", name: "5G Case" },
-      manufacturer: { "@id": `${SITE_URL}/#organization` },
-      category: "Industrial Networking Hardware",
-      offers: {
-        "@type": "Offer",
-        url: `${SITE_URL}/#shop`,
-        priceCurrency: "EUR",
-        price: "2499",
-        priceValidUntil: "2026-12-31",
-        availability: "https://schema.org/InStock",
-        seller: { "@id": `${SITE_URL}/#organization` },
-      },
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq`,
+      mainEntity: CASE_FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
     },
   ],
 };
@@ -138,7 +145,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </head>
-      <body className="bg-bg text-white font-body antialiased">{children}</body>
+      <body className="bg-bg text-white font-body antialiased">
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }

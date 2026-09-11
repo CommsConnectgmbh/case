@@ -120,8 +120,8 @@ export default async function ArticlePage({
           <div className="my-12 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/20">
             <h2 className="font-heading text-2xl font-bold mb-2">Der Case Connect 5G-Koffer</h2>
             <p className="text-muted mb-6">
-              Plug &amp; Play in unter 60 Sekunden online. IP67, akkubetrieben, Multi-SIM, bis 500 m
-              WLAN-Reichweite — für Baustelle, Event, BOS, Service und Film.
+              Vorkonfiguriert geliefert, im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM,
+              Dual-Band-WLAN und drei Stromquellen: Netz, Akku, Kfz. Für Baustelle, Event, Service und Film.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link

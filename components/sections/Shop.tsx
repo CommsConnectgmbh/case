@@ -30,7 +30,7 @@ export default function Shop() {
           {t.shop.subline}
         </motion.p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <div className="max-w-2xl mx-auto mb-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,14 +39,6 @@ export default function Shop() {
           >
             <ProductCard {...PRODUCTS.standard} highlighted />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
-            <ProductCard {...PRODUCTS.professional} />
-          </motion.div>
         </div>
 
         <div className="text-center mb-20">
@@ -54,7 +46,7 @@ export default function Shop() {
             href="#technik"
             className="inline-flex items-center gap-1.5 text-primary text-sm hover:text-primary/80 transition-colors"
           >
-            Alle technischen Details vergleichen →
+            Alle technischen Details ansehen →
           </a>
         </div>
 

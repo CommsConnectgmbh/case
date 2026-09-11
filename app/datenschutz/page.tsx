@@ -104,7 +104,27 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">8. Speicherdauer</h2>
+        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">8. Cookies und Einwilligung</h2>
+        <p>
+          Diese Website verwendet ausschließlich technisch notwendige Cookies bzw. lokale
+          Speicherzugriffe, die für den Betrieb erforderlich sind (z.&nbsp;B. Warenkorb,
+          Spracheinstellung und die Speicherung Ihrer Cookie-Auswahl selbst). Für diese ist nach
+          § 25 Abs. 2 TDDDG keine Einwilligung erforderlich.
+        </p>
+        <p>
+          Nicht zwingend erforderliche Cookies oder Tracking-Technologien (z.&nbsp;B. Statistik
+          oder Marketing) werden erst gesetzt, nachdem Sie hierin über unseren Cookie-Hinweis
+          aktiv eingewilligt haben (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO). Vor Ihrer
+          Einwilligung werden keine entsprechenden Skripte geladen.
+        </p>
+        <p>
+          Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft ändern oder
+          widerrufen, indem Sie den Link &bdquo;Cookie-Einstellungen&ldquo; im Seitenfuß öffnen.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">9. Speicherdauer</h2>
         <p>
           Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Erreichung der jeweiligen
           Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen (in der Regel 6 bzw.
@@ -113,7 +133,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">9. Ihre Rechte</h2>
+        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">10. Ihre Rechte</h2>
         <p>
           Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten,
           deren Herkunft, Empfänger und Zweck der Verarbeitung. Außerdem haben Sie das Recht auf

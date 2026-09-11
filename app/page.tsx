@@ -11,6 +11,7 @@ import RemoteManagement from '@/components/sections/RemoteManagement';
 import Connectivity from '@/components/sections/Connectivity';
 import Shop from '@/components/sections/Shop';
 import TechSpecs from '@/components/sections/TechSpecs';
+import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 import CartDrawer from '@/components/ui/CartDrawer';
@@ -33,6 +34,7 @@ export default function Home() {
         <Connectivity />
         <Shop />
         <TechSpecs />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

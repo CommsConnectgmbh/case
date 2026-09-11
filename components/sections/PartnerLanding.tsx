@@ -8,7 +8,6 @@ const AUDIENCE = [
   'IT-Systemhäuser & Integratoren',
   'Vermieter (Event- & Baustellentechnik)',
   'Werkzeug- & Arbeitsschutz-Fachhandel',
-  'BOS- & Einsatztechnik-Ausstatter',
   'Vermittler & Tippgeber',
 ];
 
@@ -26,7 +25,7 @@ const VALUE = [
   {
     icon: PackageCheck,
     title: 'Gefragtes Produkt, fertig konfektioniert',
-    text: 'Plug & Play 5G-Koffer für Baustelle, Event, BOS und Film — du musst nichts entwickeln.',
+    text: 'Plug & Play 5G-Koffer für Baustelle, Event, Service und Film. Du musst nichts entwickeln.',
   },
   {
     icon: Headset,
@@ -304,7 +303,7 @@ export default function PartnerLanding() {
                 id="partner-branche"
                 name="branche"
                 type="text"
-                placeholder="optional — z. B. Eventtechnik, Baustellen-IT, BOS"
+                placeholder="optional, z. B. Eventtechnik, Baustellen-IT, Service"
                 value={form.branche}
                 onChange={(e) => setForm({ ...form, branche: e.target.value })}
                 className={inputCls}

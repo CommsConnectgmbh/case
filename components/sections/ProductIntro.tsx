@@ -11,7 +11,7 @@ const featureIcons = [Plug, BatteryCharging, Wifi];
 const productImages = [
   { src: '/images/Bild2.png', alt: '5G Case – geschlossen' },
   { src: '/images/Bild5.png', alt: '5G Case – geöffnet mit Zubehör' },
-  { src: '/images/Bild6.png', alt: '5G Case – Professional Variante' },
+  { src: '/images/Bild6.png', alt: '5G Case, Detailansicht' },
   { src: '/images/bild1.png', alt: '5G Case – Power Button Detail' },
   { src: '/images/Bild3.png', alt: '5G Case – Innenleben' },
   { src: '/images/Bild4.png', alt: '5G Case – Akku-Slot' },

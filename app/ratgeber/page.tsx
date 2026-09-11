@@ -12,11 +12,11 @@ const SITE = 'https://case-connect.de';
 export const metadata: Metadata = {
   title: 'Ratgeber: 5G-Koffer & mobiles Internet',
   description:
-    'Praxis-Ratgeber rund um den 5G-Koffer: mobiles Internet für Baustelle, Event, BOS, Service und Film — mieten oder kaufen, Technik erklärt, Kaufkriterien.',
+    'Praxis-Ratgeber rund um den 5G-Koffer: mobiles Internet für Baustelle, Event, Service und Film. Mieten oder kaufen, Technik erklärt, Kaufkriterien.',
   alternates: { canonical: `${SITE}/ratgeber` },
   openGraph: {
     title: 'Ratgeber: 5G-Koffer & mobiles Internet',
-    description: 'Mobiles Internet für Baustelle, Event, BOS, Service und Film — verständlich erklärt.',
+    description: 'Mobiles Internet für Baustelle, Event, Service und Film, verständlich erklärt.',
     url: `${SITE}/ratgeber`,
   },
 };
@@ -47,7 +47,7 @@ export default function RatgeberHub() {
           </h1>
           <p className="text-muted text-lg max-w-2xl mb-12">
             Wann lohnt sich mieten statt kaufen? Wie funktioniert ein Internetkoffer? Worauf kommt es
-            für Baustelle, Event, BOS, Service und Film an? Hier sind die Antworten aus der Praxis.
+            für Baustelle, Event, Service und Film an? Hier sind die Antworten aus der Praxis.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -74,7 +74,7 @@ export default function RatgeberHub() {
           <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/20 text-center">
             <h2 className="font-heading text-2xl font-bold mb-2">Bereit für eigenes Netz?</h2>
             <p className="text-muted mb-6 max-w-lg mx-auto">
-              Der Case Connect 5G-Koffer ist in unter 60 Sekunden online — IP67, akkubetrieben, bis 500 m Reichweite.
+              Der Case Connect 5G-Koffer kommt vorkonfiguriert im robusten PARAT-Systemkoffer: 5G mit LTE-Rückfall, Dual-SIM, Strom aus Netz, Akku oder Kfz.
             </p>
             <Link
               href="/#shop"
