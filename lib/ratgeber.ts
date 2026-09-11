@@ -391,7 +391,7 @@ export const articles: Article[] = [
       },
     ],
     faq: [
-      { q: 'Funktioniert 5G überhaupt zuverlässig in einer vollen Messehalle?', a: 'Das hängt von Netz und Standort ab, ein Empfangstest vor der Messe ist sinnvoll. Mit Dual-SIM und automatischem Failover wechselt der Router auf die zweite SIM, wenn ein Netz ausfällt. Anders als das geteilte Hallen-WLAN wird deine Bandbreite nicht von Tausenden Nachbarn aufgebraucht.' },
+      { q: 'Funktioniert 5G überhaupt zuverlässig in einer vollen Messehalle?', a: 'Das hängt von Netz und Standort ab, ein Empfangstest vor der Messe ist sinnvoll. Mit Dual-SIM und automatischem Failover wechselt der Router auf die zweite SIM, wenn ein Netz ausfällt.' },
       { q: 'Reicht ein Koffer für einen kompletten Messestand?', a: 'Für die allermeisten Stände ja: Kasse, Tablets, Lead-Scanner, Displays und Stream laufen gleichzeitig über einen Koffer. Bei sehr großen Ständen verteilt man zwei Koffer als Zellen.' },
       { q: 'Was kostet das im Vergleich zum Veranstalter-WLAN?', a: 'Die Tagespauschalen des Veranstalters summieren sich über mehrere Geräte und Messetage schnell. Ein gemieteter Koffer deckt den ganzen Stand mit einem Gerät ab — meist deutlich günstiger und ohne Limits.' },
     ],
