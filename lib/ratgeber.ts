@@ -156,15 +156,15 @@ export const articles: Article[] = [
         ],
       },
       {
-        h2: 'Ausfallschutz per Multi-SIM',
+        h2: 'Ausfallschutz per Dual-SIM',
         p: [
-          'Auf einem Event gibt es keinen zweiten Versuch. Ein Koffer mit Multi-SIM nutzt mehrere Mobilfunknetze gleichzeitig — fällt eines aus oder ist überlastet, läuft es über das andere weiter. Genau das macht den Unterschied zwischen „lief" und „stand still".',
+          'Auf einem Event gibt es keinen zweiten Versuch. Ein Koffer mit Dual-SIM und automatischem Failover nimmt SIM-Karten zweier Anbieter auf: fällt ein Netz aus, wechselt der Router auf die zweite SIM. Genau das macht den Unterschied zwischen „lief" und „stand still".',
         ],
       },
     ],
     faq: [
       { q: 'Reicht ein Koffer für ein ganzes Event?', a: 'Für viele kleine bis mittlere Events ja — ein Koffer als zentrale Quelle, von dort per LAN/WLAN verteilt. Bei großen Flächen verteilt man mehrere Koffer als Zellen.' },
-      { q: 'Wie schütze ich Kasse und Ticketing vor Ausfall?', a: 'Über Multi-SIM: Der Koffer nutzt mehrere Netze gleichzeitig und schaltet bei Ausfall automatisch um. Kernsysteme sollten in einem eigenen Netz vom Gäste-WLAN getrennt laufen.' },
+      { q: 'Wie schütze ich Kasse und Ticketing vor Ausfall?', a: 'Über Dual-SIM mit automatischem Failover: Fällt ein Netz aus, wechselt der Router auf die zweite SIM. Kernsysteme sollten in einem eigenen Netz vom Gäste-WLAN getrennt laufen.' },
       { q: 'Brauche ich für das Event-WLAN einen Festanschluss?', a: 'Nein. Der 5G-Koffer ist die Internetquelle selbst — er braucht nur Mobilfunkempfang und Strom oder Akku.' },
     ],
   },
@@ -202,7 +202,7 @@ export const articles: Article[] = [
     ],
     faq: [
       { q: 'Warum nicht einfach den Handy-Hotspot nutzen?', a: 'Für eine einzelne Verbindung reicht das, aber Diagnosegerät, Laptop und Tablet zusammen plus stabile VPN-Verbindung überfordern den Hotspot schnell. Ein Koffer liefert Reichweite, mehrere Geräte und Ausfallschutz.' },
-      { q: 'Komme ich damit an Maschinen in Kellern oder Hallen?', a: 'Mit einer Hochleistungsantenne und Akkubetrieb funktioniert das auch dort, wo das Handy längst keinen Empfang mehr hat — und das Signal wird per WLAN über die Halle verteilt.' },
+      { q: 'Komme ich damit an Maschinen in Kellern oder Hallen?', a: 'Ja, wenn du den Koffer dort aufstellst, wo Empfang ist (die Poynting 5G-Panelantenne sitzt im Kofferdeckel). Von dort verteilst du das Netz per WLAN oder mit dem 25 m LAN-Kabel bis an die Maschine im Keller oder in der Halle.' },
     ],
   },
   {
@@ -220,7 +220,7 @@ export const articles: Article[] = [
       {
         h2: 'Upload ist König',
         p: [
-          'Am Set geht es weniger um Download als um stabilen Upload großer Datenmengen. Ein Koffer mit Multi-SIM bündelt mehrere Mobilfunknetze und hält den Upload auch dann stabil, wenn ein einzelnes Netz schwächelt.',
+          'Am Set geht es weniger um Download als um stabilen Upload großer Datenmengen. Wie viel Upload möglich ist, hängt von Netz und Standort ab. Ein Koffer mit Dual-SIM und automatischem Failover wechselt auf die zweite SIM, wenn ein Netz ausfällt.',
         ],
       },
       {
@@ -238,7 +238,7 @@ export const articles: Article[] = [
       },
     ],
     faq: [
-      { q: 'Reicht die Bandbreite für Dailies-Upload?', a: 'Über gebündelte Mobilfunknetze (Multi-SIM) lässt sich auch außerhalb der Stadt ein stabiler Upload erreichen. In echten Funklöchern lässt sich Satellit ergänzen.' },
+      { q: 'Reicht die Bandbreite für Dailies-Upload?', a: 'Das hängt von Netz und Standort ab; vor dem Dreh lohnt ein Empfangstest am Set. Dual-SIM mit automatischem Failover sichert gegen den Ausfall eines Netzes ab. In echten Funklöchern lässt sich Satellit ergänzen.' },
       { q: 'Kann das ganze Team ein Netz nutzen?', a: 'Ja, der Koffer verteilt ein gemeinsames WLAN über das Set, sodass Video-Village, DIT und Regie aus einer Quelle arbeiten.' },
     ],
   },
@@ -263,15 +263,15 @@ export const articles: Article[] = [
       {
         h2: 'Antenne & Reichweite',
         p: [
-          'Hochleistungsantennen holen auch dort noch Signal, wo ein Handy aufgibt. Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Verteilt wird das Netz per Dual-Band-WLAN, dessen Reichweite von Umgebung und Bebauung abhängt. Für feste Punkte gibt es zusätzlich 5 × Gigabit-Ethernet und ein 25 m langes Netzwerkkabel, um z. B. aus dem Keller nach oben zu kommen.',
+          'Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Den Koffer stellst du dort auf, wo Empfang ist, und verteilst das Netz von dort per Dual-Band-WLAN oder per LAN: Der Router hat 5 × Gigabit-Ethernet, ein 25 m langes Netzwerkkabel liegt bei, um z. B. in den Keller oder andere Etagen zu kommen. Wie weit das WLAN reicht, hängt von Umgebung und Bebauung ab.',
         ],
       },
       {
-        h2: 'SIM & Multi-Carrier',
+        h2: 'SIM & Dual-SIM-Failover',
         p: [
-          'Der Koffer nimmt SIM-Karten der Mobilfunkbetreiber auf. Mit Multi-SIM laufen mehrere Netze gleichzeitig: Ist eines überlastet oder ausgefallen, schaltet der Router automatisch um — der Nutzer merkt davon nichts.',
+          'Der Koffer nimmt SIM-Karten der Mobilfunkbetreiber auf. Der 5G Case hat Dual-SIM mit automatischem Failover: Fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM, der Nutzer merkt davon nichts.',
         ],
-        bullets: ['Physische SIM mehrerer Anbieter', 'Automatisches Umschalten bei Ausfall', 'Fernverwaltung der Konfiguration möglich'],
+        bullets: ['Zwei SIM-Karten, auch von verschiedenen Anbietern', 'Automatisches Umschalten bei Ausfall', 'Fernverwaltung der Konfiguration möglich'],
       },
       {
         h2: 'Strom & Akku',
@@ -288,7 +288,7 @@ export const articles: Article[] = [
     ],
     faq: [
       { q: 'Brauche ich technisches Wissen, um den Koffer zu nutzen?', a: 'Grundkenntnisse genügen: Strom anschließen, Stromquelle wählen, mit dem WLAN verbinden. Der Router wird vorkonfiguriert geliefert.' },
-      { q: 'Welche SIM-Karte brauche ich?', a: 'Eine Daten-SIM eines Mobilfunkanbieters. Mit Multi-SIM lassen sich mehrere Anbieter parallel für Ausfallschutz nutzen.' },
+      { q: 'Welche SIM-Karte brauche ich?', a: 'Eine Daten-SIM eines Mobilfunkanbieters. Mit Dual-SIM lassen sich zwei Anbieter kombinieren: fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM.' },
       { q: 'Wie groß ist die Reichweite?', a: 'Die WLAN-Reichweite hängt von Umgebung, Bebauung und Endgeräten ab, eine pauschale Meterzahl nennen wir deshalb nicht. Für feste Punkte gibt es zusätzlich LAN, mit 25 m Netzwerkkabel im Lieferumfang.' },
     ],
   },
@@ -375,12 +375,12 @@ export const articles: Article[] = [
         p: [
           'Ein 5G-Koffer bringt eine eigene, private Verbindung mit: aufstellen, einschalten, alle Standgeräte verbinden sich per WLAN oder LAN. Das Netz gehört nur deinem Stand — keine Konkurrenz um Bandbreite, keine Tageslimits, keine Gerätezahl-Grenze vom Veranstalter.',
         ],
-        bullets: ['Vorkonfiguriert geliefert, schnell aufgebaut', 'Dutzende Geräte gleichzeitig: Kasse, Tablets, Displays', 'Über mehrere Mobilfunknetze abgesichert'],
+        bullets: ['Vorkonfiguriert geliefert, schnell aufgebaut', 'Dutzende Geräte gleichzeitig: Kasse, Tablets, Displays', 'Dual-SIM mit automatischem Failover'],
       },
       {
-        h2: 'Was am Stand damit zuverlässig läuft',
+        h2: 'Was am Stand damit läuft',
         p: [
-          'Kartenzahlung und Lead-Scanner brauchen wenig Bandbreite, aber absolute Zuverlässigkeit — genau das liefert ein dediziertes Netz. Für Video-Wall, Cloud-Demos und den Stream in die Zentrale zählt stabiler Upload, den ein 5G-Koffer mit guter Antenne auch in der Messehalle hält.',
+          'Kartenzahlung und Lead-Scanner brauchen wenig Bandbreite, aber eine stabile Verbindung. Ein eigenes Netz trennt sie vom überlasteten Hallen-WLAN. Für Video-Wall, Cloud-Demos und den Stream in die Zentrale zählt stabiler Upload; wie viel möglich ist, hängt von Netz und Standort ab.',
         ],
       },
       {
@@ -391,7 +391,7 @@ export const articles: Article[] = [
       },
     ],
     faq: [
-      { q: 'Funktioniert 5G überhaupt zuverlässig in einer vollen Messehalle?', a: 'Ja — ein Koffer mit guter Antenne und Multi-Netz-Fähigkeit wählt das beste verfügbare Netz. Anders als das geteilte Hallen-WLAN wird deine Bandbreite nicht von Tausenden Nachbarn aufgebraucht.' },
+      { q: 'Funktioniert 5G überhaupt zuverlässig in einer vollen Messehalle?', a: 'Das hängt von Netz und Standort ab, ein Empfangstest vor der Messe ist sinnvoll. Mit Dual-SIM und automatischem Failover wechselt der Router auf die zweite SIM, wenn ein Netz ausfällt. Anders als das geteilte Hallen-WLAN wird deine Bandbreite nicht von Tausenden Nachbarn aufgebraucht.' },
       { q: 'Reicht ein Koffer für einen kompletten Messestand?', a: 'Für die allermeisten Stände ja: Kasse, Tablets, Lead-Scanner, Displays und Stream laufen gleichzeitig über einen Koffer. Bei sehr großen Ständen verteilt man zwei Koffer als Zellen.' },
       { q: 'Was kostet das im Vergleich zum Veranstalter-WLAN?', a: 'Die Tagespauschalen des Veranstalters summieren sich über mehrere Geräte und Messetage schnell. Ein gemieteter Koffer deckt den ganzen Stand mit einem Gerät ab — meist deutlich günstiger und ohne Limits.' },
     ],

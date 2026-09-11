@@ -91,7 +91,7 @@ export default function OpengraphImage() {
         >
           <div>case-connect.de</div>
           <div>·</div>
-          <div>Multi-Carrier 5G/LTE</div>
+          <div>Dual-SIM 5G/LTE mit Failover</div>
           <div>·</div>
           <div>Netz · Akku · Kfz</div>
         </div>

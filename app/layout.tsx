@@ -8,7 +8,7 @@ const SITE_URL = "https://case-connect.de";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Case-Connect 5G-Koffer — Mobiles Internet für Baustelle, Service & Event | Comms Connect",
+    default: "Case-Connect 5G-Koffer: Mobiles Internet für Baustelle, Service & Event | Comms Connect",
     template: "%s · Case-Connect 5G-Koffer",
   },
   description:
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: SITE_URL,
-    siteName: "Case-Connect — 5G-Koffer by Comms Connect",
-    title: "Case-Connect 5G-Koffer — Mobiles Internet für Baustelle & Service",
+    siteName: "Case-Connect: 5G-Koffer by Comms Connect",
+    title: "Case-Connect 5G-Koffer: Mobiles Internet für Baustelle & Service",
     description:
       "Mobiles Internet ohne DSL im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM, drei Stromquellen, vorkonfiguriert geliefert. 1.999 € netto.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Case-Connect 5G-Koffer — Mobiles Internet für Baustelle",
+    title: "Case-Connect 5G-Koffer: Mobiles Internet für Baustelle",
     description: "Mobiles 5G-Internet ohne DSL im PARAT-Systemkoffer. Dual-SIM, drei Stromquellen, vorkonfiguriert. 1.999 € netto.",
   },
   robots: {
@@ -87,7 +87,7 @@ const schema = {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: "Case-Connect — 5G-Koffer by Comms Connect",
+      name: "Case-Connect: 5G-Koffer by Comms Connect",
       alternateName: ["Case-Connect", "Case Connect", "5G Case Connect"],
       inLanguage: "de-DE",
       publisher: { "@id": `${SITE_URL}/#organization` },
@@ -108,7 +108,6 @@ const schema = {
       description:
         "Mobiles 5G-Koffersystem mit Teltonika RUTX50 (5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) im robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Drei Stromquellen: Netz, Werkzeugakku, 12 V Kfz. Vorkonfiguriert geliefert, inklusive 25 m Cat6-Kabel und Teltonika RMS mit 10-Jahres-Lizenz.",
       brand: { "@id": `${SITE_URL}/#brand` },
-      manufacturer: { "@id": `${SITE_URL}/#organization` },
       category: "Industrial Networking Hardware",
       offers: {
         "@type": "Offer",

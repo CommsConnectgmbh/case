@@ -3,7 +3,7 @@
 // Die Daten werden an zwei Stellen gebraucht: in der Client-Komponente FAQ.tsx
 // (Accordion) und im FAQPage-JSON-LD in app/layout.tsx, das serverseitig
 // gerendert wird. Importiert eine Server Component aus einem 'use client'-Modul,
-// ersetzt Next den Import durch eine Client-Referenz — Komponenten passieren die
+// ersetzt Next den Import durch eine Client-Referenz: Komponenten passieren die
 // Grenze, ein Array nicht. Aus `FAQS` wurde dabei ein Proxy-Objekt, und der
 // Prerender brach mit `FAQS.map is not a function` ab. Deshalb liegen die Daten
 // hier in einem eigenen, server-seitig lesbaren Modul.
@@ -25,11 +25,11 @@ export const FAQS: FaqEntry[] = [
   },
   {
     q: 'Wie schnell ist das Internet aus dem 5G-Koffer?',
-    a: 'Bis zu 3,3 Gbit/s Download und 900 Mbit/s Upload im 5G-Standalone-Modus (4×4 MIMO). In der Praxis hängt das Tempo von der Carrier-Abdeckung am Standort ab. Bei schwachem 5G-Netz wechselt der Koffer automatisch auf LTE-Cat-20 (bis 2 Gbit/s).',
+    a: 'Bis 3,3 Gbit/s Download (Herstellerangabe des Teltonika RUTX50). Das tatsächliche Tempo hängt von Netz und Standort ab. Ist kein 5G verfügbar, fällt der Router auf 4G LTE zurück.',
   },
   {
     q: 'Welche Mobilfunkanbieter werden unterstützt?',
-    a: 'Multi-Carrier: Deutsche Telekom, Vodafone, O2 (Telefónica), 1&1 — und alle EU-Roaming-Partner via eSIM. Der Koffer prüft alle vier Netze parallel und wählt automatisch das stärkste. Bei Bedarf kommt jedes Gerät auch mit Business-SIM-Karte aus unserem Bestand.',
+    a: 'Der Koffer nimmt zwei SIM-Karten auf, so lassen sich zwei Mobilfunkanbieter kombinieren. Dual-SIM mit automatischem Failover: fällt ein Netz aus, wechselt der Router auf die zweite SIM.',
   },
   {
     q: 'Was kostet ein 5G-Koffer und gibt es Miete?',

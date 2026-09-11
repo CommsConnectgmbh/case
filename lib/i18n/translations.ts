@@ -22,8 +22,8 @@ export interface Translations {
     ctaDatasheet?: string;
     statPower?: string;
     statPowerLabel?: string;
-    statUptime?: string;
-    statUptimeLabel?: string;
+    statRms?: string;
+    statRmsLabel?: string;
     statCable?: string;
     statCableLabel?: string;
   };
@@ -167,13 +167,13 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Mehr erfahren',
       eyebrow: '5G Industrie-Konnektivität · Plug & Play',
       subhead:
-        'Industrial-Internet im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM und drei Stromquellen. Vorkonfiguriert geliefert und aufgebaut, bevor die Diskussion über Netzabdeckung anfängt.',
+        'Industrial-Internet im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM und drei Stromquellen. Vorkonfiguriert geliefert.',
       ctaDemo: 'Live-Demo anfragen',
       ctaDatasheet: 'Datenblatt',
       statPower: '3',
       statPowerLabel: 'Stromquellen',
-      statUptime: '99,9 %',
-      statUptimeLabel: 'Geräte-Verfügbarkeit',
+      statRms: '10 Jahre',
+      statRmsLabel: 'RMS-Fernverwaltung inklusive',
       statCable: '25 m',
       statCableLabel: 'LAN-Kabel',
     },
@@ -183,7 +183,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 3, suffix: '', label: 'Stromquellen' },
         { value: 25, suffix: ' m', label: 'LAN-Kabel inklusive' },
-        { value: 99.9, suffix: '%', label: 'Geräte-Verfügbarkeit' },
+        { value: 10, suffix: ' Jahre', label: 'RMS-Fernverwaltung inklusive' },
       ],
       cards: [
         {
@@ -205,17 +205,17 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Enterprise-Konnektivität. Nahezu überall.',
+      headline: 'Enterprise-Konnektivität. Wo Mobilfunk verfügbar ist.',
       features: [
         'Vorkonfiguriert geliefert',
         '3 Stromquellen: Netz, Akku, Kfz',
         'Dual-Band-WLAN, 5 × Gigabit-Ethernet',
-        'Multi-Carrier 5G/LTE',
+        'Dual-SIM 5G/LTE mit Failover',
       ],
     },
     shop: {
       headline: 'Das richtige Setup für Ihren Einsatz.',
-      subline: 'Der 5G Case Standard. Konnektivität nahezu überall, wo ein Netz erreichbar ist.',
+      subline: 'Der 5G Case Standard. Konnektivität überall dort, wo Mobilfunk verfügbar ist, Leistung abhängig von Netz und Standort.',
       addonsTitle: 'Zubehör & Adapter',
     },
     howItWorks: {
@@ -332,7 +332,7 @@ export const translations: Record<Language, Translations> = {
         '5G / LTE / 3G weltweit',
         'Alle gängigen Mobilfunknetze',
         'Starlink-kompatibel via WAN',
-        'Multi-Carrier Failover',
+        'Dual-SIM-Failover',
       ],
       starlinkNote:
         'Starlink-Integration für Standorte ohne Mobilfunkabdeckung',
@@ -401,13 +401,13 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Learn more',
       eyebrow: '5G Industrial Connectivity · Plug & Play',
       subhead:
-        'Industrial internet in a rugged PARAT system case. 5G with LTE fallback, dual SIM and three power sources. Delivered pre-configured and online before the meeting about network coverage even starts.',
+        'Industrial internet in a rugged PARAT system case. 5G with LTE fallback, dual SIM and three power sources. Delivered pre-configured.',
       ctaDemo: 'Request live demo',
       ctaDatasheet: 'Datasheet',
       statPower: '3',
       statPowerLabel: 'Power sources',
-      statUptime: '99.9%',
-      statUptimeLabel: 'Device availability',
+      statRms: '10 years',
+      statRmsLabel: 'RMS remote management included',
       statCable: '25 m',
       statCableLabel: 'LAN cable',
     },
@@ -417,7 +417,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 3, suffix: '', label: 'Power sources' },
         { value: 25, suffix: ' m', label: 'LAN cable included' },
-        { value: 99.9, suffix: '%', label: 'Device availability' },
+        { value: 10, suffix: ' years', label: 'RMS remote management included' },
       ],
       cards: [
         {
@@ -439,17 +439,17 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Enterprise connectivity. Nearly everywhere.',
+      headline: 'Enterprise connectivity. Wherever cellular coverage is available.',
       features: [
         'Delivered pre-configured',
         '3 power sources: mains, battery, vehicle',
         'Dual-band Wi-Fi, 5 × Gigabit Ethernet',
-        'Multi-carrier 5G/LTE',
+        'Dual-SIM 5G/LTE with failover',
       ],
     },
     shop: {
       headline: 'The right setup for your operation.',
-      subline: 'The 5G Case Standard. Connectivity nearly everywhere a network is reachable.',
+      subline: 'The 5G Case Standard. Connectivity wherever cellular coverage is available, performance depends on network and location.',
       addonsTitle: 'Accessories & Adapters',
     },
     howItWorks: {
@@ -566,7 +566,7 @@ export const translations: Record<Language, Translations> = {
         '5G / LTE / 3G worldwide',
         'All major mobile networks',
         'Starlink-compatible via WAN',
-        'Multi-carrier failover',
+        'Dual-SIM failover',
       ],
       starlinkNote:
         'Starlink integration for sites without cellular coverage',
@@ -635,13 +635,13 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'En savoir plus',
       eyebrow: 'Connectivité 5G industrielle · Plug & Play',
       subhead:
-        "Internet industriel dans une valise système PARAT robuste. 5G avec repli LTE, double SIM et trois sources d'alimentation. Livré préconfiguré et en ligne avant même la réunion sur la couverture réseau.",
+        "Internet industriel dans une valise système PARAT robuste. 5G avec repli LTE, double SIM et trois sources d'alimentation. Livré préconfiguré.",
       ctaDemo: 'Demander une démo',
       ctaDatasheet: 'Fiche technique',
       statPower: '3',
       statPowerLabel: "Sources d'alimentation",
-      statUptime: '99,9 %',
-      statUptimeLabel: "Disponibilité de l'appareil",
+      statRms: '10 ans',
+      statRmsLabel: 'Gestion à distance RMS incluse',
       statCable: '25 m',
       statCableLabel: 'Câble LAN',
     },
@@ -651,7 +651,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 3, suffix: '', label: "Sources d'alimentation" },
         { value: 25, suffix: ' m', label: 'Câble LAN inclus' },
-        { value: 99.9, suffix: '%', label: "Disponibilité de l'appareil" },
+        { value: 10, suffix: ' ans', label: 'Gestion à distance RMS incluse' },
       ],
       cards: [
         {
@@ -673,17 +673,17 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Connectivité professionnelle. Presque partout.',
+      headline: 'Connectivité professionnelle. Là où le réseau mobile est disponible.',
       features: [
         'Livré préconfiguré',
         "3 sources d'alimentation : secteur, batterie, véhicule",
         'Wi-Fi double bande, 5 × Gigabit Ethernet',
-        'Multi-opérateur 5G/LTE',
+        'Double SIM 5G/LTE avec basculement',
       ],
     },
     shop: {
       headline: 'La bonne configuration pour votre mission.',
-      subline: 'Le 5G Case Standard. Connectivité presque partout où un réseau est disponible.',
+      subline: 'Le 5G Case Standard. Connectivité là où le réseau mobile est disponible, performances selon le réseau et le site.',
       addonsTitle: 'Accessoires & Adaptateurs',
     },
     howItWorks: {
@@ -800,7 +800,7 @@ export const translations: Record<Language, Translations> = {
         '5G / LTE / 3G mondial',
         'Tous les principaux réseaux mobiles',
         'Compatible Starlink via WAN',
-        'Basculement multi-opérateur',
+        'Basculement double SIM',
       ],
       starlinkNote:
         'Intégration Starlink pour les sites sans couverture cellulaire',
@@ -869,13 +869,13 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Más información',
       eyebrow: 'Conectividad 5G industrial · Plug & Play',
       subhead:
-        'Internet industrial en un robusto maletín de sistema PARAT. 5G con respaldo LTE, doble SIM y tres fuentes de alimentación. Se entrega preconfigurado y está en línea antes de que comience la reunión sobre cobertura.',
+        'Internet industrial en un robusto maletín de sistema PARAT. 5G con respaldo LTE, doble SIM y tres fuentes de alimentación. Se entrega preconfigurado.',
       ctaDemo: 'Solicitar demo',
       ctaDatasheet: 'Ficha técnica',
       statPower: '3',
       statPowerLabel: 'Fuentes de alimentación',
-      statUptime: '99,9 %',
-      statUptimeLabel: 'Disponibilidad del equipo',
+      statRms: '10 años',
+      statRmsLabel: 'Gestión remota RMS incluida',
       statCable: '25 m',
       statCableLabel: 'Cable LAN',
     },
@@ -885,7 +885,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 3, suffix: '', label: 'Fuentes de alimentación' },
         { value: 25, suffix: ' m', label: 'Cable LAN incluido' },
-        { value: 99.9, suffix: '%', label: 'Disponibilidad del equipo' },
+        { value: 10, suffix: ' años', label: 'Gestión remota RMS incluida' },
       ],
       cards: [
         {
@@ -907,17 +907,17 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Conectividad empresarial. Casi en todas partes.',
+      headline: 'Conectividad empresarial. Donde haya cobertura móvil.',
       features: [
         'Entregado preconfigurado',
         '3 fuentes de alimentación: red, batería, vehículo',
         'Wi-Fi de doble banda, 5 × Gigabit Ethernet',
-        'Multi-operador 5G/LTE',
+        'Doble SIM 5G/LTE con failover',
       ],
     },
     shop: {
       headline: 'La configuración adecuada para su operación.',
-      subline: 'El 5G Case Standard. Conectividad casi en todas partes donde hay red.',
+      subline: 'El 5G Case Standard. Conectividad donde haya cobertura móvil, rendimiento según la red y la ubicación.',
       addonsTitle: 'Accesorios y adaptadores',
     },
     howItWorks: {
@@ -1034,7 +1034,7 @@ export const translations: Record<Language, Translations> = {
         '5G / LTE / 3G mundial',
         'Todas las principales redes móviles',
         'Compatible con Starlink vía WAN',
-        'Conmutación multi-operador',
+        'Conmutación doble SIM',
       ],
       starlinkNote:
         'Integración Starlink para ubicaciones sin cobertura celular',
@@ -1103,13 +1103,13 @@ export const translations: Record<Language, Translations> = {
       ctaMore: 'Scopri di più',
       eyebrow: 'Connettività 5G industriale · Plug & Play',
       subhead:
-        'Internet industriale in una robusta valigia di sistema PARAT. 5G con fallback LTE, doppia SIM e tre fonti di alimentazione. Consegnato preconfigurato e online prima ancora che inizi la riunione sulla copertura.',
+        'Internet industriale in una robusta valigia di sistema PARAT. 5G con fallback LTE, doppia SIM e tre fonti di alimentazione. Consegnato preconfigurato.',
       ctaDemo: 'Richiedi demo',
       ctaDatasheet: 'Scheda tecnica',
       statPower: '3',
       statPowerLabel: 'Fonti di alimentazione',
-      statUptime: '99,9 %',
-      statUptimeLabel: 'Disponibilità del dispositivo',
+      statRms: '10 anni',
+      statRmsLabel: 'Gestione remota RMS inclusa',
       statCable: '25 m',
       statCableLabel: 'Cavo LAN',
     },
@@ -1119,7 +1119,7 @@ export const translations: Record<Language, Translations> = {
       stats: [
         { value: 3, suffix: '', label: 'Fonti di alimentazione' },
         { value: 25, suffix: ' m', label: 'Cavo LAN incluso' },
-        { value: 99.9, suffix: '%', label: 'Disponibilità del dispositivo' },
+        { value: 10, suffix: ' anni', label: 'Gestione remota RMS inclusa' },
       ],
       cards: [
         {
@@ -1141,17 +1141,17 @@ export const translations: Record<Language, Translations> = {
     },
     productIntro: {
       overline: '5G CASE',
-      headline: 'Connettività aziendale. Quasi ovunque.',
+      headline: 'Connettività aziendale. Dove è disponibile la rete mobile.',
       features: [
         'Consegnato preconfigurato',
         '3 fonti di alimentazione: rete, batteria, veicolo',
         'Wi-Fi dual band, 5 × Gigabit Ethernet',
-        'Multi-operatore 5G/LTE',
+        'Doppia SIM 5G/LTE con failover',
       ],
     },
     shop: {
       headline: 'La configurazione giusta per la vostra operazione.',
-      subline: 'Il 5G Case Standard. Connettività quasi ovunque dove è disponibile una rete.',
+      subline: 'Il 5G Case Standard. Connettività dove è disponibile la rete mobile, prestazioni in base a rete e sito.',
       addonsTitle: 'Accessori e adattatori',
     },
     howItWorks: {
@@ -1268,7 +1268,7 @@ export const translations: Record<Language, Translations> = {
         '5G / LTE / 3G mondiale',
         'Tutte le principali reti mobili',
         'Compatibile Starlink via WAN',
-        'Failover multi-operatore',
+        'Failover doppia SIM',
       ],
       starlinkNote:
         'Integrazione Starlink per siti senza copertura cellulare',
