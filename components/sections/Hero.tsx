@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Play } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 import IndustrialShader from '@/components/ui/IndustrialShader';
 
@@ -144,9 +144,9 @@ export default function Hero() {
         </div>
 
         <a
-          href="#features"
+          href="#launch"
           className="hidden md:flex items-center gap-3 group"
-          aria-label="Zum Produkt scrollen"
+          aria-label="Zum Stimmungsfilm scrollen"
         >
           <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55 group-hover:text-white transition-colors">
             Scroll
@@ -154,6 +154,16 @@ export default function Hero() {
           <span className="relative block h-px w-32 lg:w-48 bg-white/15 overflow-hidden">
             <span className="absolute inset-y-0 left-0 w-1/3 bg-white/65 group-hover:w-full transition-[width] duration-700" />
           </span>
+        </a>
+
+        <a
+          href="#launch"
+          className="group inline-flex items-center gap-2.5 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/80 hover:text-cta transition-colors"
+        >
+          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-white/30 group-hover:border-cta transition-colors">
+            <Play size={9} className="ml-px fill-current" />
+          </span>
+          Stimmungsfilm
         </a>
       </motion.div>
     </section>
