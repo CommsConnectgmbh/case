@@ -60,7 +60,7 @@ export default function LaunchVideo() {
             Plug. Play. Perform.
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Erlebe den 5G Case in Aktion – mobile Konnektivität ohne Kompromisse.
+            Ein kurzer Stimmungsfilm zum Thema mobile Konnektivität.
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function LaunchVideo() {
           {/* Video element — paused by default, shows poster until played */}
           <video
             ref={videoRef}
-            poster="/images/launch-poster.webp"
+            poster="/images/case-offen.jpg"
             playsInline
             preload="metadata"
             onEnded={() => setIsPlaying(false)}
@@ -150,6 +150,11 @@ export default function LaunchVideo() {
             )}
           </AnimatePresence>
         </motion.div>
+
+        {/* Ehrliche Kennzeichnung: das Video ist KI-generiert und zeigt nicht das Produkt */}
+        <p className="mt-5 text-center text-white/40 text-xs md:text-[13px] tracking-wide">
+          Stimmungsfilm, KI-generiert. Zeigt nicht den 5G Case.
+        </p>
       </div>
     </section>
   );

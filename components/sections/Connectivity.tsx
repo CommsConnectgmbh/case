@@ -1,60 +1,37 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Globe, Radio, Satellite, Shield } from 'lucide-react';
+import { Network, Radio, Satellite, Signal } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 
-interface Feature {
-  icon: typeof Globe;
-  title: string;
-  text: string;
+/**
+ * Nur Darstellung: Icon, Akzent und Link je Eintrag. Titel und Text kommen
+ * aus t.connectivity.features, damit die Sektion in allen Sprachen stimmt.
+ * Reihenfolge muss zu den Eintraegen in translations.ts passen.
+ */
+interface FeatureMeta {
+  icon: typeof Radio;
   accent?: boolean;
   link?: { href: string; label: string };
 }
 
-const features: Feature[] = [
-  {
-    icon: Globe,
-    title: 'Globale Netzabdeckung',
-    text: 'Kompatibel mit 5G, LTE und 3G – funktioniert in allen großen Mobilfunknetzen weltweit. Von AT&T über Deutsche Telekom bis Vodafone.',
-  },
-  {
-    icon: Radio,
-    title: 'Dual-SIM-Failover',
-    text: 'Fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM. Kein manuelles Umschalten.',
-  },
+const featureMeta: FeatureMeta[] = [
+  { icon: Signal },
+  { icon: Radio },
   {
     icon: Satellite,
-    title: 'Starlink-kompatibel',
-    text: 'Für Standorte komplett ohne Mobilfunkempfang: Starlink via WAN-Port anschließen und sofort online.',
     accent: true,
-    link: { href: 'https://starlink.com/de', label: 'Mehr zu Starlink' },
+    link: { href: 'https://starlink.com/de', label: 'starlink.com' },
   },
-  {
-    icon: Shield,
-    title: 'Enterprise-Sicherheit',
-    text: 'VPN-fähig, verschlüsselte Verbindungen, private APN-Unterstützung für maximale Datensicherheit.',
-  },
+  { icon: Network },
 ];
 
 export default function Connectivity() {
   const t = useTranslation();
   return (
     <section className="relative py-32 px-6 bg-bg overflow-hidden">
-      {/* Dezentes Satelliten-Hintergrundbild – optimiert AVIF/WebP */}
+      {/* Dezenter Verlauf als Sektions-Hintergrund */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.12]">
-        <picture>
-          <source srcSet="/images/sateliten.avif" type="image/avif" />
-          <source srcSet="/images/sateliten.webp" type="image/webp" />
-          <img
-            src="/images/sateliten.png"
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg" />
       </div>
 
@@ -87,7 +64,9 @@ export default function Connectivity() {
           />
 
           <ul className="space-y-12 md:space-y-20">
-            {features.map((f, i) => {
+            {t.connectivity.features.map((f, i) => {
+              const meta = featureMeta[i % featureMeta.length];
+              const Icon = meta.icon;
               const isRight = i % 2 === 1;
               return (
                 <motion.li
@@ -109,7 +88,7 @@ export default function Connectivity() {
                   >
                     <div
                       className={`w-3 h-3 rounded-full ring-4 ${
-                        f.accent
+                        meta.accent
                           ? 'bg-primary ring-primary/15'
                           : 'bg-primary/70 ring-primary/10'
                       }`}
@@ -139,12 +118,12 @@ export default function Connectivity() {
                     >
                       <div
                         className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 ${
-                          f.accent
+                          meta.accent
                             ? 'bg-primary/15 shadow-[0_0_24px_rgba(0,196,255,0.15)]'
                             : 'bg-primary/10'
                         }`}
                       >
-                        <f.icon size={26} className="text-primary" />
+                        <Icon size={26} className="text-primary" />
                       </div>
                       <div className="min-w-0">
                         <h3 className="font-heading text-lg md:text-xl font-bold mb-2">
@@ -153,14 +132,14 @@ export default function Connectivity() {
                         <p className="text-muted text-[15px] leading-relaxed">
                           {f.text}
                         </p>
-                        {f.link && (
+                        {meta.link && (
                           <a
-                            href={f.link.href}
+                            href={meta.link.href}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 mt-3 text-primary text-sm font-medium hover:underline"
                           >
-                            {f.link.label}
+                            {meta.link.label}
                             <span aria-hidden="true">&rarr;</span>
                           </a>
                         )}

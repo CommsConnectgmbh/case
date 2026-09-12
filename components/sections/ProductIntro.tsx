@@ -9,12 +9,12 @@ import { useTranslation } from '@/lib/i18n';
 const featureIcons = [Plug, BatteryCharging, Wifi];
 
 const productImages = [
-  { src: '/images/Bild2.png', alt: '5G Case – geschlossen' },
-  { src: '/images/Bild5.png', alt: '5G Case – geöffnet mit Zubehör' },
-  { src: '/images/Bild6.png', alt: '5G Case, Detailansicht' },
-  { src: '/images/bild1.png', alt: '5G Case – Power Button Detail' },
-  { src: '/images/Bild3.png', alt: '5G Case – Innenleben' },
-  { src: '/images/Bild4.png', alt: '5G Case – Akku-Slot' },
+  { src: '/images/case-geschlossen.jpg', alt: '5G Case geschlossen: schwarzer PARAT-Systemkoffer mit rotem Tragegriff und Comms-Connect-Logo' },
+  { src: '/images/case-offen.jpg', alt: '5G Case geöffnet: Poynting-Panelantenne im Kofferdeckel, Bedienfeld im Kofferunterteil' },
+  { src: '/images/bedienfeld.jpg', alt: 'Bedienfeld des 5G Case mit Drehwahlschalter, Status-LED und grünem Netzschalter' },
+  { src: '/images/anschluesse.jpg', alt: 'Anschlüsse an der Außenseite des 5G Case: LAN, WAN, 12 V und 230 V' },
+  { src: '/images/akku-staufach.jpg', alt: 'Staufach des 5G Case mit einem 18-V-Werkzeugakku am Brennenstuhl MULTI Adapter (Akku nicht im Lieferumfang)' },
+  { src: '/images/router-innen.jpg', alt: 'Teltonika RUTX50 5G-Router im Inneren des 5G Case' },
 ];
 
 export default function ProductIntro() {

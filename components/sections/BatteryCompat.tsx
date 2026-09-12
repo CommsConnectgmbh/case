@@ -71,8 +71,8 @@ export default function BatteryCompat() {
             }}
           >
             <Image
-              src="/images/adapters-overview.png"
-              alt="9 Brennenstuhl Markenadapter – Kompatibel mit Bosch, Dewalt, Milwaukee, Makita, Festool, Metabo CAS, Einhell, Hikoki und Fein"
+              src="/images/akku-staufach.jpg"
+              alt="Staufach des 5G Case mit einem 18-V-Werkzeugakku, aufgesteckt auf einen Brennenstuhl MULTI Adapter (Akku und Adapter nicht im Lieferumfang)"
               width={1200}
               height={800}
               className="w-full h-auto object-contain"

@@ -146,7 +146,7 @@ export default function Hero() {
         <a
           href="#launch"
           className="hidden md:flex items-center gap-3 group"
-          aria-label="Scroll to video"
+          aria-label="Zum Stimmungsfilm scrollen"
         >
           <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55 group-hover:text-white transition-colors">
             Scroll
@@ -163,7 +163,7 @@ export default function Hero() {
           <span className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-white/30 group-hover:border-cta transition-colors">
             <Play size={9} className="ml-px fill-current" />
           </span>
-          Watch Video
+          Stimmungsfilm
         </a>
       </motion.div>
     </section>
