@@ -15,8 +15,8 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: Globe,
-    title: 'Globale Netzabdeckung',
-    text: 'Kompatibel mit 5G, LTE und 3G – funktioniert in allen großen Mobilfunknetzen weltweit. Von AT&T über Deutsche Telekom bis Vodafone.',
+    title: '5G und LTE',
+    text: '5G (SA und NSA) mit Rückfall auf 4G LTE. Dual-SIM, SIM-Karten frei wählbar.',
   },
   {
     icon: Radio,
@@ -26,7 +26,7 @@ const features: Feature[] = [
   {
     icon: Satellite,
     title: 'Starlink-kompatibel',
-    text: 'Für Standorte komplett ohne Mobilfunkempfang: Starlink via WAN-Port anschließen und sofort online.',
+    text: 'Für Standorte ohne Mobilfunkempfang am Aufstellort: Starlink über den WAN-Port anschließen.',
     accent: true,
     link: { href: 'https://starlink.com/de', label: 'Mehr zu Starlink' },
   },
@@ -41,20 +41,8 @@ export default function Connectivity() {
   const t = useTranslation();
   return (
     <section className="relative py-32 px-6 bg-bg overflow-hidden">
-      {/* Dezentes Satelliten-Hintergrundbild – optimiert AVIF/WebP */}
+      {/* Dezenter Verlauf als Sektions-Hintergrund */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.12]">
-        <picture>
-          <source srcSet="/images/sateliten.avif" type="image/avif" />
-          <source srcSet="/images/sateliten.webp" type="image/webp" />
-          <img
-            src="/images/sateliten.png"
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg" />
       </div>
 

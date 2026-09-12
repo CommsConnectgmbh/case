@@ -5,7 +5,7 @@ export const PRODUCTS = {
     subtitle: 'Mit Teltonika RUTX50',
     badge: 'Bestseller',
     priceNetto: 1999,
-    image: '/images/koffer-hero.png',
+    image: '/images/case-geschlossen.jpg',
     description: 'Mobiles 5G-Koffersystem mit Teltonika RUTX50 Router (Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet), Teltonika RMS mit 10-Jahres-Lizenz, Poynting 5G-Panelantenne (A-PANL-0431) im Kofferdeckel, 25 m Cat6-Netzwerkkabel, robuster PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Akkubetrieb möglich, Akku und Markenadapter nicht im Lieferumfang enthalten.',
     features: [
       'Teltonika RUTX50 5G-Router (Dual-SIM)',
