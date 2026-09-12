@@ -1,40 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Globe, Radio, Satellite, Shield } from 'lucide-react';
+import { Network, Radio, Satellite, Signal } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 
-interface Feature {
-  icon: typeof Globe;
-  title: string;
-  text: string;
+/**
+ * Nur Darstellung: Icon, Akzent und Link je Eintrag. Titel und Text kommen
+ * aus t.connectivity.features, damit die Sektion in allen Sprachen stimmt.
+ * Reihenfolge muss zu den Eintraegen in translations.ts passen.
+ */
+interface FeatureMeta {
+  icon: typeof Radio;
   accent?: boolean;
   link?: { href: string; label: string };
 }
 
-const features: Feature[] = [
-  {
-    icon: Globe,
-    title: '5G und LTE',
-    text: '5G (SA und NSA) mit Rückfall auf 4G LTE. Dual-SIM, SIM-Karten frei wählbar.',
-  },
-  {
-    icon: Radio,
-    title: 'Dual-SIM-Failover',
-    text: 'Fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM. Kein manuelles Umschalten.',
-  },
+const featureMeta: FeatureMeta[] = [
+  { icon: Signal },
+  { icon: Radio },
   {
     icon: Satellite,
-    title: 'Starlink-kompatibel',
-    text: 'Für Standorte ohne Mobilfunkempfang am Aufstellort: Starlink über den WAN-Port anschließen.',
     accent: true,
-    link: { href: 'https://starlink.com/de', label: 'Mehr zu Starlink' },
+    link: { href: 'https://starlink.com/de', label: 'starlink.com' },
   },
-  {
-    icon: Shield,
-    title: 'Enterprise-Sicherheit',
-    text: 'VPN-fähig, verschlüsselte Verbindungen, private APN-Unterstützung für maximale Datensicherheit.',
-  },
+  { icon: Network },
 ];
 
 export default function Connectivity() {
@@ -75,7 +64,9 @@ export default function Connectivity() {
           />
 
           <ul className="space-y-12 md:space-y-20">
-            {features.map((f, i) => {
+            {t.connectivity.features.map((f, i) => {
+              const meta = featureMeta[i % featureMeta.length];
+              const Icon = meta.icon;
               const isRight = i % 2 === 1;
               return (
                 <motion.li
@@ -97,7 +88,7 @@ export default function Connectivity() {
                   >
                     <div
                       className={`w-3 h-3 rounded-full ring-4 ${
-                        f.accent
+                        meta.accent
                           ? 'bg-primary ring-primary/15'
                           : 'bg-primary/70 ring-primary/10'
                       }`}
@@ -127,12 +118,12 @@ export default function Connectivity() {
                     >
                       <div
                         className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 ${
-                          f.accent
+                          meta.accent
                             ? 'bg-primary/15 shadow-[0_0_24px_rgba(0,196,255,0.15)]'
                             : 'bg-primary/10'
                         }`}
                       >
-                        <f.icon size={26} className="text-primary" />
+                        <Icon size={26} className="text-primary" />
                       </div>
                       <div className="min-w-0">
                         <h3 className="font-heading text-lg md:text-xl font-bold mb-2">
@@ -141,14 +132,14 @@ export default function Connectivity() {
                         <p className="text-muted text-[15px] leading-relaxed">
                           {f.text}
                         </p>
-                        {f.link && (
+                        {meta.link && (
                           <a
-                            href={f.link.href}
+                            href={meta.link.href}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 mt-3 text-primary text-sm font-medium hover:underline"
                           >
-                            {f.link.label}
+                            {meta.link.label}
                             <span aria-hidden="true">&rarr;</span>
                           </a>
                         )}

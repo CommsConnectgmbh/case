@@ -100,8 +100,10 @@ export interface Translations {
   connectivity: {
     headline: string;
     subline: string;
-    features: string[];
-    starlinkNote: string;
+    features: {
+      title: string;
+      text: string;
+    }[];
   };
   footer: {
     sections: {
@@ -325,17 +327,27 @@ export const translations: Record<Language, Translations> = {
       ],
     },
     connectivity: {
-      headline: 'Weltweit vernetzt. Ohne Kompromisse.',
+      headline: 'Mehrere Wege ins Netz.',
       subline:
-        'Kompatibel mit allen gängigen Mobilfunknetzen weltweit. Für besonders schwierige Standorte ohne Mobilfunkempfang kann Starlink via WAN-Port angeschlossen werden.',
+        '5G (SA und NSA) mit Rückfall auf 4G LTE. Dual-SIM mit automatischem Failover. Über den WAN-Port lässt sich ein Festnetz- oder Satelliten-Uplink anschließen.',
       features: [
-        '5G / LTE / 3G weltweit',
-        'Alle gängigen Mobilfunknetze',
-        'Starlink-kompatibel via WAN',
-        'Dual-SIM-Failover',
+        {
+          title: '5G und LTE',
+          text: '5G (SA und NSA) mit Rückfall auf 4G LTE. Dual-SIM, SIM-Karten frei wählbar.',
+        },
+        {
+          title: 'Dual-SIM-Failover',
+          text: 'Fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM. Kein manuelles Umschalten.',
+        },
+        {
+          title: 'Starlink-kompatibel',
+          text: 'Für Standorte ohne Mobilfunkempfang am Aufstellort: Starlink über den WAN-Port anschließen.',
+        },
+        {
+          title: 'Anschlüsse vor Ort',
+          text: '5 × Gigabit-Ethernet und Dual-Band-WLAN für die Geräte am Einsatzort.',
+        },
       ],
-      starlinkNote:
-        'Starlink-Integration für Standorte ohne Mobilfunkabdeckung',
     },
     footer: {
       sections: {
@@ -559,17 +571,27 @@ export const translations: Record<Language, Translations> = {
       ],
     },
     connectivity: {
-      headline: 'Globally connected. No compromises.',
+      headline: 'More than one way online.',
       subline:
-        'Compatible with all major mobile networks worldwide. For particularly challenging sites without cellular reception, Starlink can be connected via the WAN port.',
+        '5G (SA and NSA) with fallback to 4G LTE. Dual-SIM with automatic failover. A fixed-line or satellite uplink can be connected via the WAN port.',
       features: [
-        '5G / LTE / 3G worldwide',
-        'All major mobile networks',
-        'Starlink-compatible via WAN',
-        'Dual-SIM failover',
+        {
+          title: '5G and LTE',
+          text: '5G (SA and NSA) with fallback to 4G LTE. Dual-SIM, SIM cards of your choice.',
+        },
+        {
+          title: 'Dual-SIM failover',
+          text: 'If one network fails, the router switches to the second SIM automatically. No manual switching.',
+        },
+        {
+          title: 'Starlink-compatible',
+          text: 'For sites without cellular reception at the location: connect Starlink via the WAN port.',
+        },
+        {
+          title: 'Connections on site',
+          text: '5 × Gigabit Ethernet and dual-band Wi-Fi for the devices at the site.',
+        },
       ],
-      starlinkNote:
-        'Starlink integration for sites without cellular coverage',
     },
     footer: {
       sections: {
@@ -793,17 +815,27 @@ export const translations: Record<Language, Translations> = {
       ],
     },
     connectivity: {
-      headline: 'Connecté partout. Sans compromis.',
+      headline: 'Plusieurs chemins vers le réseau.',
       subline:
-        'Compatible avec tous les principaux réseaux mobiles dans le monde. Pour les sites particulièrement difficiles sans réception cellulaire, Starlink peut être connecté via le port WAN.',
+        '5G (SA et NSA) avec repli sur la 4G LTE. Double SIM avec bascule automatique. Un lien fixe ou satellite peut être raccordé au port WAN.',
       features: [
-        '5G / LTE / 3G mondial',
-        'Tous les principaux réseaux mobiles',
-        'Compatible Starlink via WAN',
-        'Basculement double SIM',
+        {
+          title: '5G et LTE',
+          text: '5G (SA et NSA) avec repli sur la 4G LTE. Double SIM, cartes SIM au choix.',
+        },
+        {
+          title: 'Bascule double SIM',
+          text: 'Si un réseau tombe, le routeur passe automatiquement sur la seconde SIM. Aucune manipulation.',
+        },
+        {
+          title: 'Compatible Starlink',
+          text: 'Pour les sites sans réception cellulaire sur place : raccorder Starlink au port WAN.',
+        },
+        {
+          title: 'Connexions sur site',
+          text: '5 × Gigabit Ethernet et Wi-Fi bibande pour les appareils sur place.',
+        },
       ],
-      starlinkNote:
-        'Intégration Starlink pour les sites sans couverture cellulaire',
     },
     footer: {
       sections: {
@@ -1027,17 +1059,27 @@ export const translations: Record<Language, Translations> = {
       ],
     },
     connectivity: {
-      headline: 'Conectado globalmente. Sin compromisos.',
+      headline: 'Más de una vía a la red.',
       subline:
-        'Compatible con todas las principales redes móviles del mundo. Para ubicaciones especialmente difíciles sin recepción celular, se puede conectar Starlink a través del puerto WAN.',
+        '5G (SA y NSA) con retorno a 4G LTE. SIM doble con conmutación automática. Por el puerto WAN puede conectarse un enlace fijo o por satélite.',
       features: [
-        '5G / LTE / 3G mundial',
-        'Todas las principales redes móviles',
-        'Compatible con Starlink vía WAN',
-        'Conmutación doble SIM',
+        {
+          title: '5G y LTE',
+          text: '5G (SA y NSA) con retorno a 4G LTE. SIM doble, tarjetas SIM a elección.',
+        },
+        {
+          title: 'Conmutación doble SIM',
+          text: 'Si una red falla, el router cambia automáticamente a la segunda SIM. Sin conmutación manual.',
+        },
+        {
+          title: 'Compatible con Starlink',
+          text: 'Para ubicaciones sin cobertura móvil en el emplazamiento: conectar Starlink al puerto WAN.',
+        },
+        {
+          title: 'Conexiones in situ',
+          text: '5 × Gigabit Ethernet y wifi de doble banda para los equipos del lugar.',
+        },
       ],
-      starlinkNote:
-        'Integración Starlink para ubicaciones sin cobertura celular',
     },
     footer: {
       sections: {
@@ -1261,17 +1303,27 @@ export const translations: Record<Language, Translations> = {
       ],
     },
     connectivity: {
-      headline: 'Connessi ovunque. Senza compromessi.',
+      headline: 'Più di una strada verso la rete.',
       subline:
-        'Compatibile con tutte le principali reti mobili del mondo. Per siti particolarmente difficili senza ricezione cellulare, Starlink può essere collegato tramite la porta WAN.',
+        '5G (SA e NSA) con ritorno a 4G LTE. Doppia SIM con failover automatico. Tramite la porta WAN è possibile collegare un uplink fisso o satellitare.',
       features: [
-        '5G / LTE / 3G mondiale',
-        'Tutte le principali reti mobili',
-        'Compatibile Starlink via WAN',
-        'Failover doppia SIM',
+        {
+          title: '5G e LTE',
+          text: '5G (SA e NSA) con ritorno a 4G LTE. Doppia SIM, schede SIM a scelta.',
+        },
+        {
+          title: 'Failover doppia SIM',
+          text: 'Se una rete cade, il router passa automaticamente alla seconda SIM. Nessun intervento manuale.',
+        },
+        {
+          title: 'Compatibile Starlink',
+          text: 'Per siti senza copertura cellulare in loco: collegare Starlink alla porta WAN.',
+        },
+        {
+          title: 'Collegamenti in loco',
+          text: '5 × Gigabit Ethernet e Wi-Fi dual band per i dispositivi sul posto.',
+        },
       ],
-      starlinkNote:
-        'Integrazione Starlink per siti senza copertura cellulare',
     },
     footer: {
       sections: {
