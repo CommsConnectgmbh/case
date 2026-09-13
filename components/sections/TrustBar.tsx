@@ -6,7 +6,6 @@ const partners = [
   { name: 'PARAT', url: 'https://www.parat.de/', role: 'Gehäuse' },
   { name: 'Teltonika', url: 'https://teltonika-networks.com/', role: 'Router' },
   { name: 'Poynting', url: 'https://poynting.tech/', role: 'Antenne' },
-  { name: 'Sector27', url: 'https://www.sector27.de/', role: 'Service' },
   { name: 'Gautzsch', url: 'https://www.gautzsch-gruppe.de/', role: 'Distribution' },
 ];
 

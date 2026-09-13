@@ -11,32 +11,50 @@ export default function LaunchVideo() {
   const [isMuted, setIsMuted] = useState(false);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (isPlaying) {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      // On mobile, go fullscreen automatically
-      const isMobile = window.innerWidth < 768;
-      if (isMobile && videoRef.current.requestFullscreen) {
-        videoRef.current.requestFullscreen().catch(() => {});
-      } else if (isMobile && (videoRef.current as HTMLVideoElement & { webkitEnterFullscreen?: () => void }).webkitEnterFullscreen) {
-        (videoRef.current as HTMLVideoElement & { webkitEnterFullscreen: () => void }).webkitEnterFullscreen();
+  const enterFullscreen = (v: HTMLVideoElement) => {
+    const el = v as HTMLVideoElement & { webkitEnterFullscreen?: () => void };
+    try {
+      if (v.requestFullscreen) {
+        v.requestFullscreen().catch(() => {});
+      } else if (el.webkitEnterFullscreen) {
+        el.webkitEnterFullscreen();
       }
-      videoRef.current.play();
-      setIsPlaying(true);
+    } catch {
+      // iOS wirft InvalidStateError, solange keine Mediendaten geladen sind — ignorieren
     }
+  };
+
+  const togglePlay = async () => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    if (!v.paused) {
+      v.pause();
+      return;
+    }
+
+    // Erst abspielen, dann Vollbild. Umgekehrt wirft iOS InvalidStateError
+    // in webkitEnterFullscreen(), bevor play() überhaupt erreicht wird.
+    try {
+      await v.play();
+    } catch {
+      // Browser, die Ton-Start per Klick verweigern: stumm erneut versuchen
+      v.muted = true;
+      setIsMuted(true);
+      try {
+        await v.play();
+      } catch {
+        return;
+      }
+    }
+
+    if (window.innerWidth < 768) enterFullscreen(v);
   };
 
   const goFullscreen = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (!videoRef.current) return;
-    if (videoRef.current.requestFullscreen) {
-      videoRef.current.requestFullscreen().catch(() => {});
-    } else if ((videoRef.current as HTMLVideoElement & { webkitEnterFullscreen?: () => void }).webkitEnterFullscreen) {
-      (videoRef.current as HTMLVideoElement & { webkitEnterFullscreen: () => void }).webkitEnterFullscreen();
-    }
+    enterFullscreen(videoRef.current);
   };
 
   const toggleMute = (e: React.MouseEvent) => {
@@ -78,6 +96,8 @@ export default function LaunchVideo() {
             poster="/images/case-offen.jpg"
             playsInline
             preload="metadata"
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
             onEnded={() => setIsPlaying(false)}
             className="w-full aspect-video object-cover"
           >
