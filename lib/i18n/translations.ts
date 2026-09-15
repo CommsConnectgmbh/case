@@ -184,7 +184,7 @@ export const translations: Record<Language, Translations> = {
         'Kein Netz ist keine Option. Nicht auf der Baustelle. Nicht beim Event. Nicht im Einsatz.',
       stats: [
         { value: 3, suffix: '', label: 'Stromquellen' },
-        { value: 25, suffix: ' m', label: 'LAN-Kabel inklusive' },
+        { value: 30, suffix: ' m', label: 'LAN-Kabel inklusive' },
         { value: 10, suffix: ' Jahre', label: 'RMS-Fernverwaltung inklusive' },
       ],
       cards: [
@@ -428,7 +428,7 @@ export const translations: Record<Language, Translations> = {
         'No signal is not an option. Not on the construction site. Not at the event. Not in the field.',
       stats: [
         { value: 3, suffix: '', label: 'Power sources' },
-        { value: 25, suffix: ' m', label: 'LAN cable included' },
+        { value: 30, suffix: ' m', label: 'LAN cable included' },
         { value: 10, suffix: ' years', label: 'RMS remote management included' },
       ],
       cards: [
@@ -672,7 +672,7 @@ export const translations: Record<Language, Translations> = {
         "Pas de réseau n'est pas une option. Pas sur le chantier. Pas lors d'un événement. Pas en mission.",
       stats: [
         { value: 3, suffix: '', label: "Sources d'alimentation" },
-        { value: 25, suffix: ' m', label: 'Câble LAN inclus' },
+        { value: 30, suffix: ' m', label: 'Câble LAN inclus' },
         { value: 10, suffix: ' ans', label: 'Gestion à distance RMS incluse' },
       ],
       cards: [
@@ -916,7 +916,7 @@ export const translations: Record<Language, Translations> = {
         'Sin cobertura no es una opción. Ni en la obra. Ni en el evento. Ni en la operación.',
       stats: [
         { value: 3, suffix: '', label: 'Fuentes de alimentación' },
-        { value: 25, suffix: ' m', label: 'Cable LAN incluido' },
+        { value: 30, suffix: ' m', label: 'Cable LAN incluido' },
         { value: 10, suffix: ' años', label: 'Gestión remota RMS incluida' },
       ],
       cards: [
@@ -1160,7 +1160,7 @@ export const translations: Record<Language, Translations> = {
         "Nessun segnale non è un'opzione. Non in cantiere. Non all'evento. Non in missione.",
       stats: [
         { value: 3, suffix: '', label: 'Fonti di alimentazione' },
-        { value: 25, suffix: ' m', label: 'Cavo LAN incluso' },
+        { value: 30, suffix: ' m', label: 'Cavo LAN incluso' },
         { value: 10, suffix: ' anni', label: 'Gestione remota RMS inclusa' },
       ],
       cards: [

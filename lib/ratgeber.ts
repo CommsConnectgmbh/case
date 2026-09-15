@@ -152,7 +152,7 @@ export const articles: Article[] = [
       {
         h2: 'Reichweite & Aufbau',
         p: [
-          'Ein 5G-Koffer liefert Dual-Band-WLAN direkt am Standort. Wie weit das WLAN reicht, hängt von Halle, Bebauung und Publikum ab. Für viele Setups reicht ein einziger Koffer als zentrale Quelle, von der aus per LAN weiterverteilt wird: Der 5G Case hat 5 × Gigabit-Ethernet und ein 30 m langes Netzwerkkabel im Lieferumfang. Kein Techniker, kein Kabelgraben.',
+          'Ein 5G-Koffer liefert Dual-Band-WLAN direkt am Standort. Wie weit das WLAN reicht, hängt von Halle, Bebauung und Publikum ab. Für viele Setups reicht ein einziger Koffer als zentrale Quelle, von der aus per LAN weiterverteilt wird: Der 5G Case hat 5 × Gigabit-Ethernet und ein 30 m langes Netzwerkkabel im Lieferumfang. Für die letzte Strecke liegt ein Cudy RE3000 Wi-Fi-6-Mesh-Repeater bei, der wahlweise drahtlos verlängert oder per Kabel als Access Point am Zielort hängt. Kein Techniker, kein Kabelgraben.',
         ],
       },
       {
@@ -263,7 +263,7 @@ export const articles: Article[] = [
       {
         h2: 'Antenne & Reichweite',
         p: [
-          'Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Den Koffer stellst du dort auf, wo Empfang ist, und verteilst das Netz von dort per Dual-Band-WLAN oder per LAN: Der Router hat 5 × Gigabit-Ethernet, ein 30 m langes Netzwerkkabel liegt bei, um z. B. in den Keller oder andere Etagen zu kommen. Wie weit das WLAN reicht, hängt von Umgebung und Bebauung ab.',
+          'Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Den Koffer stellst du dort auf, wo Empfang ist, und verteilst das Netz von dort per Dual-Band-WLAN oder per LAN: Der Router hat 5 × Gigabit-Ethernet, ein 30 m langes Netzwerkkabel liegt bei, um z. B. in den Keller oder andere Etagen zu kommen. Am Ende des Kabels kannst du den mitgelieferten Cudy RE3000 als Access Point setzen: Dort steht dann ein eigenes Wi-Fi-6-Netz, sofern eine Steckdose vorhanden ist. Wie weit das WLAN reicht, hängt von Umgebung und Bebauung ab.',
         ],
       },
       {
@@ -289,7 +289,7 @@ export const articles: Article[] = [
     faq: [
       { q: 'Brauche ich technisches Wissen, um den Koffer zu nutzen?', a: 'Grundkenntnisse genügen: Strom anschließen, Stromquelle wählen, mit dem WLAN verbinden. Der Router wird vorkonfiguriert geliefert.' },
       { q: 'Welche SIM-Karte brauche ich?', a: 'Eine Daten-SIM eines Mobilfunkanbieters. Mit Dual-SIM lassen sich zwei Anbieter kombinieren: fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM.' },
-      { q: 'Wie groß ist die Reichweite?', a: 'Die WLAN-Reichweite hängt von Umgebung, Bebauung und Endgeräten ab, eine pauschale Meterzahl nennen wir deshalb nicht. Für feste Punkte gibt es zusätzlich LAN, mit 30 m Netzwerkkabel im Lieferumfang.' },
+      { q: 'Wie groß ist die Reichweite?', a: 'Die WLAN-Reichweite hängt von Umgebung, Bebauung und Endgeräten ab, eine pauschale Meterzahl nennen wir deshalb nicht. Für feste Punkte gibt es zusätzlich LAN, mit 30 m Netzwerkkabel im Lieferumfang. Der beiliegende Cudy RE3000 Wi-Fi-6-Mesh-Repeater bringt das WLAN weiter, drahtlos oder per Kabel als Access Point.' },
     ],
   },
   {

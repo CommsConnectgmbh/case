@@ -10,9 +10,10 @@ const overviewRows = [
   { label: 'Mobilfunk', value: '5G (SA und NSA), Rückfall auf 4G LTE' },
   { label: 'Max. Download', value: 'bis 3,3 Gbit/s (Herstellerangabe, real abhängig von Netz und Standort)' },
   { label: 'SIM', value: 'Dual-SIM mit automatischem Failover' },
-  { label: 'WLAN', value: 'Dual-Band-WLAN' },
+  { label: 'WLAN', value: 'Dual-Band-WLAN am Router, zusätzlich Wi-Fi 6 über den mitgelieferten Mesh-Repeater' },
   { label: 'LAN', value: '5 × Gigabit-Ethernet' },
   { label: 'Antenne (inkl.)', value: 'Poynting 5G-Panelantenne (A-PANL-0431), im Kofferdeckel verbaut' },
+  { label: 'Repeater (inkl.)', value: 'Cudy RE3000 Wi-Fi-6-Mesh-Repeater (AX3000), als Repeater oder Access Point nutzbar' },
   { label: 'Gehäuse', value: 'PARAT-Systemkoffer mit Tragegriff, gefertigt von PARAT in Waldkirchen' },
   { label: 'Remote Mgmt', value: 'Teltonika RMS, 10-Jahres-Lizenz inklusive' },
 ];
@@ -54,8 +55,19 @@ const detailCategories: DetailCategory[] = [
     category: 'Lieferumfang',
     rows: [
       { label: 'Koffer', value: '5G Case mit Teltonika RUTX50 und Poynting 5G-Panelantenne, vorkonfiguriert' },
+      { label: 'Repeater', value: 'Cudy RE3000 Wi-Fi-6-Mesh-Repeater (AX3000), Steckernetzteil, 1 × Gigabit-Ethernet' },
       { label: 'Kabel', value: '30 m Cat6-Netzwerkkabel (S/FTP, LSZH, halogenfrei), 230-V-Anschlusskabel, 12-V-Kfz-Anschlusskabel' },
       { label: 'Staufach', value: 'Im Koffer, für Kabel und Akku' },
+    ],
+  },
+  {
+    category: 'WLAN erweitern: Cudy RE3000 (im Lieferumfang)',
+    rows: [
+      { label: 'Standard', value: 'Wi-Fi 6 (802.11ax), Dual-Band AX3000: bis 2.402 Mbit/s auf 5 GHz und 574 Mbit/s auf 2,4 GHz (Herstellerangaben)' },
+      { label: 'Betriebsart 1', value: 'Repeater: verlängert das WLAN des Koffers drahtlos, z. B. um eine Etage oder Hallenhälfte' },
+      { label: 'Betriebsart 2', value: 'Access Point: per Netzwerkkabel an den Koffer angebunden und spannt am Zielort ein eigenes WLAN auf' },
+      { label: 'Anschluss', value: '1 × Gigabit-Ethernet, passend zum 30 m Cat6-Kabel im Lieferumfang' },
+      { label: 'Stromversorgung', value: 'Steckernetzteil 100 bis 240 V. Der Repeater braucht am Einsatzort eine eigene Steckdose und läuft nicht über den Werkzeugakku des Koffers.' },
     ],
   },
   {
@@ -74,6 +86,7 @@ const productLinks = [
   { name: 'Teltonika RUTX50', url: 'https://teltonika-networks.com/products/routers/rutx50' },
   { name: 'Teltonika RMS', url: 'https://www.teltonika-networks.com/de/newsroom/rms-connect-your-expert-remote-management-tool' },
   { name: 'Poynting A-PANL-0431', url: 'https://poynting.tech/antennas/panl-431/' },
+  { name: 'Cudy RE3000', url: 'https://www.cudy.com/products/re3000-1-0' },
 ];
 
 export default function TechSpecs() {

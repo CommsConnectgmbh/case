@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "Case Connect 5G",
     "Teltonika 5G Koffer",
     "Teltonika RUTX50 Koffer",
+    "5G Koffer mit WLAN Repeater",
   ],
   alternates: { canonical: SITE_URL },
   openGraph: {
@@ -106,7 +107,7 @@ const schema = {
       "@id": `${SITE_URL}/#product-standard`,
       name: "Case-Connect 5G-Koffer Standard",
       description:
-        "Mobiles 5G-Koffersystem mit Teltonika RUTX50 (5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) im robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Drei Stromquellen: Netz, Werkzeugakku, 12 V Kfz. Vorkonfiguriert geliefert, inklusive 30 m Cat6-Kabel und Teltonika RMS mit 10-Jahres-Lizenz.",
+        "Mobiles 5G-Koffersystem mit Teltonika RUTX50 (5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) im robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Drei Stromquellen: Netz, Werkzeugakku, 12 V Kfz. Vorkonfiguriert geliefert, inklusive 30 m Cat6-Kabel, Cudy RE3000 Wi-Fi-6-Mesh-Repeater und Teltonika RMS mit 10-Jahres-Lizenz.",
       brand: { "@id": `${SITE_URL}/#brand` },
       category: "Industrial Networking Hardware",
       offers: {
