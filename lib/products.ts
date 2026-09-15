@@ -34,6 +34,7 @@ export const ADDONS = {
     { id: 'adapter-dewalt', name: 'Brennenstuhl Adapter – Milwaukee / DeWalt', priceNetto: 16.80, image: '/images/MILWAUKEE-und-Dewalt.jpg', description: 'Ein Adapter für beide Systeme: Milwaukee und DeWalt 18V Akkus (Brennenstuhl 1172640066). Akku nicht enthalten.' },
     { id: 'adapter-makita', name: 'Brennenstuhl Adapter – Makita', priceNetto: 16.80, image: '/images/MAKITA.jpg', description: 'Adapter für Makita 18V Akkus. Akku nicht enthalten.' },
     { id: 'adapter-festool', name: 'Brennenstuhl Adapter – Festool', priceNetto: 16.80, image: '/images/Festool.jpg', description: 'Adapter für Festool 18V Akkus. Akku nicht enthalten.' },
+    { id: 'adapter-flex', name: 'Brennenstuhl Adapter – Flex', priceNetto: 16.80, image: '/images/flex.jpg', description: 'Adapter für Flex 18V Akkus. Akku nicht enthalten.' },
     { id: 'adapter-metabo', name: 'Brennenstuhl Adapter – Metabo CAS', priceNetto: 16.80, image: '/images/Metabo.jpg', description: 'Adapter für Metabo CAS 18V Akkus. Akku nicht enthalten.' },
     { id: 'adapter-einhell', name: 'Brennenstuhl Adapter – Einhell', priceNetto: 16.80, image: '/images/einhell.jpg', description: 'Adapter für Einhell 18V Akkus. Akku nicht enthalten.' },
     { id: 'adapter-hikoki', name: 'Brennenstuhl Adapter – Hikoki', priceNetto: 16.80, image: '/images/hikoki.jpg', description: 'Adapter für Hikoki 18V Akkus. Akku nicht enthalten.' },

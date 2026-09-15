@@ -8,6 +8,7 @@ const PRICE_MAP: Record<string, string | undefined> = {
   'adapter-dewalt': process.env.STRIPE_PRICE_ADAPTER_DEWALT,
   'adapter-makita': process.env.STRIPE_PRICE_ADAPTER_MAKITA,
   'adapter-festool': process.env.STRIPE_PRICE_ADAPTER_FESTOOL,
+  'adapter-flex': process.env.STRIPE_PRICE_ADAPTER_FLEX,
   'adapter-metabo': process.env.STRIPE_PRICE_ADAPTER_METABO,
   'adapter-einhell': process.env.STRIPE_PRICE_ADAPTER_EINHELL,
   'adapter-hikoki': process.env.STRIPE_PRICE_ADAPTER_HIKOKI,
