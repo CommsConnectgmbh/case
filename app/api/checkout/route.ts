@@ -6,7 +6,6 @@ const PRICE_MAP: Record<string, string | undefined> = {
   'addon-einhell-kit': process.env.STRIPE_PRICE_EINHELL_KIT,
   'adapter-bosch': process.env.STRIPE_PRICE_ADAPTER_BOSCH,
   'adapter-dewalt': process.env.STRIPE_PRICE_ADAPTER_DEWALT,
-  'adapter-milwaukee': process.env.STRIPE_PRICE_ADAPTER_MILWAUKEE,
   'adapter-makita': process.env.STRIPE_PRICE_ADAPTER_MAKITA,
   'adapter-festool': process.env.STRIPE_PRICE_ADAPTER_FESTOOL,
   'adapter-metabo': process.env.STRIPE_PRICE_ADAPTER_METABO,
