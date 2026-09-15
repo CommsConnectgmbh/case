@@ -12,6 +12,7 @@ const overviewRows = [
   { label: 'SIM', value: 'Dual-SIM mit automatischem Failover' },
   { label: 'WLAN', value: 'Dual-Band-WLAN am Router, zusätzlich Wi-Fi 6 über den mitgelieferten Mesh-Repeater' },
   { label: 'LAN', value: '5 × Gigabit-Ethernet' },
+  { label: 'Anschlüsse außen', value: '1 × LAN, 1 × WAN, 1 × 12 V DC (max. 2 A), 1 × 100–240 V AC (50/60 Hz, max. 1 A)' },
   { label: 'Antenne (inkl.)', value: 'Poynting 5G-Panelantenne (A-PANL-0431), im Kofferdeckel verbaut, 4×4 MIMO und GNSS' },
   { label: 'Repeater (inkl.)', value: 'Cudy RE3000 Wi-Fi-6-Mesh-Repeater (AX3000), als Repeater oder Access Point nutzbar' },
   { label: 'Gehäuse', value: 'PARAT-Systemkoffer mit Tragegriff, gefertigt von PARAT in Waldkirchen' },
@@ -27,18 +28,18 @@ const detailCategories: DetailCategory[] = [
   {
     category: 'Anschlüsse außen am Koffer',
     rows: [
-      { label: 'RJ45 LAN', value: 'Netzwerkanschluss für Endgeräte, Maschinen oder Kameras' },
-      { label: 'RJ45 WAN', value: 'Durchgangsbuchse zum WAN-Port des Routers, z. B. für Festnetz- oder Satelliten-Uplink' },
-      { label: '12-V-Kfz-Buchse', value: 'Versorgung über Kfz-Steckdose' },
-      { label: '230-V-Netzbuchse', value: 'Versorgung über das Stromnetz' },
+      { label: '1 × LAN (RJ45)', value: 'Netzwerkanschluss für das lokale Netz: Endgeräte, Maschinen oder Kameras' },
+      { label: '1 × WAN (RJ45)', value: 'Anschluss für eine externe Netz- oder Internetverbindung, durchgeschleift zum WAN-Port des Routers, z. B. Festnetz- oder Satelliten-Uplink' },
+      { label: '1 × 12 V DC', value: 'Gleichstromanschluss, max. 2 A, Polarität L+/N−. Versorgung z. B. über die Kfz-Steckdose.' },
+      { label: '1 × 100–240 V AC', value: 'Netzanschluss für Wechselspannung, 50/60 Hz, max. 1 A' },
     ],
   },
   {
     category: 'Stromversorgung: drei Quellen',
     rows: [
-      { label: 'Netz', value: '100 bis 240 V AC, 50/60 Hz' },
+      { label: 'Netz', value: '100 bis 240 V AC, 50/60 Hz, max. 1 A' },
       { label: 'Akku', value: 'Werkzeugakkus 18 bis 36 V über Brennenstuhl MULTI Battery Adapter (Akku und Adapter nicht im Lieferumfang)' },
-      { label: 'Fahrzeug', value: '12 V über Kfz-Steckdose (12 bis 13,5 V DC)' },
+      { label: 'Fahrzeug', value: '12 V DC über Kfz-Steckdose (12 bis 13,5 V DC), max. 2 A' },
       { label: 'Hinweis', value: 'Der Akku wird im Koffer nicht geladen. Laden mit dem Originalladegerät.' },
     ],
   },
