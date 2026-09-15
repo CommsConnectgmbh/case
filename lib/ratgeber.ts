@@ -334,7 +334,7 @@ export const articles: Article[] = [
       {
         h2: 'Antenne & Verteilung vor Ort',
         p: [
-          'Eine gute Antenne entscheidet, ob am Rand der Abdeckung noch nutzbares Signal ankommt. Im 5G Case sitzt eine Poynting 5G-Panelantenne (A-PANL-0431) im Kofferdeckel. Vor Ort verteilt der Teltonika RUTX50 das Netz per Dual-Band-WLAN; wie weit das reicht, hängt von Umgebung und Bebauung ab. Für Maschinen, Kameras oder andere Etagen gibt es 5 × Gigabit-Ethernet und ein 30 m langes Cat6-Kabel im Lieferumfang.',
+          'Eine gute Antenne entscheidet, ob am Rand der Abdeckung noch nutzbares Signal ankommt. Im 5G Case sitzt eine Poynting 5G-Panelantenne (A-PANL-0431) im Kofferdeckel: 410 bis 6000 MHz, 7,8 dBi, mit allen vier Mobilfunkpfaden des Routers belegt (4×4 MIMO) und einer integrierten GNSS-Antenne. Das ist der Unterschied zu zwei Stabantennen am Routergehäuse. Vor Ort verteilt der Teltonika RUTX50 das Netz per Dual-Band-WLAN; wie weit das reicht, hängt von Umgebung und Bebauung ab. Für Maschinen, Kameras oder andere Etagen gibt es 5 × Gigabit-Ethernet und ein 30 m langes Cat6-Kabel im Lieferumfang.',
         ],
       },
       {

@@ -13,7 +13,7 @@ export type FaqEntry = { q: string; a: string };
 export const FAQS: FaqEntry[] = [
   {
     q: 'Was ist ein 5G-Koffer?',
-    a: 'Ein 5G-Koffer ist ein mobiles Netzwerk-System in einem Koffer. Im 5G Case von Case-Connect steckt ein Teltonika RUTX50 (5G mit Rückfall auf 4G LTE, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) mit einer Poynting 5G-Panelantenne im Kofferdeckel, eingebaut in einen robusten PARAT-Systemkoffer. Er wird vorkonfiguriert geliefert, läuft an Netz, Werkzeugakku oder 12-V-Kfz-Buchse und schafft bis 3,3 Gbit/s Download (Herstellerangabe, real abhängig von Netz und Standort).',
+    a: 'Ein 5G-Koffer ist ein mobiles Netzwerk-System in einem Koffer. Im 5G Case von Case-Connect steckt ein Teltonika RUTX50 (5G mit Rückfall auf 4G LTE, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) mit einer Poynting 5G-Panelantenne im Kofferdeckel, eingebaut in einen robusten PARAT-Systemkoffer. Alle vier Mobilfunkpfade des Routers liegen auf dieser Panelantenne (4×4 MIMO), dazu kommt eine integrierte GNSS-Antenne. Er wird vorkonfiguriert geliefert, läuft an Netz, Werkzeugakku oder 12-V-Kfz-Buchse und schafft bis 3,3 Gbit/s Download (Herstellerangabe, real abhängig von Netz und Standort).',
   },
   {
     q: 'Wofür wird ein 5G-Koffer eingesetzt?',

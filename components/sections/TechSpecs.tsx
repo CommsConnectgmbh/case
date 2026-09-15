@@ -8,11 +8,11 @@ import { useTranslation } from '@/lib/i18n';
 const overviewRows = [
   { label: 'Router', value: 'Teltonika RUTX50' },
   { label: 'Mobilfunk', value: '5G (SA und NSA), Rückfall auf 4G LTE' },
-  { label: 'Max. Download', value: 'bis 3,3 Gbit/s (Herstellerangabe, real abhängig von Netz und Standort)' },
+  { label: 'Max. Download', value: 'bis 3,3 Gbit/s im 4×4 MIMO (Herstellerangabe, real abhängig von Netz und Standort)' },
   { label: 'SIM', value: 'Dual-SIM mit automatischem Failover' },
   { label: 'WLAN', value: 'Dual-Band-WLAN am Router, zusätzlich Wi-Fi 6 über den mitgelieferten Mesh-Repeater' },
   { label: 'LAN', value: '5 × Gigabit-Ethernet' },
-  { label: 'Antenne (inkl.)', value: 'Poynting 5G-Panelantenne (A-PANL-0431), im Kofferdeckel verbaut' },
+  { label: 'Antenne (inkl.)', value: 'Poynting 5G-Panelantenne (A-PANL-0431), im Kofferdeckel verbaut, 4×4 MIMO und GNSS' },
   { label: 'Repeater (inkl.)', value: 'Cudy RE3000 Wi-Fi-6-Mesh-Repeater (AX3000), als Repeater oder Access Point nutzbar' },
   { label: 'Gehäuse', value: 'PARAT-Systemkoffer mit Tragegriff, gefertigt von PARAT in Waldkirchen' },
   { label: 'Remote Mgmt', value: 'Teltonika RMS, 10-Jahres-Lizenz inklusive' },
@@ -58,6 +58,16 @@ const detailCategories: DetailCategory[] = [
       { label: 'Repeater', value: 'Cudy RE3000 Wi-Fi-6-Mesh-Repeater (AX3000), Steckernetzteil, 1 × Gigabit-Ethernet' },
       { label: 'Kabel', value: '30 m Cat6-Netzwerkkabel (S/FTP, LSZH, halogenfrei), 230-V-Anschlusskabel, 12-V-Kfz-Anschlusskabel' },
       { label: 'Staufach', value: 'Im Koffer, für Kabel und Akku' },
+    ],
+  },
+  {
+    category: 'Antenne: Poynting A-PANL-0431 im Kofferdeckel',
+    rows: [
+      { label: 'Frequenzbereich', value: '410 bis 6000 MHz, deckt 4G LTE und 5G inklusive n78 ab (Herstellerangabe)' },
+      { label: 'Gewinn', value: '7,8 dBi Spitzengewinn, Panelbauform mit rundstrahlender Charakteristik' },
+      { label: 'MIMO', value: '4×4 MIMO Mobilfunk. Alle vier Mobilfunkpfade des RUTX50 liegen auf der Panelantenne, nicht auf Stabantennen am Gehäuse.' },
+      { label: 'GNSS', value: 'Integrierte Dual-Band-GNSS-Antenne, am GNSS-Eingang des Routers angeschlossen (GPS, GLONASS, Galileo, BeiDou, QZSS)' },
+      { label: 'Montage', value: 'Flach im Kofferdeckel verbaut, richtet sich beim Öffnen des Deckels mit aus' },
     ],
   },
   {
