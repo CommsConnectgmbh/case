@@ -46,9 +46,9 @@ const detailCategories: DetailCategory[] = [
   {
     category: 'Bedienfeld',
     rows: [
-      { label: 'Drehwahlschalter', value: 'Stromquelle wählen: 0 Aus, 1 Netz 230 V, 2 Akku, 3 Kfz 12 V' },
-      { label: 'Status-LED', value: 'Leuchtet, wenn der Router versorgt wird' },
-      { label: 'Netzschalter', value: 'Grüner Schalter für das 230-V-Netzteil' },
+      { label: 'Verbraucher Ein/Aus', value: 'Drehwahlschalter für die Betriebsart: 0 Aus, 1 Versorgung über 230 V Netz, 2 Versorgung über Akkumulator, 3 Versorgung über 12 V Kfz' },
+      { label: 'Statusanzeige Betrieb', value: 'Grüne LED, leuchtet wenn der Router versorgt wird' },
+      { label: '230 V Netzschalter', value: 'Grüner Wippschalter für das Netzteil, bei Netzbetrieb zusätzlich einschalten' },
       { label: 'Absicherung', value: 'Sicherungen je Stromquelle' },
     ],
   },
