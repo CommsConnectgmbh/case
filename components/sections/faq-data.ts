@@ -21,7 +21,7 @@ export const FAQS: FaqEntry[] = [
   },
   {
     q: 'Welche Reichweite hat der 5G-Koffer?',
-    a: 'Die WLAN-Reichweite hängt stark von Umgebung, Bebauung und Endgeräten ab, deshalb nennen wir keine pauschale Meterzahl. Für weiter entfernte Geräte, Maschinen, Kameras oder andere Etagen liegt ein 25 m langes Cat6-Netzwerkkabel bei, der Router hat 5 × Gigabit-Ethernet.',
+    a: 'Die WLAN-Reichweite hängt stark von Umgebung, Bebauung und Endgeräten ab, deshalb nennen wir keine pauschale Meterzahl. Für weiter entfernte Geräte, Maschinen, Kameras oder andere Etagen liegt ein 30 m langes Cat6-Netzwerkkabel bei, der Router hat 5 × Gigabit-Ethernet.',
   },
   {
     q: 'Wie schnell ist das Internet aus dem 5G-Koffer?',

@@ -152,7 +152,7 @@ export const articles: Article[] = [
       {
         h2: 'Reichweite & Aufbau',
         p: [
-          'Ein 5G-Koffer liefert Dual-Band-WLAN direkt am Standort. Wie weit das WLAN reicht, hängt von Halle, Bebauung und Publikum ab. Für viele Setups reicht ein einziger Koffer als zentrale Quelle, von der aus per LAN weiterverteilt wird: Der 5G Case hat 5 × Gigabit-Ethernet und ein 25 m langes Netzwerkkabel im Lieferumfang. Kein Techniker, kein Kabelgraben.',
+          'Ein 5G-Koffer liefert Dual-Band-WLAN direkt am Standort. Wie weit das WLAN reicht, hängt von Halle, Bebauung und Publikum ab. Für viele Setups reicht ein einziger Koffer als zentrale Quelle, von der aus per LAN weiterverteilt wird: Der 5G Case hat 5 × Gigabit-Ethernet und ein 30 m langes Netzwerkkabel im Lieferumfang. Kein Techniker, kein Kabelgraben.',
         ],
       },
       {
@@ -202,7 +202,7 @@ export const articles: Article[] = [
     ],
     faq: [
       { q: 'Warum nicht einfach den Handy-Hotspot nutzen?', a: 'Für eine einzelne Verbindung reicht das, aber Diagnosegerät, Laptop und Tablet zusammen plus stabile VPN-Verbindung überfordern den Hotspot schnell. Ein Koffer liefert Reichweite, mehrere Geräte und Ausfallschutz.' },
-      { q: 'Komme ich damit an Maschinen in Kellern oder Hallen?', a: 'Ja, wenn du den Koffer dort aufstellst, wo Empfang ist (die Poynting 5G-Panelantenne sitzt im Kofferdeckel). Von dort verteilst du das Netz per WLAN oder mit dem 25 m LAN-Kabel bis an die Maschine im Keller oder in der Halle.' },
+      { q: 'Komme ich damit an Maschinen in Kellern oder Hallen?', a: 'Ja, wenn du den Koffer dort aufstellst, wo Empfang ist (die Poynting 5G-Panelantenne sitzt im Kofferdeckel). Von dort verteilst du das Netz per WLAN oder mit dem 30 m LAN-Kabel bis an die Maschine im Keller oder in der Halle.' },
     ],
   },
   {
@@ -226,7 +226,7 @@ export const articles: Article[] = [
       {
         h2: 'Ein Netz für das ganze Team',
         p: [
-          'Video-Village, DIT-Station, Regie und Aufnahmeleitung sind über das Set verteilt. Statt jedem einen eigenen Hotspot zu geben, spannt ein Koffer ein gemeinsames Netz auf, per Dual-Band-WLAN und bei Bedarf per LAN-Kabel (25 m im Lieferumfang). Alle ziehen aus derselben stabilen Quelle.',
+          'Video-Village, DIT-Station, Regie und Aufnahmeleitung sind über das Set verteilt. Statt jedem einen eigenen Hotspot zu geben, spannt ein Koffer ein gemeinsames Netz auf, per Dual-Band-WLAN und bei Bedarf per LAN-Kabel (30 m im Lieferumfang). Alle ziehen aus derselben stabilen Quelle.',
         ],
         bullets: ['DIT-Daten-Offload in die Cloud', 'Remote-Review mit Kunden/Producer', 'Streaming und Live-Monitoring'],
       },
@@ -263,7 +263,7 @@ export const articles: Article[] = [
       {
         h2: 'Antenne & Reichweite',
         p: [
-          'Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Den Koffer stellst du dort auf, wo Empfang ist, und verteilst das Netz von dort per Dual-Band-WLAN oder per LAN: Der Router hat 5 × Gigabit-Ethernet, ein 25 m langes Netzwerkkabel liegt bei, um z. B. in den Keller oder andere Etagen zu kommen. Wie weit das WLAN reicht, hängt von Umgebung und Bebauung ab.',
+          'Im 5G Case sitzt eine Poynting 5G-Panelantenne im Kofferdeckel. Den Koffer stellst du dort auf, wo Empfang ist, und verteilst das Netz von dort per Dual-Band-WLAN oder per LAN: Der Router hat 5 × Gigabit-Ethernet, ein 30 m langes Netzwerkkabel liegt bei, um z. B. in den Keller oder andere Etagen zu kommen. Wie weit das WLAN reicht, hängt von Umgebung und Bebauung ab.',
         ],
       },
       {
@@ -289,7 +289,7 @@ export const articles: Article[] = [
     faq: [
       { q: 'Brauche ich technisches Wissen, um den Koffer zu nutzen?', a: 'Grundkenntnisse genügen: Strom anschließen, Stromquelle wählen, mit dem WLAN verbinden. Der Router wird vorkonfiguriert geliefert.' },
       { q: 'Welche SIM-Karte brauche ich?', a: 'Eine Daten-SIM eines Mobilfunkanbieters. Mit Dual-SIM lassen sich zwei Anbieter kombinieren: fällt ein Netz aus, wechselt der Router automatisch auf die zweite SIM.' },
-      { q: 'Wie groß ist die Reichweite?', a: 'Die WLAN-Reichweite hängt von Umgebung, Bebauung und Endgeräten ab, eine pauschale Meterzahl nennen wir deshalb nicht. Für feste Punkte gibt es zusätzlich LAN, mit 25 m Netzwerkkabel im Lieferumfang.' },
+      { q: 'Wie groß ist die Reichweite?', a: 'Die WLAN-Reichweite hängt von Umgebung, Bebauung und Endgeräten ab, eine pauschale Meterzahl nennen wir deshalb nicht. Für feste Punkte gibt es zusätzlich LAN, mit 30 m Netzwerkkabel im Lieferumfang.' },
     ],
   },
   {
@@ -334,7 +334,7 @@ export const articles: Article[] = [
       {
         h2: 'Antenne & Verteilung vor Ort',
         p: [
-          'Eine gute Antenne entscheidet, ob am Rand der Abdeckung noch nutzbares Signal ankommt. Im 5G Case sitzt eine Poynting 5G-Panelantenne (A-PANL-0431) im Kofferdeckel. Vor Ort verteilt der Teltonika RUTX50 das Netz per Dual-Band-WLAN; wie weit das reicht, hängt von Umgebung und Bebauung ab. Für Maschinen, Kameras oder andere Etagen gibt es 5 × Gigabit-Ethernet und ein 25 m langes Cat6-Kabel im Lieferumfang.',
+          'Eine gute Antenne entscheidet, ob am Rand der Abdeckung noch nutzbares Signal ankommt. Im 5G Case sitzt eine Poynting 5G-Panelantenne (A-PANL-0431) im Kofferdeckel. Vor Ort verteilt der Teltonika RUTX50 das Netz per Dual-Band-WLAN; wie weit das reicht, hängt von Umgebung und Bebauung ab. Für Maschinen, Kameras oder andere Etagen gibt es 5 × Gigabit-Ethernet und ein 30 m langes Cat6-Kabel im Lieferumfang.',
         ],
       },
       {

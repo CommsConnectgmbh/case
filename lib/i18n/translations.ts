@@ -176,7 +176,7 @@ export const translations: Record<Language, Translations> = {
       statPowerLabel: 'Stromquellen',
       statRms: '10 Jahre',
       statRmsLabel: 'RMS-Fernverwaltung inklusive',
-      statCable: '25 m',
+      statCable: '30 m',
       statCableLabel: 'LAN-Kabel',
     },
     problem: {
@@ -420,7 +420,7 @@ export const translations: Record<Language, Translations> = {
       statPowerLabel: 'Power sources',
       statRms: '10 years',
       statRmsLabel: 'RMS remote management included',
-      statCable: '25 m',
+      statCable: '30 m',
       statCableLabel: 'LAN cable',
     },
     problem: {
@@ -664,7 +664,7 @@ export const translations: Record<Language, Translations> = {
       statPowerLabel: "Sources d'alimentation",
       statRms: '10 ans',
       statRmsLabel: 'Gestion à distance RMS incluse',
-      statCable: '25 m',
+      statCable: '30 m',
       statCableLabel: 'Câble LAN',
     },
     problem: {
@@ -908,7 +908,7 @@ export const translations: Record<Language, Translations> = {
       statPowerLabel: 'Fuentes de alimentación',
       statRms: '10 años',
       statRmsLabel: 'Gestión remota RMS incluida',
-      statCable: '25 m',
+      statCable: '30 m',
       statCableLabel: 'Cable LAN',
     },
     problem: {
@@ -1152,7 +1152,7 @@ export const translations: Record<Language, Translations> = {
       statPowerLabel: 'Fonti di alimentazione',
       statRms: '10 anni',
       statRmsLabel: 'Gestione remota RMS inclusa',
-      statCable: '25 m',
+      statCable: '30 m',
       statCableLabel: 'Cavo LAN',
     },
     problem: {

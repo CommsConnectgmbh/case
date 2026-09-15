@@ -54,7 +54,7 @@ const detailCategories: DetailCategory[] = [
     category: 'Lieferumfang',
     rows: [
       { label: 'Koffer', value: '5G Case mit Teltonika RUTX50 und Poynting 5G-Panelantenne, vorkonfiguriert' },
-      { label: 'Kabel', value: '25 m Cat6-Netzwerkkabel, 230-V-Anschlusskabel, 12-V-Kfz-Anschlusskabel' },
+      { label: 'Kabel', value: '30 m Cat6-Netzwerkkabel (S/FTP, LSZH, halogenfrei), 230-V-Anschlusskabel, 12-V-Kfz-Anschlusskabel' },
       { label: 'Staufach', value: 'Im Koffer, für Kabel und Akku' },
     ],
   },
