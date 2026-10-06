@@ -20,7 +20,7 @@ export default function ImpressumPage() {
       <section>
         <p>
           <strong>Handelsregister:</strong> HRB 295951, Amtsgericht München<br />
-          <strong>Vertreten durch:</strong> Rainer Roloff
+          <strong>Vertreten durch:</strong> Geschäftsführer Rainer Roloff
         </p>
       </section>
 
@@ -54,17 +54,6 @@ export default function ImpressumPage() {
         <p>
           Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer
           Verbraucherschlichtungsstelle teilzunehmen.
-        </p>
-        <p>
-          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-          <a
-            href="https://ec.europa.eu/consumers/odr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            https://ec.europa.eu/consumers/odr
-          </a>
         </p>
       </section>
 
