@@ -78,6 +78,7 @@ export async function POST(req: Request) {
       },
       payment_method_types: ['card'],
       locale: 'de',
+      submit_type: 'pay',
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/#shop`,
       metadata: {
