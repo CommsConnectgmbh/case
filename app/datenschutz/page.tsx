@@ -39,6 +39,10 @@ export default function DatenschutzPage() {
           der Serveranfrage. Eine Zusammenführung dieser Daten mit anderen Datenquellen erfolgt nicht.
         </p>
         <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb).</p>
+        <p>
+          Die auf dieser Website verwendeten Schriftarten (Inter, Space Grotesk) werden lokal von
+          unserem eigenen Server ausgeliefert. Es findet keine Verbindung zu Google Fonts statt.
+        </p>
       </section>
 
       <section>
@@ -55,6 +59,14 @@ export default function DatenschutzPage() {
         <p>
           Wenn Sie uns per E-Mail, Telefon oder Kontaktformular kontaktieren, werden Ihre Angaben zur
           Bearbeitung der Anfrage sowie für Anschlussfragen gespeichert.
+        </p>
+        <p>
+          Angaben aus dem Kontaktformular, dem Partnerformular (/partner) und dem Widerrufsformular
+          (/widerruf) werden direkt in unserem CRM-System HubSpot gespeichert (siehe Ziffer 7). Für
+          einen Widerruf versenden wir die Eingangsbestätigung an Sie und die Benachrichtigung an
+          uns über den E-Mail-Dienstleister Resend (Resend, Inc., 2261 Market Street #5039,
+          San Francisco, CA 94114, USA; DPF-zertifiziert, Auftragsverarbeitungsvertrag mit
+          Standardvertragsklauseln).
         </p>
         <p>
           Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertrag oder Vertragsanbahnung) oder Art. 6
@@ -94,8 +106,11 @@ export default function DatenschutzPage() {
         <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">7. CRM-Verarbeitung (HubSpot)</h2>
         <p>
           Zur Verwaltung von Kundenbeziehungen nutzen wir HubSpot (HubSpot Inc., 25 First Street,
-          Cambridge, MA 02141, USA). Nach erfolgreicher Bestellung werden Kontaktdaten in unserem
-          CRM-System gespeichert, um den Kundenservice und die Auftragsabwicklung zu optimieren.
+          Cambridge, MA 02141, USA). Nach erfolgreicher Bestellung sowie bei Anfragen über das
+          Kontakt-, Partner- oder Widerrufsformular werden Ihre Angaben in unserem CRM-System
+          gespeichert, um Anfragen, Kundenservice und Auftragsabwicklung zu bearbeiten. Die
+          Übermittlung erfolgt serverseitig; auf dieser Website wird kein HubSpot-Tracking-Skript
+          geladen.
         </p>
         <p>
           HubSpot ist unter dem EU-U.S. Data Privacy Framework zertifiziert. Rechtsgrundlage ist

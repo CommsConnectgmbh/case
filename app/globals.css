@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+/* Schriften (Inter, Space Grotesk) werden per next/font in app/layout.tsx zur
+   Build-Zeit selbst gehostet: kein Browser-Request an Google Fonts. */
 
 html {
   scroll-behavior: smooth;
@@ -11,11 +12,11 @@ html {
 body {
   background: #0A0A0A;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
 }
 
 .glass {
