@@ -1,7 +1,24 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import CookieConsent from "@/components/ui/CookieConsent";
 import { FAQS as CASE_FAQS } from "@/components/sections/faq-data";
+
+// next/font/google laedt die Schriften zur Build-Zeit herunter und liefert sie
+// von der eigenen Domain aus. Kein Browser-Request an fonts.googleapis.com /
+// fonts.gstatic.com (LG Muenchen I, 20.01.2022, 3 O 17493/20).
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-inter",
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
 const SITE_URL = "https://case-connect.de";
 
@@ -138,7 +155,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script
           type="application/ld+json"
