@@ -5,15 +5,15 @@ import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n';
 
 const brands = [
-  { name: 'Bosch Professional', logo: '/images/Bosch.jpg' },
-  { name: 'Dewalt', logo: '/images/MILWAUKEE-und-Dewalt.jpg' },
-  { name: 'Milwaukee', logo: '/images/MILWAUKEE-und-Dewalt.jpg' },
-  { name: 'Makita', logo: '/images/MAKITA.jpg' },
-  { name: 'Festool', logo: '/images/Festool.jpg' },
-  { name: 'Metabo CAS', logo: '/images/Metabo.jpg' },
-  { name: 'Einhell', logo: '/images/einhell.jpg' },
-  { name: 'Hikoki', logo: '/images/hikoki.jpg' },
-  { name: 'Fein', logo: '/images/fein.jpg' },
+  { name: 'Bosch Professional' },
+  { name: 'Dewalt' },
+  { name: 'Milwaukee' },
+  { name: 'Makita' },
+  { name: 'Festool' },
+  { name: 'Metabo CAS' },
+  { name: 'Einhell' },
+  { name: 'Hikoki' },
+  { name: 'Fein' },
 ];
 
 export default function BatteryCompat() {
@@ -99,23 +99,11 @@ export default function BatteryCompat() {
               className="group"
             >
               <div className="relative flex flex-col items-center justify-center aspect-square rounded-2xl bg-white/[0.03] border border-white/[0.06] p-4 transition-all duration-500 hover:bg-white/[0.07] hover:border-white/[0.12] hover:scale-[1.04] hover:shadow-[0_8px_40px_rgba(0,196,255,0.08)] cursor-default">
-                {brand.logo ? (
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 mb-3 rounded-xl overflow-hidden bg-white/90 p-1.5 shadow-sm">
-                    <Image
-                      src={brand.logo}
-                      alt={brand.name}
-                      fill
-                      className="object-contain"
-                      sizes="56px"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 mb-3 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center">
-                    <span className="text-white/40 text-lg font-bold">
-                      {brand.name.charAt(0)}
-                    </span>
-                  </div>
-                )}
+                <div className="w-12 h-12 sm:w-14 sm:h-14 mb-3 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center">
+                  <span className="text-white/40 text-lg font-bold">
+                    {brand.name.charAt(0)}
+                  </span>
+                </div>
                 <span className="text-[10px] sm:text-[11px] text-white/60 font-medium text-center leading-tight group-hover:text-white/90 transition-colors duration-500">
                   {brand.name}
                 </span>
@@ -142,7 +130,7 @@ export default function BatteryCompat() {
           className="text-white/25 text-[10px] text-center mb-10 max-w-3xl mx-auto leading-relaxed px-4"
         >
           Bosch Professional, Dewalt, Milwaukee, Makita, Festool, Metabo CAS, Einhell, Hikoki und Fein
-          sind eingetragene Marken ihrer jeweiligen Inhaber. Die hier abgebildeten Adapter werden von der
+          sind eingetragene Marken ihrer jeweiligen Inhaber. Die angebotenen Adapter werden von der
           Brennenstuhl GmbH &amp; Co. KG hergestellt und vertrieben. Es besteht keine geschäftliche Verbindung
           oder Kooperation zwischen Comms Connect GmbH und den genannten Markeninhabern. Die Markennennung
           erfolgt ausschließlich als Hinweis auf die Bestimmung der Adapter (§ 23 Nr. 3 MarkenG).

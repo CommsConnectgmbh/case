@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-label="Schematische Darstellung von Akku und Ladegerät">
+  <rect width="240" height="160" fill="#f4f6f8"/>
+  <rect x="28" y="38" width="104" height="70" rx="10" fill="#2b2f36"/>
+  <rect x="44" y="50" width="72" height="22" rx="4" fill="#1c1f24"/>
+  <circle cx="52" cy="92" r="4" fill="#00c4ff"/>
+  <circle cx="66" cy="92" r="4" fill="#5b616b"/>
+  <rect x="116" y="74" width="96" height="58" rx="8" fill="#3a3f48"/>
+  <rect x="116" y="74" width="96" height="16" rx="6" fill="#23262c"/>
+  <rect x="128" y="100" width="40" height="8" rx="3" fill="#00c4ff" opacity=".85"/>
+  <rect x="128" y="112" width="26" height="6" rx="3" fill="#5b616b"/>
+</svg>
