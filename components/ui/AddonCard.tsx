@@ -21,7 +21,7 @@ export default function AddonCard({ id, name, priceNetto, image, description }: 
 
   return (
     <div className="group rounded-2xl p-4 flex items-center gap-4 bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-400">
-      <Image src={image} alt={name} width={72} height={72} className="rounded-xl object-cover w-[72px] h-[72px]" />
+      <Image src={image} alt={name} width={72} height={72} unoptimized={image.endsWith('.svg')} className="rounded-xl object-cover w-[72px] h-[72px]" />
       <div className="flex-1 min-w-0">
         <h4 className="font-heading font-bold text-sm truncate">{name}</h4>
         <p className="text-muted text-xs mt-1 line-clamp-1">{description}</p>
