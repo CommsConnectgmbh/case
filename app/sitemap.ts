@@ -20,5 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/versand`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/widerrufsbelehrung`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${base}/widerruf`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${base}/barrierefreiheit`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
 }

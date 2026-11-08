@@ -1,5 +1,7 @@
 import LegalLayout from '@/components/legal/LegalLayout';
 import type { Metadata } from 'next';
+import { EinwilligungsDienste, Reichweitenmessung } from '@/components/legal/DseMessung';
+import { brauchtEinwilligung, werbeIdsAusEnv } from '@/lib/consent/ids';
 
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung | 5G Case by Comms Connect',
@@ -7,6 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function DatenschutzPage() {
+  // Build-Zeit: die Abschnitte der Werbedienste erscheinen nur mit gesetzter ID.
+  const ids = werbeIdsAusEnv();
+  const mitDiensten = brauchtEinwilligung(ids);
   return (
     <LegalLayout title="Datenschutzerklärung">
       <p>
@@ -118,14 +123,25 @@ export default function DatenschutzPage() {
         </p>
       </section>
 
+      <Reichweitenmessung nr="8." />
+
       <section>
-        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">8. Cookies und Einwilligung</h2>
-        <p>
-          Diese Website verwendet ausschließlich technisch notwendige Cookies bzw. lokale
-          Speicherzugriffe, die für den Betrieb erforderlich sind (z.&nbsp;B. Warenkorb,
-          Spracheinstellung und die Speicherung Ihrer Cookie-Auswahl selbst). Für diese ist nach
-          § 25 Abs. 2 TDDDG keine Einwilligung erforderlich.
-        </p>
+        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">9. Cookies und Einwilligung</h2>
+        {mitDiensten ? (
+          <p>
+            Technisch notwendige Cookies bzw. lokale Speicherzugriffe, die für den Betrieb erforderlich
+            sind (z.&nbsp;B. Warenkorb, Spracheinstellung und die Speicherung Ihrer Cookie-Auswahl
+            selbst), setzen wir ohne Einwilligung ein. Für diese ist nach § 25 Abs. 2 TDDDG keine
+            Einwilligung erforderlich.
+          </p>
+        ) : (
+          <p>
+            Diese Website verwendet ausschließlich technisch notwendige Cookies bzw. lokale
+            Speicherzugriffe, die für den Betrieb erforderlich sind (z.&nbsp;B. Warenkorb,
+            Spracheinstellung und die Speicherung Ihrer Cookie-Auswahl selbst). Für diese ist nach
+            § 25 Abs. 2 TDDDG keine Einwilligung erforderlich.
+          </p>
+        )}
         <p>
           Nicht zwingend erforderliche Cookies oder Tracking-Technologien (z.&nbsp;B. Statistik
           oder Marketing) werden erst gesetzt, nachdem Sie hierin über unseren Cookie-Hinweis
@@ -136,10 +152,11 @@ export default function DatenschutzPage() {
           Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft ändern oder
           widerrufen, indem Sie den Link &bdquo;Cookie-Einstellungen&ldquo; im Seitenfuß öffnen.
         </p>
+        <EinwilligungsDienste ids={ids} praefix="9" />
       </section>
 
       <section>
-        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">9. Speicherdauer</h2>
+        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">10. Speicherdauer</h2>
         <p>
           Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Erreichung der jeweiligen
           Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen (in der Regel 6 bzw.
@@ -148,7 +165,7 @@ export default function DatenschutzPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">10. Ihre Rechte</h2>
+        <h2 className="text-lg font-heading font-semibold text-white mt-8 mb-3">11. Ihre Rechte</h2>
         <p>
           Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten,
           deren Herkunft, Empfänger und Zweck der Verarbeitung. Außerdem haben Sie das Recht auf

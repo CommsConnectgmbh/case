@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import TuerLink from '@/components/ui/TuerLink';
 import { notFound } from 'next/navigation';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import NavBar from '@/components/sections/NavBar';
@@ -124,18 +125,18 @@ export default async function ArticlePage({
               Dual-Band-WLAN und drei Stromquellen: Netz, Akku, Kfz. Für Baustelle, Event, Service und Film.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link
-                href="/#shop"
+              <TuerLink
+                ziel="shop"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-white font-semibold rounded-full hover:bg-cta/90 transition-colors"
               >
                 Zum 5G-Koffer <ArrowRight size={16} />
-              </Link>
-              <Link
-                href="/#kontakt"
+              </TuerLink>
+              <TuerLink
+                ziel="demo"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-white/15 text-white font-medium rounded-full hover:border-primary/40 transition-colors"
               >
                 Live-Demo anfragen
-              </Link>
+              </TuerLink>
             </div>
           </div>
 

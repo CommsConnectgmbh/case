@@ -1,5 +1,6 @@
 import { stripe } from '@/lib/stripe';
 import { NextResponse } from 'next/server';
+import { meldeServerCta } from '@/lib/analytics/server-cta';
 
 const PRICE_MAP: Record<string, string | undefined> = {
   'case-standard': process.env.STRIPE_PRICE_5G_STANDARD,
@@ -85,6 +86,9 @@ export async function POST(req: Request) {
         source: '5g-case-shop',
       },
     });
+
+    // Reichweitenmessung: Checkout gestartet, ohne Warenkorb- oder Kundendaten.
+    meldeServerCta(req, 'checkout');
 
     return NextResponse.json({ url: session.url });
   } catch (err: unknown) {

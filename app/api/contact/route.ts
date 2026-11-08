@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { meldeServerCta } from '@/lib/analytics/server-cta';
 
 // --- Simple in-memory IP rate limit (per server instance) ---------------
 // Good enough to blunt bot bursts without external infra. Resets on deploy.
@@ -135,6 +136,9 @@ export async function POST(req: Request) {
         }
       }
     }
+
+    // Reichweitenmessung: nur "Anfrage angekommen", ohne Formularinhalte.
+    meldeServerCta(req, 'kontakt_gesendet');
 
     return NextResponse.json({ ok: true });
   } catch (err: unknown) {

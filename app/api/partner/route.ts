@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { meldeServerCta } from '@/lib/analytics/server-cta';
 
 // --- Simple in-memory IP rate limit (per server instance) ---------------
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
@@ -112,6 +113,9 @@ export async function POST(req: Request) {
         if (contactId) await attachPartnerNote(token, contactId, noteBody);
       }
     }
+
+    // Reichweitenmessung: nur "Anfrage angekommen", ohne Formularinhalte.
+    meldeServerCta(req, 'partner');
 
     return NextResponse.json({ ok: true });
   } catch (err: unknown) {

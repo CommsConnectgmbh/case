@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useCartStore } from '@/lib/cart-store';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation, useLanguageStore } from '@/lib/i18n';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import TuerLink from '@/components/ui/TuerLink';
 
 const PARTNER_LABEL: Record<string, string> = {
   de: 'Partner werden',
@@ -25,6 +27,9 @@ export default function NavBar() {
   const t = useTranslation();
   const language = useLanguageStore((s) => s.language);
   const partnerLabel = PARTNER_LABEL[language] ?? PARTNER_LABEL.de;
+  // Auf der Startseite scrollt "Kaufen" nur zum Shop; von allen anderen
+  // Seiten aus geht der Klick ueber die Klick-Tuer und wird gezaehlt.
+  const aufStartseite = usePathname() === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -88,12 +93,21 @@ export default function NavBar() {
               )}
             </AnimatePresence>
           </button>
-          <Link
-            href="/#shop"
-            className="hidden sm:inline-flex px-4 py-1.5 bg-cta text-white text-[13px] font-medium rounded-full hover:bg-cta/90 transition-colors duration-300"
-          >
-            {t.nav.buyButton}
-          </Link>
+          {aufStartseite ? (
+            <Link
+              href="/#shop"
+              className="hidden sm:inline-flex px-4 py-1.5 bg-cta text-white text-[13px] font-medium rounded-full hover:bg-cta/90 transition-colors duration-300"
+            >
+              {t.nav.buyButton}
+            </Link>
+          ) : (
+            <TuerLink
+              ziel="shop"
+              className="hidden sm:inline-flex px-4 py-1.5 bg-cta text-white text-[13px] font-medium rounded-full hover:bg-cta/90 transition-colors duration-300"
+            >
+              {t.nav.buyButton}
+            </TuerLink>
+          )}
           <LanguageSwitcher />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}

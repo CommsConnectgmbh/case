@@ -6,6 +6,7 @@ import { X, Minus, Plus, Trash2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useTranslation } from '@/lib/i18n';
+import { track } from '@/lib/consent/tags';
 
 export default function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQuantity } = useCartStore();
@@ -15,6 +16,8 @@ export default function CartDrawer() {
 
   async function handleCheckout() {
     setLoading(true);
+    // Conversion nur mit Einwilligung (sonst No-op), ohne Warenkorbinhalt.
+    track('begin_checkout');
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
