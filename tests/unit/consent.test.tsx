@@ -198,6 +198,47 @@ describe("Tags und Conversions", () => {
     expect(fbq.mock.calls.map((c) => c[1])).toEqual(["Lead", "Lead", "InitiateCheckout", "Lead"]);
   });
 
+  it("Einwilligung spaeter erweitert: Update und AW-config sofort, gtag.js nur einmal", () => {
+    ladeTags(consent(true, false), ALLE, window);
+    ladeTags(consent(true, true), ALLE, window);
+    const dl = ((window as unknown as { dataLayer: IArguments[] }).dataLayer).map((a) => Array.from(a));
+    expect(dl.filter((a) => a[0] === "consent").map((a) => [a[1], (a[2] as Record<string, string>).ad_storage])).toEqual([
+      ["default", "denied"],
+      ["update", "denied"],
+      ["update", "granted"],
+    ]);
+    expect(dl.filter((a) => a[0] === "config").map((a) => a[1])).toEqual(["G-TEST000000", "AW-1234567890"]);
+    expect(fremdScripte().filter((s) => s.includes("googletagmanager"))).toHaveLength(1);
+    expect(fremdScripte()).toContain("https://connect.facebook.net/en_US/fbevents.js");
+  });
+
+  it("Stripe-Kennung session_id verschwindet aus der Adresse, bevor Tags laden", () => {
+    window.history.replaceState(null, "", "/success?session_id=cs_test_GEHEIM&utm_source=x");
+    ladeTags(consent(true, true), ALLE, window);
+    expect(window.location.search).toBe("?utm_source=x");
+    expect(window.location.pathname).toBe("/success");
+    window.history.replaceState(null, "", "/");
+  });
+
+  it("ohne Einwilligung bleibt die Adresse unangetastet", () => {
+    window.history.replaceState(null, "", "/success?session_id=cs_test_x");
+    ladeTags(consent(false, false), ALLE, window);
+    expect(window.location.search).toBe("?session_id=cs_test_x");
+    window.history.replaceState(null, "", "/");
+  });
+
+  it("LinkedIn-Conversion nur mit Conversion-ID", () => {
+    ladeTags(consent(false, true), ALLE, window);
+    const lintrk = vi.fn();
+    (window as unknown as { lintrk: unknown }).lintrk = lintrk;
+    track("generate_lead");
+    expect(lintrk).not.toHaveBeenCalled();
+    vi.stubEnv("NEXT_PUBLIC_LINKEDIN_CONVERSION_ID", "987654");
+    track("generate_lead");
+    expect(lintrk).toHaveBeenCalledWith("track", { conversion_id: "987654" });
+    vi.unstubAllEnvs();
+  });
+
   it("nur Statistik: Conversion geht nur an GA4", () => {
     ladeTags(consent(true, false), ALLE, window);
     const fbq = vi.fn();

@@ -18,7 +18,7 @@ type Fenster = Window & {
   lintrk?: any;
   _linkedin_partner_id?: string;
   _linkedin_data_partner_ids?: string[];
-  __ccTags?: { google?: boolean; meta?: boolean; linkedin?: boolean };
+  __ccTags?: { google?: boolean; ga4?: boolean; gads?: boolean; meta?: boolean; linkedin?: boolean };
 };
 
 export const GTAG_SRC = "https://www.googletagmanager.com/gtag/js";
@@ -33,8 +33,38 @@ function script(doc: Document, src: string): void {
 }
 
 /**
+ * Parameter, die nie an Werbe- oder Statistikdienste gehen duerfen. Stripe
+ * haengt nach dem Bezahlen `session_id` an /success; die Kennung des
+ * Bezahlvorgangs hat bei Google, Meta oder LinkedIn nichts verloren.
+ */
+const GEHEIME_PARAMETER = ["session_id"];
+
+/**
+ * Entfernt GEHEIME_PARAMETER aus der Adresszeile, bevor ein Tag die Adresse
+ * liest (GA4 page_location, Meta, LinkedIn senden location.href). Die Seite
+ * selbst braucht den Parameter nicht.
+ */
+export function bereinigeAdresse(win: Window): void {
+  try {
+    const url = new URL(win.location.href);
+    let geaendert = false;
+    for (const p of GEHEIME_PARAMETER) {
+      if (url.searchParams.has(p)) {
+        url.searchParams.delete(p);
+        geaendert = true;
+      }
+    }
+    if (geaendert) win.history.replaceState(win.history.state, "", url.toString());
+  } catch {
+    // Adresse nicht lesbar: nichts tun.
+  }
+}
+
+/**
  * Laedt genau die Dienste, fuer die eine ID gesetzt UND eingewilligt ist.
- * Mehrfacher Aufruf laedt nichts doppelt.
+ * Mehrfacher Aufruf laedt nichts doppelt. Wird eine Einwilligung spaeter
+ * erweitert (z. B. erst nur Statistik, dann alle), gehen Consent-Update und
+ * die fehlende Konfiguration sofort raus, ohne Neuladen.
  */
 export function ladeTags(consent: Consent, ids: WerbeIds, w: Window = window): void {
   const win = w as Fenster;
@@ -43,9 +73,34 @@ export function ladeTags(consent: Consent, ids: WerbeIds, w: Window = window): v
 
   const ga4 = consent.statistik ? ids.ga4 : undefined;
   const gads = consent.marketing ? ids.gads : undefined;
+  const marketingDienste = consent.marketing && (ids.metaPixel || ids.linkedin);
+
+  if (ga4 || gads || marketingDienste) bereinigeAdresse(win);
+
+  const update = {
+    analytics_storage: consent.statistik ? "granted" : "denied",
+    ad_storage: consent.marketing ? "granted" : "denied",
+    ad_user_data: consent.marketing ? "granted" : "denied",
+    ad_personalization: consent.marketing ? "granted" : "denied",
+  };
+
+  if ((ga4 || gads) && geladen.google && win.gtag) {
+    // gtag.js laeuft schon: nur die erweiterte Einwilligung nachtragen.
+    win.gtag("consent", "update", update);
+    if (ga4 && !geladen.ga4) {
+      geladen.ga4 = true;
+      win.gtag("config", ga4);
+    }
+    if (gads && !geladen.gads) {
+      geladen.gads = true;
+      win.gtag("config", gads);
+    }
+  }
 
   if ((ga4 || gads) && !geladen.google) {
     geladen.google = true;
+    geladen.ga4 = Boolean(ga4);
+    geladen.gads = Boolean(gads);
     win.dataLayer = win.dataLayer || [];
     // gtag erwartet das arguments-Objekt, kein Array.
     win.gtag = function gtag() {
@@ -58,12 +113,7 @@ export function ladeTags(consent: Consent, ids: WerbeIds, w: Window = window): v
       ad_personalization: "denied",
       analytics_storage: "denied",
     });
-    win.gtag("consent", "update", {
-      analytics_storage: consent.statistik ? "granted" : "denied",
-      ad_storage: consent.marketing ? "granted" : "denied",
-      ad_user_data: consent.marketing ? "granted" : "denied",
-      ad_personalization: consent.marketing ? "granted" : "denied",
-    });
+    win.gtag("consent", "update", update);
     win.gtag("js", new Date());
     if (ga4) win.gtag("config", ga4);
     if (gads) win.gtag("config", gads);
@@ -120,12 +170,14 @@ const META_EREIGNIS: Record<string, string> = {
  * Dienste nicht geladen, dann ist das ein No-op.
  *
  * LinkedIn braucht fuer ein Conversion-Ereignis eine Conversion-ID aus dem
- * Campaign Manager; ohne `linkedin_conversion_id` wird dort nichts gesendet.
+ * Campaign Manager: `linkedin_conversion_id` im Aufruf oder, fuer alle
+ * Conversions gemeinsam, NEXT_PUBLIC_LINKEDIN_CONVERSION_ID. Ohne ID wird an
+ * LinkedIn kein Ereignis gesendet (der Insight Tag selbst zaehlt trotzdem).
  */
 export function track(name: string, params: Record<string, unknown> = {}, w?: Window): void {
   const win = (w ?? (typeof window !== "undefined" ? window : undefined)) as Fenster | undefined;
   if (!win?.__ccTags) return;
-  const { linkedin_conversion_id, ...rest } = params;
+  const { linkedin_conversion_id = linkedinConversionId(), ...rest } = params;
   try {
     if (win.__ccTags.google && win.gtag) win.gtag("event", name, rest);
     const meta = META_EREIGNIS[name];
@@ -136,6 +188,11 @@ export function track(name: string, params: Record<string, unknown> = {}, w?: Wi
   } catch {
     // Messung darf den Klick nie stoeren.
   }
+}
+
+function linkedinConversionId(): string | undefined {
+  const v = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID?.trim();
+  return v && /^[0-9]{3,20}$/.test(v) ? v : undefined;
 }
 
 /** Klick auf eine Tuer-CTA. */
