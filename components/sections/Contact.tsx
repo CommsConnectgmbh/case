@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
+import { track } from '@/lib/consent/tags';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', company: '' });
@@ -21,6 +22,8 @@ export default function Contact() {
       });
       if (res.ok) {
         setStatus('sent');
+        // Conversion nur mit Einwilligung (sonst No-op), ohne Formularinhalte.
+        track('generate_lead', { formular: 'kontakt' });
         setForm({ name: '', email: '', phone: '', message: '', company: '' });
       } else {
         setStatus('error');

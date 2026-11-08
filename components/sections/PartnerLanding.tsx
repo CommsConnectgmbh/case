@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Send, Handshake, Repeat, PackageCheck, Headset, ArrowRight } from 'lucide-react';
+import { track } from '@/lib/consent/tags';
 
 const AUDIENCE = [
   'IT-Systemhäuser & Integratoren',
@@ -71,6 +72,8 @@ export default function PartnerLanding() {
       });
       if (res.ok) {
         setStatus('sent');
+        // Conversion nur mit Einwilligung (sonst No-op), ohne Formularinhalte.
+        track('generate_lead', { formular: 'partner' });
         setForm({ name: '', firma: '', email: '', phone: '', partnertyp: '', branche: '', website: '' });
       } else {
         setStatus('error');

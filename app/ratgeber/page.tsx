@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import TuerLink from '@/components/ui/TuerLink';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import NavBar from '@/components/sections/NavBar';
 import Footer from '@/components/sections/Footer';
@@ -76,12 +77,12 @@ export default function RatgeberHub() {
             <p className="text-muted mb-6 max-w-lg mx-auto">
               Der Case Connect 5G-Koffer kommt vorkonfiguriert im robusten PARAT-Systemkoffer: 5G mit LTE-Rückfall, Dual-SIM, Strom aus Netz, Akku oder Kfz.
             </p>
-            <Link
-              href="/#shop"
+            <TuerLink
+              ziel="shop"
               className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-white font-semibold rounded-full hover:bg-cta/90 transition-colors"
             >
               Zum 5G-Koffer <ArrowRight size={16} />
-            </Link>
+            </TuerLink>
           </div>
         </div>
       </main>
