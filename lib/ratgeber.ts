@@ -300,14 +300,14 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: 'ip67-5g-koffer-outdoor',
+    slug: 'outdoor-5g-koffer',
     keyword: 'Outdoor 5G Koffer',
     title: 'Outdoor-5G-Koffer: Kaufkriterien für mobiles Baustellen-Internet',
     metaTitle: 'Outdoor-5G-Koffer: Kaufkriterien für Baustelle und Außeneinsatz',
     metaDescription:
       'Mobiles Internet für Baustelle und Außeneinsatz: Schutzarten verständlich erklärt, dazu Stromversorgung, Temperaturbereich, Antenne und Dual-SIM als Kaufkriterien.',
     datePublished: '2026-06-04',
-    dateModified: '2026-09-15',
+    dateModified: '2026-11-09',
     readingMinutes: 5,
     teaser: 'Die Kaufkriterien für mobiles Internet auf Baustelle und Außenstelle: Schutzart, Strom, Temperatur, Antenne.',
     lead: 'Soll der 5G-Koffer auf der Baustelle, auf dem Event-Gelände oder an einer Außenstelle Netz liefern, entscheiden ein paar Kennwerte über Erfolg oder Frust. Diese Kriterien solltest du vor dem Kauf prüfen, und so ordnet sich der 5G Case von Case Connect ein.',
@@ -323,6 +323,7 @@ export const articles: Article[] = [
         h2: 'Betriebsbedingungen beim 5G Case',
         p: [
           'Der 5G Case steckt in einem robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Ausgelegt ist er für den Betrieb mit geöffnetem Deckel und geöffnetem Staufach in trockener Umgebung bei 0 bis 35 °C. Bei Regen oder in feuchter Umgebung darf er nicht betrieben werden. Auf der Baustelle heißt das: aufstellen im Baucontainer, im Rohbau unter Dach oder im Fahrzeug und von dort per WLAN oder LAN-Kabel verteilen.',
+          'Das fertige 5G Case hat keine IP-Zertifizierung als Gesamtsystem; nur die leere Kofferschale PARAT PROTECT 20 ist IP67-zertifiziert, was wegen der Anschlussdurchbrüche und des Betriebs mit geöffnetem Deckel nicht für das fertige Gerät gilt.',
         ],
         bullets: [
           'Betrieb mit geöffnetem Deckel und Staufach (Wärmeabfuhr)',

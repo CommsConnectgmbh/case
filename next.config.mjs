@@ -10,6 +10,8 @@ const nextConfig = {
       { source: '/reseller', destination: '/partner', permanent: true },
       { source: '/vertriebspartner', destination: '/partner', permanent: true },
       { source: '/ratgeber/5g-einsatzkoffer-bos', destination: '/ratgeber', permanent: true },
+      // Alter Slug legte IP67 fuer das Produkt nahe; das fertige 5G Case hat keine IP-Schutzart.
+      { source: '/ratgeber/ip67-5g-koffer-outdoor', destination: '/ratgeber/outdoor-5g-koffer', permanent: true },
     ];
   },
 };

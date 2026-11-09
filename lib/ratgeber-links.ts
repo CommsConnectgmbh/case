@@ -9,7 +9,7 @@ export const ratgeberLinks: { slug: string; label: string }[] = [
   { slug: 'mobiles-wlan-servicetechniker', label: 'Mobiles WLAN für Servicetechniker' },
   { slug: 'internet-am-filmset', label: 'Internet am Filmset' },
   { slug: 'wie-funktioniert-ein-5g-internetkoffer', label: 'Wie funktioniert ein 5G-Internetkoffer?' },
-  { slug: 'ip67-5g-koffer-outdoor', label: 'Outdoor-5G-Koffer: Kaufkriterien' },
+  { slug: 'outdoor-5g-koffer', label: 'Outdoor-5G-Koffer: Kaufkriterien' },
   { slug: 'internet-fuer-messestand', label: 'Internet für den Messestand' },
   { slug: 'internet-ausfall-ueberbruecken', label: 'Internet-Ausfall überbrücken' },
 ];
