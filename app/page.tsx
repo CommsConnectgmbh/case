@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { FAQS as CASE_FAQS } from '@/components/sections/faq-data';
 import { SITE_URL } from '@/lib/seo';
+import { RUECKGABE } from '@/lib/rueckgabe';
 import NavBar from '@/components/sections/NavBar';
 import Hero from '@/components/sections/Hero';
 import TrustBar from '@/components/sections/TrustBar';
@@ -49,6 +50,7 @@ const schema = {
         price: '1999',
         availability: 'https://schema.org/InStock',
         seller: { '@id': `${SITE_URL}/#organization` },
+        hasMerchantReturnPolicy: RUECKGABE,
       },
     },
     {
