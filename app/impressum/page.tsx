@@ -1,9 +1,12 @@
 import LegalLayout from '@/components/legal/LegalLayout';
 import type { Metadata } from 'next';
+import { seitenMeta } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Impressum | 5G Case by Comms Connect',
-  description: 'Impressum der Comms Connect GmbH – Anbieter des 5G Case Online-Shops.',
+  title: 'Impressum',
+  description:
+    'Impressum der Comms Connect GmbH – Anbieter des 5G Case Online-Shops.',
+  ...seitenMeta('/impressum', 'Impressum', 'Impressum der Comms Connect GmbH – Anbieter des 5G Case Online-Shops.'),
 };
 
 export default function ImpressumPage() {

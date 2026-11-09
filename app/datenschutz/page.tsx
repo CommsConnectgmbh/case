@@ -2,10 +2,13 @@ import LegalLayout from '@/components/legal/LegalLayout';
 import type { Metadata } from 'next';
 import { EinwilligungsDienste, Reichweitenmessung } from '@/components/legal/DseMessung';
 import { brauchtEinwilligung, werbeIdsAusEnv } from '@/lib/consent/ids';
+import { seitenMeta } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Datenschutzerklärung | 5G Case by Comms Connect',
-  description: 'Datenschutzerklärung der Comms Connect GmbH für den 5G Case Online-Shop.',
+  title: 'Datenschutzerklärung',
+  description:
+    'Datenschutzerklärung der Comms Connect GmbH für den 5G Case Online-Shop.',
+  ...seitenMeta('/datenschutz', 'Datenschutzerklärung', 'Datenschutzerklärung der Comms Connect GmbH für den 5G Case Online-Shop.'),
 };
 
 export default function DatenschutzPage() {

@@ -10,6 +10,8 @@ export type Article = {
   metaTitle: string;
   metaDescription: string;
   datePublished: string;
+  dateModified: string; // letzte inhaltliche Aenderung (Sitemap lastmod, Article-Schema)
+  linkLabel: string; // kurzer Linktext fuer die Ratgeber-Reihe im Footer
   readingMinutes: number;
   teaser: string;
   lead: string;
@@ -26,6 +28,8 @@ export const articles: Article[] = [
     metaDescription:
       'Baustelle ohne Netz? Wir vergleichen Festnetz, Campus-Netz, LTE-Stick, Satellit und 5G-Koffer — und zeigen, wann welche Lösung am schnellsten online ist.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-11',
+    linkLabel: 'Mobiles Internet auf der Baustelle',
     readingMinutes: 6,
     teaser: 'Festnetz, Campus-Netz, LTE-Stick, Satellit oder 5G-Koffer — welche Lösung bringt die Baustelle am schnellsten und zuverlässigsten online?',
     lead: 'Auf einer frischen Baustelle gibt es selten einen Festnetzanschluss — aber Baudokumentation, Maschinensteuerung, Cloud-Pläne und Video-Calls brauchen ein stabiles Netz ab dem ersten Tag. Hier sind die fünf praxistauglichen Optionen und wann sich welche lohnt.',
@@ -87,6 +91,8 @@ export const articles: Article[] = [
     metaDescription:
       'Lohnt sich ein 5G-Koffer zur Miete oder zum Kauf? Wir vergleichen beide Wege nach Einsatzdauer, Häufigkeit und Kosten — mit klarer Entscheidungshilfe.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-11',
+    linkLabel: '5G-Koffer mieten oder kaufen?',
     readingMinutes: 5,
     teaser: 'Kurzer Einsatz oder Dauerbedarf? Die Faustregel, ab wann sich Kauf gegenüber Miete lohnt.',
     lead: 'Ob sich Mieten oder Kaufen eines 5G-Koffers lohnt, hängt an drei Fragen: Wie oft brauchst du ihn, wie lange jeweils, und willst du ihn an Kunden weitergeben? Hier ist die Entscheidungshilfe.',
@@ -132,6 +138,8 @@ export const articles: Article[] = [
     metaDescription:
       'WLAN für Messe, Konferenz oder Open-Air ohne Festanschluss aufbauen: So planst du Kapazität, Reichweite und Ausfallschutz mit einem mobilen 5G-Koffer.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-15',
+    linkLabel: 'WLAN für Events ohne Festanschluss',
     readingMinutes: 5,
     teaser: 'Gäste-WLAN, Ticketing, Kartenzahlung, Livestream — wie du ein Event-Netz aufsetzt, das auch bei voller Halle hält.',
     lead: 'Auf Events entscheidet das Netz über Ticketing, Kartenzahlung, Gäste-WLAN und Livestream — und genau dann ist das öffentliche Mobilfunknetz oft überlastet. So baust du ein eigenes, stabiles Netz ohne Festanschluss auf.',
@@ -176,6 +184,8 @@ export const articles: Article[] = [
     metaDescription:
       'Servicetechniker brauchen vor Ort Internet, das nicht vom Kundennetz abhängt. So sichern Sie Fernwartung, Diagnose und Cloud-Zugriff mit einem mobilen 5G-Koffer.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-15',
+    linkLabel: 'Mobiles WLAN für Servicetechniker',
     readingMinutes: 4,
     teaser: 'Warum eigenes Netz im Außendienst schneller und sicherer ist als das WLAN des Kunden.',
     lead: 'Servicetechniker stehen oft vor verschlossenen Kundennetzen: kein Gastzugang, Firewall, IT nicht erreichbar. Ein eigenes mobiles Netz macht den Außendienst unabhängig — für Diagnose, Fernwartung und Cloud-Zugriff direkt an der Maschine.',
@@ -213,6 +223,8 @@ export const articles: Article[] = [
     metaDescription:
       'Dailies hochladen, remote review, Cloud-Workflows: So sichern Sie am Set und bei Outdoor-Drehs eine stabile Internetverbindung mit einem mobilen 5G-Koffer.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-15',
+    linkLabel: 'Internet am Filmset',
     readingMinutes: 4,
     teaser: 'Daten-Offload, Remote-Review und Streaming vom Set — auch dort, wo keine Leitung liegt.',
     lead: 'Moderne Filmproduktion ist datenintensiv: Dailies hochladen, Remote-Review mit Kunden, Cloud-Backup direkt vom Set. Genau dort, wo gedreht wird, gibt es aber selten eine Leitung. So bleibt die Produktion auch im Nirgendwo angebunden.',
@@ -250,6 +262,8 @@ export const articles: Article[] = [
     metaDescription:
       'Was steckt in einem 5G-Internetkoffer und wie kommt das Internet ins Gerät? Router, Antenne, SIM, Akku und Reichweite verständlich erklärt.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-15',
+    linkLabel: 'Wie funktioniert ein 5G-Internetkoffer?',
     readingMinutes: 5,
     teaser: 'Router, Antenne, SIM, Akku — was im Koffer steckt und wie aus Mobilfunk ein stabiles WLAN wird.',
     lead: 'Ein 5G-Internetkoffer klingt komplex, ist im Kern aber einfach: Er empfängt Mobilfunk und verteilt ihn als WLAN und LAN weiter — wie ein WLAN-Router, nur mobil, robust und ohne festen Anschluss. So funktioniert er Schritt für Schritt.',
@@ -300,6 +314,8 @@ export const articles: Article[] = [
     metaDescription:
       'Mobiles Internet für Baustelle und Außeneinsatz: Schutzarten verständlich erklärt, dazu Stromversorgung, Temperaturbereich, Antenne und Dual-SIM als Kaufkriterien.',
     datePublished: '2026-06-04',
+    dateModified: '2026-09-15',
+    linkLabel: 'Outdoor-5G-Koffer: Kaufkriterien',
     readingMinutes: 5,
     teaser: 'Die Kaufkriterien für mobiles Internet auf Baustelle und Außenstelle: Schutzart, Strom, Temperatur, Antenne.',
     lead: 'Soll der 5G-Koffer auf der Baustelle, auf dem Event-Gelände oder an einer Außenstelle Netz liefern, entscheiden ein paar Kennwerte über Erfolg oder Frust. Diese Kriterien solltest du vor dem Kauf prüfen, und so ordnet sich der 5G Case von Case Connect ein.',
@@ -359,6 +375,8 @@ export const articles: Article[] = [
     metaDescription:
       'Messe-WLAN vom Veranstalter ist teuer, gedrosselt und unzuverlässig. So bringst du deinen Messestand mit einem eigenen 5G-Netz stabil online — für Demos, Kasse und Streaming.',
     datePublished: '2026-07-02',
+    dateModified: '2026-09-11',
+    linkLabel: 'Internet für den Messestand',
     readingMinutes: 5,
     teaser: 'Das offizielle Hallen-WLAN ist teuer und bricht am Messetag zusammen, wenn Tausende gleichzeitig funken. Ein eigenes 5G-Netz am Stand macht dich unabhängig.',
     lead: 'Auf dem Messestand hängt fast alles am Netz: Produkt-Demos, Kartenzahlung, Lead-Erfassung, Video-Wall und der Live-Stream in die Zentrale. Das offizielle Messe-WLAN kostet oft mehrere Hundert Euro pro Tag, ist auf wenige Geräte begrenzt und wird genau dann langsam, wenn die Halle voll ist. Ein eigener 5G-Koffer löst das — ein Netz, das nur dir gehört.',
@@ -404,6 +422,8 @@ export const articles: Article[] = [
     metaDescription:
       'Fällt die Firmenleitung aus, steht der Betrieb: keine Kasse, kein ERP, keine Telefonie. So überbrückst du einen Internet-Ausfall schnell mit einem 5G-Koffer als Backup.',
     datePublished: '2026-07-02',
+    dateModified: '2026-09-11',
+    linkLabel: 'Internet-Ausfall überbrücken',
     readingMinutes: 5,
     teaser: 'Ein Bagger kappt das Glasfaserkabel, der Provider hat eine Störung, und die ganze Firma steht. Ein 5G-Koffer als Backup bringt den Betrieb schnell wieder online.',
     lead: 'Moderne Betriebe hängen komplett am Netz: Warenwirtschaft, Kasse, Cloud-Software, VoIP-Telefonie und Kartenzahlung. Fällt die Hauptleitung aus — Bauarbeiten, Provider-Störung, defekter Router — kostet jede Stunde bares Geld. Ein 5G-Koffer als vorbereitetes Backup überbrückt den Ausfall sofort, ohne Technikertermin.',

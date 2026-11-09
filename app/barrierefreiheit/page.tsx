@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import LegalLayout from '@/components/legal/LegalLayout';
+import { seitenMeta } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Barrierefreiheit – Case-Connect',
+  title: 'Barrierefreiheit',
   description:
     'Erklärung zur digitalen Barrierefreiheit von case-connect.de gemäß Barrierefreiheitsstärkungsgesetz (BFSG).',
+  ...seitenMeta('/barrierefreiheit', 'Barrierefreiheit', 'Erklärung zur digitalen Barrierefreiheit von case-connect.de gemäß Barrierefreiheitsstärkungsgesetz (BFSG).'),
 };
 
 export default function BarrierefreiheitPage() {

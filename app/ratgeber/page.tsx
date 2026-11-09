@@ -7,6 +7,7 @@ import Footer from '@/components/sections/Footer';
 import CartDrawer from '@/components/ui/CartDrawer';
 import FloatingCart from '@/components/ui/FloatingCart';
 import { articles } from '@/lib/ratgeber';
+import { OG_IMAGE } from '@/lib/seo';
 
 const SITE = 'https://case-connect.de';
 
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Ratgeber: 5G-Koffer & mobiles Internet',
     description: 'Mobiles Internet für Baustelle, Event, Service und Film, verständlich erklärt.',
     url: `${SITE}/ratgeber`,
+    images: [OG_IMAGE],
   },
 };
 

@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import CookieConsent from "@/components/ui/CookieConsent";
-import { FAQS as CASE_FAQS } from "@/components/sections/faq-data";
 
 // next/font/google laedt die Schriften zur Build-Zeit herunter und liefert sie
 // von der eigenen Domain aus. Kein Browser-Request an fonts.googleapis.com /
@@ -25,11 +24,11 @@ const SITE_URL = "https://case-connect.de";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Case-Connect 5G-Koffer: Mobiles Internet für Baustelle, Service & Event | Comms Connect",
+    default: "5G-Koffer: Mobiles Internet ohne DSL | Case-Connect",
     template: "%s · Case-Connect 5G-Koffer",
   },
   description:
-    "Case-Connect 5G-Koffer: mobiles Internet ohne DSL im robusten PARAT-Systemkoffer. 5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, drei Stromquellen (Netz, Akku, Kfz), vorkonfiguriert geliefert. 1.999 € netto. Aus München, von Comms Connect.",
+    "Mobiles Internet ohne DSL: Der Case-Connect 5G-Koffer mit Dual-SIM kommt vorkonfiguriert. Für Baustelle, Service und Event. 1.999 € netto.",
   keywords: [
     "5G Koffer mieten",
     "5G Koffer kaufen",
@@ -48,7 +47,6 @@ export const metadata: Metadata = {
     "Teltonika RUTX50 Koffer",
     "5G Koffer mit WLAN Repeater",
   ],
-  alternates: { canonical: SITE_URL },
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -118,33 +116,6 @@ const schema = {
       logo: `${SITE_URL}/images/logo.png`,
       slogan: "Kein Netz? Unser Problem.",
       parentOrganization: { "@id": `${SITE_URL}/#organization` },
-    },
-    {
-      "@type": "Product",
-      "@id": `${SITE_URL}/#product-standard`,
-      name: "Case-Connect 5G-Koffer Standard",
-      description:
-        "Mobiles 5G-Koffersystem mit Teltonika RUTX50 (5G mit LTE-Rückfall, Dual-SIM, Dual-Band-WLAN, 5 × Gigabit-Ethernet) im robusten PARAT-Systemkoffer, gefertigt von PARAT in Waldkirchen. Poynting-Panelantenne mit 4×4 MIMO und GNSS im Deckel. Drei Stromquellen: Netz, Werkzeugakku, 12 V Kfz. Vorkonfiguriert geliefert, inklusive 30 m Cat6-Kabel, Cudy RE3000 Wi-Fi-6-Mesh-Repeater und Teltonika RMS mit 10-Jahres-Lizenz.",
-      brand: { "@id": `${SITE_URL}/#brand` },
-      category: "Industrial Networking Hardware",
-      offers: {
-        "@type": "Offer",
-        url: `${SITE_URL}/#shop`,
-        priceCurrency: "EUR",
-        price: "1999",
-        priceValidUntil: "2026-12-31",
-        availability: "https://schema.org/InStock",
-        seller: { "@id": `${SITE_URL}/#organization` },
-      },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${SITE_URL}/#faq`,
-      mainEntity: CASE_FAQS.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
     },
   ],
 };

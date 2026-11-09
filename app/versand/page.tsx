@@ -1,9 +1,12 @@
 import LegalLayout from '@/components/legal/LegalLayout';
 import type { Metadata } from 'next';
+import { seitenMeta } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Versand & Zahlung | 5G Case by Comms Connect',
-  description: 'Informationen zu Versand und Zahlungsmethoden im 5G Case Online-Shop.',
+  title: 'Versand & Zahlung',
+  description:
+    'Informationen zu Versand und Zahlungsmethoden im 5G Case Online-Shop.',
+  ...seitenMeta('/versand', 'Versand & Zahlung', 'Informationen zu Versand und Zahlungsmethoden im 5G Case Online-Shop.'),
 };
 
 export default function VersandPage() {
