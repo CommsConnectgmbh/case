@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import NavBar from '@/components/sections/NavBar';
 import Footer from '@/components/sections/Footer';
 import PartnerLanding from '@/components/sections/PartnerLanding';
-import { OG_IMAGE } from '@/lib/seo';
+import { OG_BASIS, OG_IMAGE } from '@/lib/seo';
 import CartDrawer from '@/components/ui/CartDrawer';
 import FloatingCart from '@/components/ui/FloatingCart';
 
@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     'Werde Case-Connect-Partner und verdien an jedem 5G-Koffer, den du vermittelst. Für Systemhäuser, Vermieter, Fachhandel und Vermittler. Kostenlos, keine Bindung.',
   alternates: { canonical: 'https://case-connect.de/partner' },
   openGraph: {
+    type: 'website',
+    ...OG_BASIS,
     title: 'Werde Case-Connect-Partner',
     description:
       'Verdien an jedem 5G-Koffer, den du vermittelst. Demo-Koffer, Material und Cockpit inklusive.',

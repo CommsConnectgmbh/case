@@ -7,7 +7,7 @@ import Footer from '@/components/sections/Footer';
 import CartDrawer from '@/components/ui/CartDrawer';
 import FloatingCart from '@/components/ui/FloatingCart';
 import { articles } from '@/lib/ratgeber';
-import { OG_IMAGE } from '@/lib/seo';
+import { OG_BASIS, OG_IMAGE } from '@/lib/seo';
 
 const SITE = 'https://case-connect.de';
 
@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     'Praxis-Ratgeber rund um den 5G-Koffer: mobiles Internet für Baustelle, Event, Service und Film. Mieten oder kaufen, Technik erklärt, Kaufkriterien.',
   alternates: { canonical: `${SITE}/ratgeber` },
   openGraph: {
+    type: 'website',
+    ...OG_BASIS,
     title: 'Ratgeber: 5G-Koffer & mobiles Internet',
     description: 'Mobiles Internet für Baustelle, Event, Service und Film, verständlich erklärt.',
     url: `${SITE}/ratgeber`,

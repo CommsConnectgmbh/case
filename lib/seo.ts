@@ -4,6 +4,13 @@ export const SITE_URL = 'https://case-connect.de';
 
 // Vorschaubild aus app/opengraph-image.tsx. Seiten mit eigenem openGraph-Objekt
 // erben das dateibasierte Bild nicht, deshalb hier ausdruecklich.
+// Gemeinsame Open-Graph-Grundwerte (ein eigenes openGraph-Objekt ersetzt das
+// aus dem Layout vollstaendig).
+export const OG_BASIS = {
+  locale: 'de_DE',
+  siteName: 'Case-Connect: 5G-Koffer by Comms Connect',
+};
+
 export const OG_IMAGE = {
   url: `${SITE_URL}/opengraph-image`,
   width: 1200,
@@ -25,8 +32,7 @@ export function seitenMeta(
     alternates: { canonical: url },
     openGraph: {
       type: 'website',
-      locale: 'de_DE',
-      siteName: 'Case-Connect: 5G-Koffer by Comms Connect',
+      ...OG_BASIS,
       url,
       title: titel,
       ...(beschreibung ? { description: beschreibung } : {}),

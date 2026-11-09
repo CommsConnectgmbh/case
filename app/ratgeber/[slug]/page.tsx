@@ -8,7 +8,7 @@ import Footer from '@/components/sections/Footer';
 import CartDrawer from '@/components/ui/CartDrawer';
 import FloatingCart from '@/components/ui/FloatingCart';
 import { articles, getArticle } from '@/lib/ratgeber';
-import { OG_IMAGE } from '@/lib/seo';
+import { OG_BASIS, OG_IMAGE } from '@/lib/seo';
 
 const SITE = 'https://case-connect.de';
 
@@ -34,6 +34,7 @@ export async function generateMetadata({
       description: a.metaDescription,
       url,
       type: 'article',
+      ...OG_BASIS,
       publishedTime: a.datePublished,
       modifiedTime: a.dateModified,
       images: [OG_IMAGE],

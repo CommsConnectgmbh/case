@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n';
 import { Linkedin, Star, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import { openCookieSettings } from '@/components/ui/CookieConsent';
-import { articles } from '@/lib/ratgeber';
+import { ratgeberLinks } from '@/lib/ratgeber-links';
 
 export default function Footer() {
   const t = useTranslation();
@@ -82,11 +82,11 @@ export default function Footer() {
         </div>
 
         <nav aria-labelledby="footer-ratgeber" className="mb-12">
-          <h4 id="footer-ratgeber" className="text-xs font-medium tracking-[0.15em] uppercase text-muted mb-4">Ratgeber für mobiles Internet</h4>
+          <p id="footer-ratgeber" className="text-xs font-medium tracking-[0.15em] uppercase text-muted mb-4">Ratgeber für mobiles Internet</p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2.5 text-[15px] text-muted/80">
-            {articles.map((a) => (
+            {ratgeberLinks.map((a) => (
               <li key={a.slug}>
-                <Link href={`/ratgeber/${a.slug}`} className="hover:text-white transition-colors duration-300">{a.linkLabel}</Link>
+                <Link href={`/ratgeber/${a.slug}`} className="hover:text-white transition-colors duration-300">{a.label}</Link>
               </li>
             ))}
           </ul>
