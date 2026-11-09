@@ -8,6 +8,7 @@ import Footer from '@/components/sections/Footer';
 import CartDrawer from '@/components/ui/CartDrawer';
 import FloatingCart from '@/components/ui/FloatingCart';
 import { articles, getArticle } from '@/lib/ratgeber';
+import { OG_BASIS, OG_IMAGE } from '@/lib/seo';
 
 const SITE = 'https://case-connect.de';
 
@@ -28,7 +29,16 @@ export async function generateMetadata({
     title: a.metaTitle,
     description: a.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: a.metaTitle, description: a.metaDescription, url, type: 'article' },
+    openGraph: {
+      title: a.metaTitle,
+      description: a.metaDescription,
+      url,
+      type: 'article',
+      ...OG_BASIS,
+      publishedTime: a.datePublished,
+      modifiedTime: a.dateModified,
+      images: [OG_IMAGE],
+    },
   };
 }
 
@@ -53,7 +63,8 @@ export default async function ArticlePage({
         headline: a.title,
         description: a.metaDescription,
         datePublished: a.datePublished,
-        dateModified: a.datePublished,
+        dateModified: a.dateModified,
+        image: [OG_IMAGE.url],
         inLanguage: 'de-DE',
         author: { '@type': 'Organization', name: 'Comms Connect GmbH' },
         publisher: { '@type': 'Organization', name: 'Comms Connect GmbH', url: SITE },

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ClearCartOnMount from './ClearCartOnMount';
 
 export const metadata: Metadata = {
-  title: 'Bestellung bestätigt | 5G Case – Comms Connect',
+  title: 'Bestellung bestätigt',
   robots: { index: false, follow: false },
 };
 

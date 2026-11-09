@@ -1,9 +1,12 @@
 import LegalLayout from '@/components/legal/LegalLayout';
 import type { Metadata } from 'next';
+import { seitenMeta } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Widerrufsbelehrung | 5G Case by Comms Connect',
-  description: 'Widerrufsbelehrung der Comms Connect GmbH für den 5G Case Online-Shop.',
+  title: 'Widerrufsbelehrung',
+  description:
+    'Widerrufsbelehrung der Comms Connect GmbH für den 5G Case Online-Shop.',
+  ...seitenMeta('/widerrufsbelehrung', 'Widerrufsbelehrung', 'Widerrufsbelehrung der Comms Connect GmbH für den 5G Case Online-Shop.'),
 };
 
 export default function WiderrufsbelehrungPage() {

@@ -1,9 +1,12 @@
 import LegalLayout from '@/components/legal/LegalLayout';
 import type { Metadata } from 'next';
+import { seitenMeta } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'AGB | 5G Case by Comms Connect',
-  description: 'Allgemeine Geschäftsbedingungen der Comms Connect GmbH für den 5G Case Online-Shop.',
+  title: 'AGB',
+  description:
+    'Allgemeine Geschäftsbedingungen der Comms Connect GmbH für den 5G Case Online-Shop.',
+  ...seitenMeta('/agb', 'AGB', 'Allgemeine Geschäftsbedingungen der Comms Connect GmbH für den 5G Case Online-Shop.'),
 };
 
 export default function AGBPage() {

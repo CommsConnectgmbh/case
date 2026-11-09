@@ -1,6 +1,7 @@
 import LegalLayout from '@/components/legal/LegalLayout';
 import WiderrufForm from './WiderrufForm';
 import type { Metadata } from 'next';
+import { seitenMeta } from '@/lib/seo';
 
 /**
  * Öffentliche Widerruf-Funktion — Route: /widerruf
@@ -9,8 +10,10 @@ import type { Metadata } from 'next';
  */
 
 export const metadata: Metadata = {
-  title: 'Widerruf | 5G Case by Comms Connect',
-  description: 'Hier können Sie Ihren Vertrag ohne Angabe von Gründen widerrufen.',
+  title: 'Widerruf',
+  description:
+    'Hier können Sie Ihren Vertrag ohne Angabe von Gründen widerrufen.',
+  ...seitenMeta('/widerruf', 'Widerruf', 'Hier können Sie Ihren Vertrag ohne Angabe von Gründen widerrufen.'),
 };
 
 export default function WiderrufPage() {
